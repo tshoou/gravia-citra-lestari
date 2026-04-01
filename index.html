@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - PT Gravia Citra Lestari</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1E3A8A', // Dark blue from the design
+            secondary: '#3B82F6', // Lighter blue accent
+            lightbg: '#F8FAFC', // Very light background
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Use FontAwesome for simple icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-white text-gray-800 antialiased overflow-x-hidden font-sans">
+
+  <!-- ==================== HEADER ==================== -->
+  <header
+    class="w-full bg-white shadow-sm border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50">
+    <a href="index.html" class="flex items-center shrink-0 border-none outline-none group">
+      <img src="images/logo.png" alt="PT Gravia Citra Lestari Logo"
+        class="h-10 md:h-12 w-auto object-contain group-hover:opacity-90 transition" />
+    </a>
+
+    <nav class="hidden md:flex space-x-8 items-center font-medium text-sm">
+      <a href="index.html" class="text-primary border-b-2 border-primary pb-1" data-i18n="nav_home">Home</a>
+      <a href="about.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_about">About Us</a>
+      <a href="products.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_products">Our
+        Products</a>
+      <a href="our-principals.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_principals">Our
+        Principals</a>
+      <a href="contact.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_contact">Contact Us</a>
+    </nav>
+
+    <div class="hidden md:flex items-center space-x-6 text-sm">
+      <div class="flex space-x-2 font-medium">
+        <a id="lang-id" class="text-gray-500 hover:text-primary cursor-pointer transition">ID</a>
+        <span class="text-gray-300">|</span>
+        <a id="lang-en" class="text-primary font-bold cursor-pointer transition">EN</a>
+      </div>
+      <button class="text-gray-600 hover:text-primary">
+        <i class="fa-solid fa-search"></i>
+      </button>
+    </div>
+
+    <!-- Mobile Menu Button -->
+    <button class="md:hidden text-gray-600">
+      <i class="fa-solid fa-bars text-2xl"></i>
+    </button>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section class="max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20 grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+    <div class="space-y-6">
+      <div class="text-sm font-semibold tracking-wider text-secondary uppercase" data-i18n="hero_tag">Gravia Citra
+        Lestari</div>
+      <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-primary" data-i18n="hero_title">
+        Leading Factory in <br /> Integrated Medical <br /> Solutions
+      </h1>
+      <p class="text-gray-600 text-lg max-w-lg" data-i18n="hero_desc">
+        We dedicate our expertise to providing state-of-the-art medical equipment and integrated solutions that empower
+        healthcare professionals to deliver exceptional patient care.
+      </p>
+      <div class="pt-4">
+        <a href="products.html"
+          class="bg-primary hover:bg-blue-800 text-white font-medium px-8 py-3 rounded text-lg shadow-lg hover:shadow-xl transition duration-300"
+          data-i18n="hero_btn">
+          View more
+        </a>
+      </div>
+    </div>
+    <div class="relative">
+      <!-- Decorative background blur -->
+      <div class="absolute -right-4 -top-4 w-64 h-64 bg-secondary/10 rounded-full blur-3xl -z-10"></div>
+      <img src="images/hero-cleanroom.png" alt="Medical Factory/Cleanroom"
+        class="rounded-2xl shadow-2xl object-cover h-[500px] w-full" />
+    </div>
+  </section>
+
+  <!-- ==================== BANNER SECTION ==================== -->
+  <div class="bg-primary py-12 px-6 text-center text-white">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-xl md:text-2xl font-light leading-relaxed" data-i18n="banner_text">
+        We understand the critical importance of reliable and advanced medical technology in today's healthcare
+        environment. That's why we continuously innovate.
+      </p>
+    </div>
+  </div>
+
+  <!-- ==================== ISO & CERTIFICATIONS ==================== -->
+  <section class="py-24 px-6 max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <!-- Left side: Title -->
+      <div class="lg:col-span-4 text-center lg:text-left lg:pl-4">
+        <h2 class="text-4xl md:text-5xl font-medium text-gray-900 leading-tight tracking-tight" data-i18n="cert_title">
+          ISO & <br class="hidden lg:block" /> Certifications
+        </h2>
+      </div>
+
+      <!-- Right side: Cards -->
+      <div class="lg:col-span-8 space-y-6 max-w-2xl mx-auto lg:mx-0 w-full">
+        <!-- Card 1: CDAKB -->
+        <div
+          class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left space-y-6 sm:space-y-0 sm:space-x-8 bg-white p-8 md:p-10 rounded-[28px] shadow-[0_4px_30px_rgba(0,0,0,0.04)] border border-gray-100/50">
+          <div class="w-32 md:w-36 shrink-0 flex justify-center mt-1">
+            <img src="images/cdakb.png" alt="CDAKB Certified" class="w-full object-contain drop-shadow-md" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3" data-i18n="cdakb_title">CDAKB Certified</h3>
+            <p class="text-[15px] text-gray-800 leading-relaxed font-medium" data-i18n="cdakb_desc">
+              Officially certified in Cara Distribusi Alat Kesehatan yang Baik (Good Distribution Practice for Medical
+              Devices) by the Ministry of Health (Kemenkes) of the Republic of Indonesia.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2: ISO 9001 -->
+        <div
+          class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left space-y-6 sm:space-y-0 sm:space-x-8 bg-white p-8 md:p-10 rounded-[28px] shadow-[0_4px_30px_rgba(0,0,0,0.04)] border border-gray-100/50">
+          <div class="w-32 md:w-36 shrink-0 flex justify-center mt-1">
+            <img src="images/iso.png" alt="ISO 9001:2015" class="w-full object-contain drop-shadow-md" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3" data-i18n="iso_title">ISO 9001:2015</h3>
+            <p class="text-[15px] text-gray-800 leading-relaxed font-medium" data-i18n="iso_desc">
+              Certified Quality Management System ensuring consistent excellence in our business processes and
+              distribution services.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3: Kemenkes -->
+        <div
+          class="flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left space-y-6 sm:space-y-0 sm:space-x-8 bg-white p-8 md:p-10 rounded-[28px] shadow-[0_4px_30px_rgba(0,0,0,0.04)] border border-gray-100/50">
+          <div class="w-32 md:w-36 shrink-0 flex justify-center mt-3">
+            <img src="images/kemenkes.png" alt="Kemenkes ISO 9001:2015" class="w-full object-contain" />
+          </div>
+          <div class="flex-1">
+            <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-3" data-i18n="kemenkes_title">ISO 9001:2015</h3>
+            <p class="text-[15px] text-gray-800 leading-relaxed font-medium" data-i18n="kemenkes_desc">
+              We hold all legally required business licenses for dealing in Healthcare and Aesthetic products within the
+              Indonesian market.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== OUR PRODUCTS ==================== -->
+  <section class="bg-primary py-24 px-6 relative overflow-hidden">
+    <div class="max-w-[1300px] mx-auto text-center">
+      <h2 class="text-4xl md:text-5xl font-bold text-white mb-16" data-i18n="our_products_title">Our Products</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_auto] gap-6">
+        <!-- Product 1 -->
+        <div
+          class="bg-white rounded-[32px] p-6 lg:p-8 text-left flex flex-col group hover:-translate-y-2 transition duration-300 shadow-xl">
+          <div class="h-48 mb-6 flex justify-center items-center">
+            <img
+              src="https://images.unsplash.com/photo-1584017911766-d451b3d0e843?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Medical Freezer" class="h-full object-contain group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="flex-grow flex flex-col">
+            <span class="text-[13px] font-semibold text-secondary mb-1" data-i18n="equip_tag">Equipment</span>
+            <h3 class="text-[22px] font-bold text-gray-900 mb-3" data-i18n="prod1_title">Ultra Low Temperature Freezer
+            </h3>
+            <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-grow" data-i18n="prod1_desc">High performance
+              medical freezers built with precise temperature control for essential medical storage requirements.</p>
+            <div class="mt-auto">
+              <a href="product-detail.html"
+                class="w-full bg-[#0B1120] hover:bg-gray-800 text-white text-[14px] font-medium py-3.5 px-6 rounded-xl flex items-center justify-center transition group-hover:shadow-md">
+                <span data-i18n="view_detail">View Details</span>
+                <i class="fa-solid fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 2 -->
+        <div
+          class="bg-white rounded-[32px] p-6 lg:p-8 text-left flex flex-col group hover:-translate-y-2 transition duration-300 shadow-xl">
+          <div class="h-48 mb-6 flex justify-center items-center">
+            <img
+              src="https://images.unsplash.com/photo-1579154204601-01588f351e67?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Centrifuge" class="h-full object-contain group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="flex-grow flex flex-col">
+            <span class="text-[13px] font-semibold text-secondary mb-1" data-i18n="equip_tag">Equipment</span>
+            <h3 class="text-[22px] font-bold text-gray-900 mb-3" data-i18n="prod2_title">Refrigerated Centrifuge</h3>
+            <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-grow" data-i18n="prod2_desc">Advanced
+              centrifugation technology designed to protect thermolabile samples effectively.</p>
+            <div class="mt-auto">
+              <a href="product-detail.html"
+                class="w-full bg-[#0B1120] hover:bg-gray-800 text-white text-[14px] font-medium py-3.5 px-6 rounded-xl flex items-center justify-center transition group-hover:shadow-md">
+                <span data-i18n="view_detail">View Details</span>
+                <i class="fa-solid fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Product 3 -->
+        <div
+          class="bg-white rounded-[32px] p-6 lg:p-8 text-left flex flex-col group hover:-translate-y-2 transition duration-300 shadow-xl">
+          <div class="h-48 mb-6 flex justify-center items-center">
+            <img
+              src="https://images.unsplash.com/photo-1631549916768-4119b2e5f926?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Pipette" class="h-full object-contain group-hover:scale-105 transition duration-500" />
+          </div>
+          <div class="flex-grow flex flex-col">
+            <span class="text-[13px] font-semibold text-secondary mb-1" data-i18n="inst_tag">Instruments</span>
+            <h3 class="text-[22px] font-bold text-gray-900 mb-3" data-i18n="prod3_title">Micropipettes Standard</h3>
+            <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-grow" data-i18n="prod3_desc">Engineered for
+              comfort and precision. Essential liquid handling instruments for laboratories.</p>
+            <div class="mt-auto">
+              <a href="product-detail.html"
+                class="w-full bg-[#0B1120] hover:bg-gray-800 text-white text-[14px] font-medium py-3.5 px-6 rounded-xl flex items-center justify-center transition group-hover:shadow-md">
+                <span data-i18n="view_detail">View Details</span>
+                <i class="fa-solid fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- View More Vertical Pill -->
+        <a href="products.html"
+          class="hidden lg:flex flex-col items-center justify-center bg-white rounded-full px-5 py-8 cursor-pointer hover:bg-gray-50 transition duration-300 hover:-translate-y-2 shadow-xl group">
+          <div style="writing-mode: vertical-rl; transform: rotate(180deg);"
+            class="text-[22px] font-bold text-gray-900 tracking-wide group-hover:text-primary transition"
+            data-i18n="view_all">
+            View More
+          </div>
+        </a>
+      </div>
+
+      <!-- Mobile View More Link -->
+      <div class="mt-10 lg:hidden">
+        <a href="products.html"
+          class="inline-block bg-white text-primary font-bold hover:bg-gray-100 transition duration-300 px-10 py-4 w-full sm:w-auto rounded-2xl shadow-lg"
+          data-i18n="view_all">
+          View More
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== WHY CHOOSE US ==================== -->
+  <section class="py-20 bg-lightbg px-6">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-3xl font-bold text-primary mb-12" data-i18n="why_title">Why Choose Gravia Citra Lestari</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+        <!-- Feature 1 -->
+        <div class="bg-white shadow rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition">
+          <div class="h-40 w-full mb-6 relative overflow-hidden rounded-md">
+            <img
+              src="https://images.unsplash.com/photo-1542696425-a1c223a54d31?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="High Quality" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="why1_title">Superior Quality Products</h3>
+          <p class="text-gray-500 text-sm" data-i18n="why1_desc">We ensure all our medical devices meet strict
+            international safety and quality standards before distribution.</p>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="bg-white shadow rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition">
+          <div class="h-40 w-full mb-6 relative overflow-hidden rounded-md">
+            <img
+              src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80"
+              alt="Innovation" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="why2_title">Dedicated Support</h3>
+          <p class="text-gray-500 text-sm" data-i18n="why2_desc">Our expert technical team provides continuous support,
+            maintenance, and training for our clients.</p>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="bg-white shadow rounded-lg p-6 text-center shadow-lg hover:shadow-xl transition">
+          <div class="h-40 w-full mb-6 relative overflow-hidden rounded-md">
+            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80"
+              alt="Integration" class="w-full h-full object-cover">
+          </div>
+          <h3 class="text-xl font-bold text-gray-800 mb-3" data-i18n="why3_title">Integrated Solutions</h3>
+          <p class="text-gray-500 text-sm" data-i18n="why3_desc">We provide complete end-to-end medical facility
+            outfitting rather than just individual equipment sales.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONNECT CTA ==================== -->
+  <section class="max-w-7xl mx-auto px-6 py-16 md:py-24">
+    <div
+      class="bg-blue-50 rounded-[40px] overflow-hidden flex flex-col md:flex-row items-stretch border border-blue-100 shadow-sm relative">
+      <div class="p-10 md:p-16 flex-1 flex flex-col justify-center text-center md:text-left z-10 w-full">
+        <h2 class="text-4xl md:text-5xl font-bold text-primary mb-6 leading-tight" data-i18n="connect_title">Connect
+          With <br /> Our Team</h2>
+        <p class="text-gray-600 mb-8 max-w-sm mx-auto md:mx-0 text-lg leading-relaxed" data-i18n="connect_desc">
+          Have an inquiry about bringing robust medical solutions to your facility? Let's discuss your needs.
+        </p>
+        <div>
+          <a href="contact.html"
+            class="inline-block bg-[#0B1120] hover:bg-gray-800 text-white font-medium px-8 py-4 rounded-xl shadow-md hover:-translate-y-1 transition duration-300"
+            data-i18n="contact_btn">
+            Contact Us
+          </a>
+        </div>
+      </div>
+      <div class="w-full md:w-5/12 relative flex items-end justify-center pt-8 md:pt-12 pr-0 md:pr-12 md:pb-0">
+        <img src="images/connect-worker.png" alt="Laboratory Professional"
+          class="w-full h-[350px] md:h-[450px] object-contain object-bottom drop-shadow-xl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="bg-primary text-blue-100 pt-16 pb-8 px-6 md:px-12 mt-10">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+      <div class="col-span-1 md:col-span-1 border-b border-blue-800 pb-8 md:border-0 md:pb-0">
+        <a href="index.html"
+          class="inline-block mb-6 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow hover:shadow-md transition">
+          <img src="images/logo.png" alt="PT Gravia Citra Lestari Logo" class="h-9 md:h-10 w-auto object-contain" />
+        </a>
+        <p class="text-sm opacity-80 leading-relaxed mb-6" data-i18n="footer_desc">
+          PT Gravia Citra Lestari provides comprehensive medical solutions, delivering proven technology to elevate
+          healthcare outcomes.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
+            <i class="fa-brands fa-facebook-f"></i>
+          </a>
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm" data-i18n="quick_links">Quick Links</h4>
+        <ul class="space-y-4 text-sm">
+          <li><a href="about.html" class="hover:text-white transition" data-i18n="nav_about">About Us</a></li>
+          <li><a href="products.html" class="hover:text-white transition" data-i18n="nav_products">Our Products</a></li>
+          <li><a href="our-principals.html" class="hover:text-white transition" data-i18n="footer_principals">Principals
+              & Partners</a></li>
+          <li><a href="contact.html" class="hover:text-white transition" data-i18n="nav_contact">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm" data-i18n="footer_products">Products</h4>
+        <ul class="space-y-4 text-sm">
+          <li><a href="#" class="hover:text-white transition" data-i18n="med_freezers">Medical Freezers</a></li>
+          <li><a href="#" class="hover:text-white transition" data-i18n="centrifuges">Centrifuges</a></li>
+          <li><a href="#" class="hover:text-white transition" data-i18n="autoclaves">Autoclaves</a></li>
+          <li><a href="#" class="hover:text-white transition" data-i18n="surgical_inst">Surgical Instruments</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm" data-i18n="contact_details">Contact
+          Details</h4>
+        <ul class="space-y-4 text-sm">
+          <li class="flex items-start space-x-3">
+            <i class="fa-solid fa-map-marker-alt mt-1 shrink-0"></i>
+            <span data-i18n="address">Gedung Gravia, Plaza Business Park Blok B2 No.1, Jakarta, Indonesia</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <i class="fa-solid fa-phone shrink-0"></i>
+            <span>+62 123 4567 890</span>
+          </li>
+          <li class="flex items-center space-x-3">
+            <i class="fa-solid fa-envelope shrink-0"></i>
+            <span>info@graviacitra.com</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div
+      class="max-w-7xl mx-auto mt-12 pt-8 border-t border-blue-800 text-sm text-center md:text-left flex flex-col md:flex-row justify-between items-center text-blue-300">
+      <p data-i18n="rights">&copy; 2024 PT Gravia Citra Lestari. All rights reserved.</p>
+      <div class="mt-4 md:mt-0 space-x-4">
+        <a href="#" class="hover:text-white" data-i18n="privacy">Privacy Policy</a>
+        <span>|</span>
+        <a href="#" class="hover:text-white" data-i18n="terms">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

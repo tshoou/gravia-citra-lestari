@@ -12,9 +12,10 @@
       theme: {
         extend: {
           colors: {
-            primary: '#1E3A8A', // Dark blue from the design
-            secondary: '#3B82F6', // Lighter blue accent
-            lightbg: '#F8FAFC', // Very light background
+            primary: '#0F172A', // Slate 900
+            secondary: '#3B82F6', // Blue 500 
+            accent: '#0EA5E9', // Sky 500
+            lightbg: '#F8FAFC',
           },
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
@@ -30,16 +31,20 @@
 <body class="bg-white text-gray-800 antialiased overflow-x-hidden font-sans">
 
   <!-- ==================== HEADER ==================== -->
-  <header class="w-full bg-white shadow-sm border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50">
+  <header
+    class="w-full bg-white/80 backdrop-blur-lg shadow-[0_4px_30px_rgba(0,0,0,0.03)] border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50">
     <a href="index.html" class="flex items-center shrink-0 border-none outline-none group">
-      <img src="images/logo.png" alt="PT Gravia Citra Lestari Logo" class="h-10 md:h-12 w-auto object-contain group-hover:opacity-90 transition" />
+      <img src="images/logo.png" alt="PT Gravia Citra Lestari Logo"
+        class="h-10 md:h-12 w-auto object-contain group-hover:opacity-90 transition" />
     </a>
 
     <nav class="hidden md:flex space-x-8 items-center font-medium text-sm">
       <a href="index.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_home">Home</a>
       <a href="about.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_about">About Us</a>
-      <a href="products.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_products">Our Products</a>
-      <a href="our-principals.html" class="text-primary border-b-2 border-primary pb-1" data-i18n="nav_principals">Our Principals</a>
+      <a href="products.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_products">Our
+        Products</a>
+      <a href="our-principals.html" class="text-primary border-b-2 border-primary pb-1" data-i18n="nav_principals">Our
+        Principals</a>
       <a href="contact.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_contact">Contact Us</a>
     </nav>
 
@@ -59,15 +64,17 @@
 
   <!-- ==================== HERO SECTION ==================== -->
   <section class="bg-[#1f3ba2] pt-20 pb-20 px-6 relative">
-    <div class="max-w-[1200px] mx-auto text-left relative z-10 flex flex-col md:flex-row items-start md:items-center space-x-0 md:space-x-6">
+    <div
+      class="max-w-[1200px] mx-auto text-left relative z-10 flex flex-col md:flex-row items-start md:items-center space-x-0 md:space-x-6">
       <div class="mb-4 md:mb-0">
-         <i class="fa-solid fa-handshake text-white text-4xl opacity-90"></i>
+        <i class="fa-solid fa-handshake text-white text-4xl opacity-90"></i>
       </div>
       <div>
-         <h1 class="text-3xl md:text-[40px] tracking-tight font-semibold text-white mb-3" data-i18n="princ_hero_title">Our Principals</h1>
-         <p class="text-blue-100/90 text-[15px] md:text-lg max-w-xl font-light" data-i18n="princ_hero_desc">
-           Partnering with leading medical equipment manufacturers worldwide
-         </p>
+        <h1 class="text-3xl md:text-[40px] tracking-tight font-semibold text-white mb-3" data-i18n="princ_hero_title">
+          Our Principals</h1>
+        <p class="text-blue-100/90 text-[15px] md:text-lg max-w-xl font-light" data-i18n="princ_hero_desc">
+          Partnering with leading medical equipment manufacturers worldwide
+        </p>
       </div>
     </div>
   </section>
@@ -75,22 +82,27 @@
   <!-- ==================== INTRO ==================== -->
   <section class="max-w-[800px] mx-auto text-center px-6 py-16 md:py-24">
     <p class="text-[16px] md:text-[18px] text-gray-600 leading-relaxed font-light" data-i18n="princ_intro">
-      As an authorized distributor, PT Gravia Citra Lestari works closely with PT Panatha Citra Lestari and reputable manufacturers from around the world. Our partnerships enable us to provide high-quality medical equipment and innovative healthcare solutions to our clients across Indonesia.
+      As an authorized distributor, PT Gravia Citra Lestari works closely with PT Panatha Citra Lestari and reputable
+      manufacturers from around the world. Our partnerships enable us to provide high-quality medical equipment and
+      innovative healthcare solutions to our clients across Indonesia.
     </p>
   </section>
 
   <!-- ==================== PRINCIPALS GRID ==================== -->
   <section class="max-w-[1200px] mx-auto px-6 pb-24">
     <div class="text-center mb-12">
-      <h2 class="text-2xl md:text-3xl font-semibold text-[#313f5c]" data-i18n="princ_mfg_title">Manufacturing Partners</h2>
+      <h2 class="text-2xl md:text-3xl font-semibold text-[#313f5c]" data-i18n="princ_mfg_title">Manufacturing Partners
+      </h2>
     </div>
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      
+
       <!-- Card 1 -->
-      <div class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
+      <div
+        class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
         <div class="flex items-start space-x-4 mb-6">
-          <div class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
+          <div
+            class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
             <i class="fa-solid fa-building text-xl"></i>
           </div>
           <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">Ugaiya Bio-Sciences Co. Ltd</h3>
@@ -100,43 +112,56 @@
             <i class="fa-solid fa-location-dot mr-2"></i>
             <span data-i18n="loc_japan">Japan</span>
           </div>
-          <span class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded" data-i18n="reg_asiapac">Asia Pacific</span>
+          <span
+            class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded"
+            data-i18n="reg_asiapac">Asia Pacific</span>
         </div>
         <div class="w-full mt-auto">
-          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">Products:</p>
+          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">
+            Products:</p>
           <div class="flex flex-wrap gap-2">
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md" data-i18n="tag_centrifuge">Centrifuge</span>
+            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
+              data-i18n="tag_centrifuge">Centrifuge</span>
           </div>
         </div>
       </div>
 
       <!-- Card 2 -->
-      <div class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
+      <div
+        class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
         <div class="flex items-start space-x-4 mb-6">
-          <div class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
+          <div
+            class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
             <i class="fa-solid fa-building text-xl"></i>
           </div>
-          <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">Anhui Wensheng Medical Material Co. Ltd</h3>
+          <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">Anhui Wensheng Medical Material Co. Ltd
+          </h3>
         </div>
         <div class="flex items-center justify-between w-full mb-6">
           <div class="flex items-center text-gray-500 text-[13px]">
             <i class="fa-solid fa-location-dot mr-2"></i>
             <span data-i18n="loc_china">China</span>
           </div>
-          <span class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded" data-i18n="reg_asia">Asia</span>
+          <span
+            class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded"
+            data-i18n="reg_asia">Asia</span>
         </div>
         <div class="w-full mt-auto">
-          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">Products:</p>
+          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">
+            Products:</p>
           <div class="flex flex-wrap gap-2">
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md" data-i18n="tag_disposal">Disposal Viral Transport Tube</span>
+            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
+              data-i18n="tag_disposal">Disposal Viral Transport Tube</span>
           </div>
         </div>
       </div>
 
       <!-- Card 3 -->
-      <div class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
+      <div
+        class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
         <div class="flex items-start space-x-4 mb-6">
-          <div class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
+          <div
+            class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
             <i class="fa-solid fa-building text-xl"></i>
           </div>
           <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">Shenyang RMS Medical Tech Co. Ltd</h3>
@@ -146,46 +171,62 @@
             <i class="fa-solid fa-location-dot mr-2"></i>
             <span data-i18n="loc_china">China</span>
           </div>
-          <span class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded" data-i18n="reg_asia">Asia</span>
+          <span
+            class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded"
+            data-i18n="reg_asia">Asia</span>
         </div>
         <div class="w-full mt-auto">
-          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">Products:</p>
+          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">
+            Products:</p>
           <div class="flex flex-wrap gap-2">
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md" data-i18n="tag_hiflow">HiFlow Nasal Cannula</span>
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md" data-i18n="tag_humid_bm">Humid BM</span>
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md" data-i18n="tag_humid_bh">Humid BH</span>
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md" data-i18n="tag_humid_bhr">Humid BHR</span>
+            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
+              data-i18n="tag_hiflow">HiFlow Nasal Cannula</span>
+            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
+              data-i18n="tag_humid_bm">Humid BM</span>
+            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
+              data-i18n="tag_humid_bh">Humid BH</span>
+            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
+              data-i18n="tag_humid_bhr">Humid BHR</span>
           </div>
         </div>
       </div>
 
       <!-- Card 4 -->
-      <div class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
+      <div
+        class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
         <div class="flex items-start space-x-4 mb-6">
-          <div class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
+          <div
+            class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
             <i class="fa-solid fa-building text-xl"></i>
           </div>
-          <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">Zhejiang Heli Refrigeration Equipment Co. Ltd</h3>
+          <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">Zhejiang Heli Refrigeration Equipment
+            Co. Ltd</h3>
         </div>
         <div class="flex items-center justify-between w-full mb-6">
           <div class="flex items-center text-gray-500 text-[13px]">
             <i class="fa-solid fa-location-dot mr-2"></i>
             <span data-i18n="loc_china">China</span>
           </div>
-          <span class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded" data-i18n="reg_asia">Asia</span>
+          <span
+            class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded"
+            data-i18n="reg_asia">Asia</span>
         </div>
         <div class="w-full mt-auto">
-          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">Products:</p>
+          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">
+            Products:</p>
           <div class="flex flex-wrap gap-2">
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md" data-i18n="tag_bb_ref">Blood Bank Refrigerator & Freezer</span>
+            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
+              data-i18n="tag_bb_ref">Blood Bank Refrigerator & Freezer</span>
           </div>
         </div>
       </div>
 
       <!-- Card 5 -->
-      <div class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
+      <div
+        class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
         <div class="flex items-start space-x-4 mb-6">
-          <div class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
+          <div
+            class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
             <i class="fa-solid fa-building text-xl"></i>
           </div>
           <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">Guangdong Iceco Enterprise Co. Ltd</h3>
@@ -195,66 +236,86 @@
             <i class="fa-solid fa-location-dot mr-2"></i>
             <span data-i18n="loc_china">China</span>
           </div>
-          <span class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded" data-i18n="reg_asia">Asia</span>
+          <span
+            class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded"
+            data-i18n="reg_asia">Asia</span>
         </div>
         <div class="w-full mt-auto">
-          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">Products:</p>
+          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">
+            Products:</p>
           <div class="flex flex-wrap gap-2">
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md" data-i18n="tag_comp_ref">Compressor Refrigerator</span>
+            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
+              data-i18n="tag_comp_ref">Compressor Refrigerator</span>
           </div>
         </div>
       </div>
 
       <!-- Card 6 -->
-      <div class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
+      <div
+        class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
         <div class="flex items-start space-x-4 mb-6">
-          <div class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
+          <div
+            class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
             <i class="fa-solid fa-building text-xl"></i>
           </div>
-          <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">Shanghai BOYU Purifying Technology Co. Ltd</h3>
+          <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">Shanghai BOYU Purifying Technology Co.
+            Ltd</h3>
         </div>
         <div class="flex items-center justify-between w-full mb-6">
           <div class="flex items-center text-gray-500 text-[13px]">
             <i class="fa-solid fa-location-dot mr-2"></i>
             <span data-i18n="loc_china">China</span>
           </div>
-          <span class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded" data-i18n="reg_asia">Asia</span>
+          <span
+            class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded"
+            data-i18n="reg_asia">Asia</span>
         </div>
         <div class="w-full mt-auto">
-          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">Products:</p>
+          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">
+            Products:</p>
           <div class="flex flex-wrap gap-2">
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md" data-i18n="tag_hp_steril">Hydrogen Peroxide Sterilizer</span>
+            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
+              data-i18n="tag_hp_steril">Hydrogen Peroxide Sterilizer</span>
           </div>
         </div>
       </div>
 
       <!-- Card 7 -->
-      <div class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
+      <div
+        class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
         <div class="flex items-start space-x-4 mb-6">
-          <div class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
+          <div
+            class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
             <i class="fa-solid fa-building text-xl"></i>
           </div>
-          <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">Jiangsu Kangjian Medical Apparatus Co. Ltd</h3>
+          <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">Jiangsu Kangjian Medical Apparatus Co.
+            Ltd</h3>
         </div>
         <div class="flex items-center justify-between w-full mb-6">
           <div class="flex items-center text-gray-500 text-[13px]">
             <i class="fa-solid fa-location-dot mr-2"></i>
             <span data-i18n="loc_china">China</span>
           </div>
-          <span class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded" data-i18n="reg_asia">Asia</span>
+          <span
+            class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded"
+            data-i18n="reg_asia">Asia</span>
         </div>
         <div class="w-full mt-auto">
-          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">Products:</p>
+          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">
+            Products:</p>
           <div class="flex flex-wrap gap-2">
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md" data-i18n="tag_virus_col">Virus Collection & Preservation System</span>
+            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
+              data-i18n="tag_virus_col">Virus Collection & Preservation System</span>
           </div>
         </div>
       </div>
 
       <!-- Card 8 -->
-      <div class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
+      <div
+        class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
         <div class="flex items-start space-x-4 mb-6">
-          <div class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
+          <div
+            class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
             <i class="fa-solid fa-building text-xl"></i>
           </div>
           <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">PT Panatha Citra Lestari</h3>
@@ -264,12 +325,16 @@
             <i class="fa-solid fa-location-dot mr-2"></i>
             <span data-i18n="loc_indonesia">Indonesia</span>
           </div>
-          <span class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded" data-i18n="reg_indo">Indonesia</span>
+          <span
+            class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded"
+            data-i18n="reg_indo">Indonesia</span>
         </div>
         <div class="w-full mt-auto">
-          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">Products:</p>
+          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">
+            Products:</p>
           <div class="flex flex-wrap gap-2">
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md" data-i18n="tag_local_med">Local Medical Equipment</span>
+            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
+              data-i18n="tag_local_med">Local Medical Equipment</span>
           </div>
         </div>
       </div>
@@ -281,20 +346,25 @@
   <footer class="bg-primary text-blue-100 pt-16 pb-8 px-6 md:px-12 mt-10">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
       <div class="col-span-1 md:col-span-1 border-b border-blue-800 pb-8 md:border-0 md:pb-0">
-        <a href="index.html" class="inline-block mb-6 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow hover:shadow-md transition">
+        <a href="index.html"
+          class="inline-block mb-6 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow hover:shadow-md transition">
           <img src="images/logo.png" alt="PT Gravia Citra Lestari Logo" class="h-9 md:h-10 w-auto object-contain" />
         </a>
         <p class="text-sm opacity-80 leading-relaxed mb-6" data-i18n="footer_desc">
-          PT Gravia Citra Lestari provides comprehensive medical solutions, delivering proven technology to elevate healthcare outcomes.
+          PT Gravia Citra Lestari provides comprehensive medical solutions, delivering proven technology to elevate
+          healthcare outcomes.
         </p>
         <div class="flex space-x-4">
-          <a href="#" class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
             <i class="fa-brands fa-linkedin-in"></i>
           </a>
-          <a href="#" class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-          <a href="#" class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
             <i class="fa-brands fa-instagram"></i>
           </a>
         </div>
@@ -305,7 +375,8 @@
         <ul class="space-y-4 text-sm">
           <li><a href="about.html" class="hover:text-white transition" data-i18n="nav_about">About Us</a></li>
           <li><a href="products.html" class="hover:text-white transition" data-i18n="nav_products">Our Products</a></li>
-          <li><a href="our-principals.html" class="hover:text-white transition" data-i18n="footer_principals">Principals & Partners</a></li>
+          <li><a href="our-principals.html" class="hover:text-white transition" data-i18n="footer_principals">Principals
+              & Partners</a></li>
           <li><a href="contact.html" class="hover:text-white transition" data-i18n="nav_contact">Contact Us</a></li>
         </ul>
       </div>
@@ -321,7 +392,8 @@
       </div>
 
       <div>
-        <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm" data-i18n="contact_details">Contact Details</h4>
+        <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm" data-i18n="contact_details">Contact
+          Details</h4>
         <ul class="space-y-4 text-sm">
           <li class="flex items-start space-x-3">
             <i class="fa-solid fa-map-marker-alt mt-1 shrink-0"></i>
@@ -339,7 +411,8 @@
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-blue-800 text-sm text-center md:text-left flex flex-col md:flex-row justify-between items-center text-blue-300">
+    <div
+      class="max-w-7xl mx-auto mt-12 pt-8 border-t border-blue-800 text-sm text-center md:text-left flex flex-col md:flex-row justify-between items-center text-blue-300">
       <p data-i18n="rights">&copy; 2024 PT Gravia Citra Lestari. All rights reserved.</p>
       <div class="mt-4 md:mt-0 space-x-4">
         <a href="#" class="hover:text-white" data-i18n="privacy">Privacy Policy</a>
@@ -351,4 +424,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>

@@ -12,9 +12,10 @@
       theme: {
         extend: {
           colors: {
-            primary: '#1E3A8A', // Dark blue from the design
-            secondary: '#3B82F6', // Lighter blue accent
-            lightbg: '#F8FAFC', // Very light background
+            primary: '#0F172A', // Slate 900
+            secondary: '#3B82F6', // Blue 500 
+            accent: '#0EA5E9', // Sky 500
+            lightbg: '#F8FAFC',
           },
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
@@ -32,7 +33,7 @@
 
   <!-- ==================== HEADER ==================== -->
   <header
-    class="w-full bg-white shadow-sm border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50">
+    class="w-full bg-white/80 backdrop-blur-lg shadow-[0_4px_30px_rgba(0,0,0,0.03)] border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50">
     <a href="index.html" class="flex items-center shrink-0 border-none outline-none group">
       <img src="images/logo.png" alt="PT Gravia Citra Lestari Logo"
         class="h-10 md:h-12 w-auto object-contain group-hover:opacity-90 transition" />
@@ -79,7 +80,7 @@
       </p>
       <div class="pt-4">
         <a href="products.html"
-          class="bg-primary hover:bg-blue-800 text-white font-medium px-8 py-3 rounded text-lg shadow-lg hover:shadow-xl transition duration-300"
+          class="bg-blue-600 hover:bg-blue-700 shadow-lg hover:shadow-blue-500/30 transform hover:-translate-y-1 text-white font-medium px-8 py-3 rounded text-lg shadow-lg hover:shadow-xl transition duration-300"
           data-i18n="hero_btn">
           View more
         </a>
@@ -185,7 +186,7 @@
               medical freezers built with precise temperature control for essential medical storage requirements.</p>
             <div class="mt-auto">
               <a href="product-detail.html"
-                class="w-full bg-[#0B1120] hover:bg-gray-800 text-white text-[14px] font-medium py-3.5 px-6 rounded-xl flex items-center justify-center transition group-hover:shadow-md">
+                class="w-full bg-slate-900 hover:bg-blue-600 shadow-md hover:shadow-xl transform hover:-translate-y-1 text-white text-[14px] font-medium py-3.5 px-6 rounded-xl flex items-center justify-center transition group-hover:shadow-md">
                 <span data-i18n="view_detail">View Details</span>
                 <i class="fa-solid fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition"></i>
               </a>
@@ -208,7 +209,7 @@
               centrifugation technology designed to protect thermolabile samples effectively.</p>
             <div class="mt-auto">
               <a href="product-detail.html"
-                class="w-full bg-[#0B1120] hover:bg-gray-800 text-white text-[14px] font-medium py-3.5 px-6 rounded-xl flex items-center justify-center transition group-hover:shadow-md">
+                class="w-full bg-slate-900 hover:bg-blue-600 shadow-md hover:shadow-xl transform hover:-translate-y-1 text-white text-[14px] font-medium py-3.5 px-6 rounded-xl flex items-center justify-center transition group-hover:shadow-md">
                 <span data-i18n="view_detail">View Details</span>
                 <i class="fa-solid fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition"></i>
               </a>
@@ -231,7 +232,7 @@
               comfort and precision. Essential liquid handling instruments for laboratories.</p>
             <div class="mt-auto">
               <a href="product-detail.html"
-                class="w-full bg-[#0B1120] hover:bg-gray-800 text-white text-[14px] font-medium py-3.5 px-6 rounded-xl flex items-center justify-center transition group-hover:shadow-md">
+                class="w-full bg-slate-900 hover:bg-blue-600 shadow-md hover:shadow-xl transform hover:-translate-y-1 text-white text-[14px] font-medium py-3.5 px-6 rounded-xl flex items-center justify-center transition group-hover:shadow-md">
                 <span data-i18n="view_detail">View Details</span>
                 <i class="fa-solid fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition"></i>
               </a>
@@ -317,7 +318,7 @@
         </p>
         <div>
           <a href="contact.html"
-            class="inline-block bg-[#0B1120] hover:bg-gray-800 text-white font-medium px-8 py-4 rounded-xl shadow-md hover:-translate-y-1 transition duration-300"
+            class="inline-block bg-slate-900 hover:bg-blue-600 shadow-md hover:shadow-xl transform hover:-translate-y-1 text-white font-medium px-8 py-4 rounded-xl shadow-md hover:-translate-y-1 transition duration-300"
             data-i18n="contact_btn">
             Contact Us
           </a>

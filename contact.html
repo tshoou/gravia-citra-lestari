@@ -12,9 +12,10 @@
       theme: {
         extend: {
           colors: {
-            primary: '#1E3A8A', // Dark blue from the design
-            secondary: '#3B82F6', // Lighter blue accent
-            lightbg: '#F8FAFC', // Very light background
+            primary: '#0F172A', // Slate 900
+            secondary: '#3B82F6', // Blue 500 
+            accent: '#0EA5E9', // Sky 500
+            lightbg: '#F8FAFC',
           },
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
@@ -25,21 +26,32 @@
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function() {
+      // REPLACE with your actual public key from EmailJS dashboard
+      emailjs.init("BAf2pwUjnfI8AJYg8");
+    })();
+  </script>
 </head>
 
 <body class="bg-white text-gray-800 antialiased overflow-x-hidden font-sans">
 
   <!-- ==================== HEADER ==================== -->
-  <header class="w-full bg-white shadow-sm border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50">
+  <header
+    class="w-full bg-white/80 backdrop-blur-lg shadow-[0_4px_30px_rgba(0,0,0,0.03)] border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50">
     <a href="index.html" class="flex items-center shrink-0 border-none outline-none group">
-      <img src="images/logo.png" alt="PT Gravia Citra Lestari Logo" class="h-10 md:h-12 w-auto object-contain group-hover:opacity-90 transition" />
+      <img src="images/logo.png" alt="PT Gravia Citra Lestari Logo"
+        class="h-10 md:h-12 w-auto object-contain group-hover:opacity-90 transition" />
     </a>
 
     <nav class="hidden md:flex space-x-8 items-center font-medium text-sm">
       <a href="index.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_home">Home</a>
       <a href="about.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_about">About Us</a>
-      <a href="products.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_products">Our Products</a>
-      <a href="our-principals.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_principals">Our Principals</a>
+      <a href="products.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_products">Our
+        Products</a>
+      <a href="our-principals.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_principals">Our
+        Principals</a>
       <a href="contact.html" class="text-primary border-b-2 border-primary pb-1" data-i18n="nav_contact">Contact Us</a>
     </nav>
 
@@ -59,12 +71,14 @@
 
   <!-- ==================== HERO SECTION ==================== -->
   <section class="bg-[#1f3ba2] pt-20 pb-20 px-6 relative">
-    <div class="max-w-[1200px] mx-auto text-left relative z-10 flex flex-col md:flex-row items-start md:items-center space-x-0 md:space-x-6">
+    <div
+      class="max-w-[1200px] mx-auto text-left relative z-10 flex flex-col md:flex-row items-start md:items-center space-x-0 md:space-x-6">
       <div class="mb-4 md:mb-0">
         <i class="fa-solid fa-handshake text-white text-4xl opacity-90"></i>
       </div>
       <div>
-        <h1 class="text-3xl md:text-[40px] tracking-tight font-semibold text-white mb-3" data-i18n="contact_hero_title">Contact Us</h1>
+        <h1 class="text-3xl md:text-[40px] tracking-tight font-semibold text-white mb-3" data-i18n="contact_hero_title">
+          Contact Us</h1>
         <p class="text-blue-100/90 text-[15px] md:text-lg max-w-xl font-light" data-i18n="contact_hero_desc">
           Get in touch with our team for inquiries about our products and services
         </p>
@@ -76,7 +90,8 @@
   <section class="max-w-[1200px] mx-auto px-6 py-16 md:py-24">
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
       <!-- Address -->
-      <div class="bg-white border border-gray-100 rounded-[20px] p-8 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start min-h-[220px]">
+      <div
+        class="bg-white border border-gray-100 rounded-[20px] p-8 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start min-h-[220px]">
         <div class="w-10 h-10 bg-[#ebf0ff] text-[#2b4c9b] rounded-full flex items-center justify-center mb-6">
           <i class="fa-solid fa-location-dot text-lg"></i>
         </div>
@@ -87,7 +102,8 @@
       </div>
 
       <!-- Phone -->
-      <div class="bg-white border border-gray-100 rounded-[20px] p-8 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start min-h-[220px]">
+      <div
+        class="bg-white border border-gray-100 rounded-[20px] p-8 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start min-h-[220px]">
         <div class="w-10 h-10 bg-[#ebf0ff] text-[#2b4c9b] rounded-full flex items-center justify-center mb-6">
           <i class="fa-solid fa-phone text-lg"></i>
         </div>
@@ -96,7 +112,8 @@
       </div>
 
       <!-- Email -->
-      <div class="bg-white border border-gray-100 rounded-[20px] p-8 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start min-h-[220px]">
+      <div
+        class="bg-white border border-gray-100 rounded-[20px] p-8 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start min-h-[220px]">
         <div class="w-10 h-10 bg-[#ebf0ff] text-[#2b4c9b] rounded-full flex items-center justify-center mb-6">
           <i class="fa-solid fa-envelope text-lg"></i>
         </div>
@@ -108,7 +125,8 @@
       </div>
 
       <!-- Hours -->
-      <div class="bg-white border border-gray-100 rounded-[20px] p-8 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start min-h-[220px]">
+      <div
+        class="bg-white border border-gray-100 rounded-[20px] p-8 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start min-h-[220px]">
         <div class="w-10 h-10 bg-[#ebf0ff] text-[#2b4c9b] rounded-full flex items-center justify-center mb-6">
           <i class="fa-solid fa-clock text-lg"></i>
         </div>
@@ -128,60 +146,88 @@
       <!-- Form Side -->
       <div class="flex flex-col">
         <h2 class="text-3xl font-bold text-gray-900 mb-8" data-i18n="form_title">Send Us a Message</h2>
-        <form class="space-y-6">
+        <form id="main-contact-form" class="space-y-6">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="flex flex-col space-y-2">
               <label class="text-[14px] font-semibold text-gray-700" data-i18n="form_name">Full Name *</label>
-              <input type="text" class="bg-[#f3f4f6] border-none rounded-lg px-4 py-3 text-[14px] focus:ring-2 focus:ring-primary outline-none" placeholder="Your full name" data-i18n-placeholder="form_placeholder_name">
+              <input type="text" name="from_name" required
+                class="bg-[#f3f4f6] border-none rounded-lg px-4 py-3 text-[14px] focus:ring-2 focus:ring-primary outline-none"
+                placeholder="Your full name" data-i18n-placeholder="form_placeholder_name">
             </div>
             <div class="flex flex-col space-y-2">
               <label class="text-[14px] font-semibold text-gray-700" data-i18n="form_email">Email Address *</label>
-              <input type="email" class="bg-[#f3f4f6] border-none rounded-lg px-4 py-3 text-[14px] focus:ring-2 focus:ring-primary outline-none" placeholder="your.email@company.com" data-i18n-placeholder="form_placeholder_email">
+              <input type="email" name="reply_to" required
+                class="bg-[#f3f4f6] border-none rounded-lg px-4 py-3 text-[14px] focus:ring-2 focus:ring-primary outline-none"
+                placeholder="your.email@company.com" data-i18n-placeholder="form_placeholder_email">
             </div>
           </div>
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="flex flex-col space-y-2">
-              <label class="text-[14px] font-semibold text-gray-700" data-i18n="form_company">Company/Institution *</label>
-              <input type="text" class="bg-[#f3f4f6] border-none rounded-lg px-4 py-3 text-[14px] focus:ring-2 focus:ring-primary outline-none" placeholder="Your company name" data-i18n-placeholder="form_placeholder_company">
+              <label class="text-[14px] font-semibold text-gray-700" data-i18n="form_company">Company/Institution
+                *</label>
+              <input type="text" name="company" required
+                class="bg-[#f3f4f6] border-none rounded-lg px-4 py-3 text-[14px] focus:ring-2 focus:ring-primary outline-none"
+                placeholder="Your company name" data-i18n-placeholder="form_placeholder_company">
             </div>
             <div class="flex flex-col space-y-2">
               <label class="text-[14px] font-semibold text-gray-700" data-i18n="form_phone">Phone Number</label>
-              <input type="text" class="bg-[#f3f4f6] border-none rounded-lg px-4 py-3 text-[14px] focus:ring-2 focus:ring-primary outline-none" placeholder="+62 xxx xxxx xxxx" data-i18n-placeholder="form_placeholder_phone">
+              <input type="tel" name="phone"
+                class="bg-[#f3f4f6] border-none rounded-lg px-4 py-3 text-[14px] focus:ring-2 focus:ring-primary outline-none"
+                placeholder="+62 xxx xxxx xxxx" data-i18n-placeholder="form_placeholder_phone">
             </div>
           </div>
           <div class="flex flex-col space-y-2">
             <label class="text-[14px] font-semibold text-gray-700" data-i18n="form_subject">Subject *</label>
-            <input type="text" class="bg-[#f3f4f6] border-none rounded-lg px-4 py-3 text-[14px] focus:ring-2 focus:ring-primary outline-none" placeholder="What is your inquiry about?" data-i18n-placeholder="form_placeholder_subject">
+            <input type="text" name="subject" required
+              class="bg-[#f3f4f6] border-none rounded-lg px-4 py-3 text-[14px] focus:ring-2 focus:ring-primary outline-none"
+              placeholder="What is your inquiry about?" data-i18n-placeholder="form_placeholder_subject">
           </div>
           <div class="flex flex-col space-y-2">
             <label class="text-[14px] font-semibold text-gray-700" data-i18n="form_message">Message *</label>
-            <textarea rows="5" class="bg-[#f3f4f6] border-none rounded-lg px-4 py-3 text-[14px] focus:ring-2 focus:ring-primary outline-none resize-none" placeholder="Tell us more about your needs..." data-i18n-placeholder="form_placeholder_message"></textarea>
+            <textarea name="message" rows="5" required
+              class="bg-[#f3f4f6] border-none rounded-lg px-4 py-3 text-[14px] focus:ring-2 focus:ring-primary outline-none resize-none"
+              placeholder="Tell us more about your needs..."
+              data-i18n-placeholder="form_placeholder_message"></textarea>
           </div>
-          <button type="submit" class="w-full bg-[#090b14] hover:bg-gray-800 text-white font-semibold py-4 rounded-lg flex items-center justify-center transition shadow-md">
-            <i class="fa-solid fa-paper-plane mr-3 text-[14px]"></i>
-            <span data-i18n="form_btn">Send Message</span>
+          <button type="submit" id="contact-submit-btn"
+            class="w-full bg-[#090b14] hover:bg-gray-800 text-white font-semibold py-4 rounded-lg flex items-center justify-center transition shadow-md">
+            <i class="fa-solid fa-paper-plane mr-3 text-[14px]" id="contact-submit-icon"></i>
+            <i class="fa-solid fa-circle-notch fa-spin hidden mr-3 text-[14px]" id="contact-loading-icon"></i>
+            <span data-i18n="form_btn" id="contact-submit-text">Send Message</span>
           </button>
         </form>
+        <div id="contact-success" class="hidden mt-6 bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg flex items-center">
+          <i class="fa-solid fa-check-circle mr-3"></i>
+          Your message has been sent. We will get back to you shortly.
+        </div>
       </div>
 
       <!-- Image Side -->
       <div class="hidden lg:block relative">
-        <img src="images/company-building.png" alt="Gravia Office Building" class="w-full h-full object-cover rounded-[32px] shadow-xl" />
+        <img src="images/company-building.png" alt="Gravia Office Building"
+          class="w-full h-full object-cover rounded-[32px] shadow-xl" />
       </div>
     </div>
   </section>
 
   <!-- ==================== PARTNERSHIP BOX ==================== -->
   <section class="max-w-[1200px] mx-auto px-6 pb-24">
-    <div class="bg-white border border-blue-50 rounded-[24px] p-8 md:p-12 shadow-[0_10px_50px_rgba(30,58,138,0.04)] flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-0 md:space-x-10">
-      <div class="w-16 h-16 bg-primary text-white rounded-[16px] flex items-center justify-center shrink-0 shadow-lg shadow-primary/20">
+    <div
+      class="bg-white border border-blue-50 rounded-[24px] p-8 md:p-12 shadow-[0_10px_50px_rgba(30,58,138,0.04)] flex flex-col md:flex-row items-start md:items-center space-y-6 md:space-y-0 md:space-x-10">
+      <div
+        class="w-16 h-16 bg-primary text-white rounded-[16px] flex items-center justify-center shrink-0 shadow-lg shadow-primary/20">
         <i class="fa-solid fa-building-circle-check text-2xl"></i>
       </div>
       <div class="flex flex-col space-y-4">
-        <h3 class="text-xl md:text-2xl font-bold text-gray-900" data-i18n="partnership_title">Domestic Manufacturing Partnership</h3>
+        <h3 class="text-xl md:text-2xl font-bold text-gray-900" data-i18n="partnership_title">Domestic Manufacturing
+          Partnership</h3>
         <div class="text-[15px] text-gray-600 leading-relaxed space-y-4 font-light">
-          <p data-i18n="partnership_p1">We are proud to be an authorized distributor from PT Panatha Citra Lestari and other domestic manufacturers, supporting local medical equipment production while maintaining international quality standards.</p>
-          <p data-i18n="partnership_p2">Our dual approach of working with both international and domestic manufacturers allows us to offer a comprehensive range of products that meet diverse healthcare needs across Indonesia.</p>
+          <p data-i18n="partnership_p1">We are proud to be an authorized distributor from PT Panatha Citra Lestari and
+            other domestic manufacturers, supporting local medical equipment production while maintaining international
+            quality standards.</p>
+          <p data-i18n="partnership_p2">Our dual approach of working with both international and domestic manufacturers
+            allows us to offer a comprehensive range of products that meet diverse healthcare needs across Indonesia.
+          </p>
         </div>
       </div>
     </div>
@@ -191,20 +237,25 @@
   <footer class="bg-primary text-blue-100 pt-16 pb-8 px-6 md:px-12">
     <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
       <div class="col-span-1 md:col-span-1 border-b border-blue-800 pb-8 md:border-0 md:pb-0">
-        <a href="index.html" class="inline-block mb-6 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow hover:shadow-md transition">
+        <a href="index.html"
+          class="inline-block mb-6 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow hover:shadow-md transition">
           <img src="images/logo.png" alt="PT Gravia Citra Lestari Logo" class="h-9 md:h-10 w-auto object-contain" />
         </a>
         <p class="text-sm opacity-80 leading-relaxed mb-6" data-i18n="footer_desc">
-          PT Gravia Citra Lestari provides comprehensive medical solutions, delivering proven technology to elevate healthcare outcomes.
+          PT Gravia Citra Lestari provides comprehensive medical solutions, delivering proven technology to elevate
+          healthcare outcomes.
         </p>
         <div class="flex space-x-4">
-          <a href="#" class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
             <i class="fa-brands fa-linkedin-in"></i>
           </a>
-          <a href="#" class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
             <i class="fa-brands fa-facebook-f"></i>
           </a>
-          <a href="#" class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
+          <a href="#"
+            class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
             <i class="fa-brands fa-instagram"></i>
           </a>
         </div>
@@ -215,7 +266,8 @@
         <ul class="space-y-4 text-sm">
           <li><a href="about.html" class="hover:text-white transition" data-i18n="nav_about">About Us</a></li>
           <li><a href="products.html" class="hover:text-white transition" data-i18n="nav_products">Our Products</a></li>
-          <li><a href="our-principals.html" class="hover:text-white transition" data-i18n="footer_principals">Principals & Partners</a></li>
+          <li><a href="our-principals.html" class="hover:text-white transition" data-i18n="footer_principals">Principals
+              & Partners</a></li>
           <li><a href="contact.html" class="hover:text-white transition" data-i18n="nav_contact">Contact Us</a></li>
         </ul>
       </div>
@@ -231,7 +283,8 @@
       </div>
 
       <div>
-        <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm" data-i18n="contact_details">Contact Details</h4>
+        <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm" data-i18n="contact_details">Contact
+          Details</h4>
         <ul class="space-y-4 text-sm">
           <li class="flex items-start space-x-3">
             <i class="fa-solid fa-map-marker-alt mt-1 shrink-0"></i>
@@ -249,7 +302,8 @@
       </div>
     </div>
 
-    <div class="max-w-7xl mx-auto mt-12 pt-8 border-t border-blue-800 text-sm text-center md:text-left flex flex-col md:flex-row justify-between items-center text-blue-300">
+    <div
+      class="max-w-7xl mx-auto mt-12 pt-8 border-t border-blue-800 text-sm text-center md:text-left flex flex-col md:flex-row justify-between items-center text-blue-300">
       <p data-i18n="rights">&copy; 2024 PT Gravia Citra Lestari. All rights reserved.</p>
       <div class="mt-4 md:mt-0 space-x-4">
         <a href="#" class="hover:text-white" data-i18n="privacy">Privacy Policy</a>

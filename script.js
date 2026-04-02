@@ -321,12 +321,227 @@ window.setLanguage = function (lang) {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
+  // Mobile Menu Generation
+  const mobileMenuHTML = `
+    <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-md z-50 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col pt-20 px-8 shadow-2xl">
+      <button id="close-menu" class="absolute top-6 right-6 text-gray-500 hover:text-primary transition-transform hover:rotate-90">
+        <i class="fa-solid fa-xmark text-3xl"></i>
+      </button>
+      <nav class="flex flex-col space-y-6 text-xl font-medium">
+        <a href="index.html" class="text-gray-800 hover:text-primary hover:translate-x-2 transition-all" data-i18n="nav_home">Home</a>
+        <a href="about.html" class="text-gray-800 hover:text-primary hover:translate-x-2 transition-all" data-i18n="nav_about">About Us</a>
+        <a href="products.html" class="text-gray-800 hover:text-primary hover:translate-x-2 transition-all" data-i18n="nav_products">Our Products</a>
+        <a href="our-principals.html" class="text-gray-800 hover:text-primary hover:translate-x-2 transition-all" data-i18n="nav_principals">Our Principals</a>
+        <a href="contact.html" class="text-gray-800 hover:text-primary hover:translate-x-2 transition-all" data-i18n="nav_contact">Contact Us</a>
+      </nav>
+      <div class="mt-12 flex space-x-6 text-lg">
+        <a id="mobile-lang-id" class="text-gray-500 hover:text-primary cursor-pointer transition">ID</a>
+        <span class="text-gray-300">|</span>
+        <a id="mobile-lang-en" class="text-primary font-bold cursor-pointer transition">EN</a>
+      </div>
+      
+      <div class="mt-auto pb-12 flex space-x-6 justify-center">
+        <a href="#" class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white transition duration-300 shadow-sm"><i class="fa-brands fa-linkedin-in text-xl"></i></a>
+        <a href="#" class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white transition duration-300 shadow-sm"><i class="fa-brands fa-facebook-f text-xl"></i></a>
+        <a href="#" class="w-12 h-12 rounded-full bg-slate-100 flex items-center justify-center text-slate-600 hover:bg-primary hover:text-white transition duration-300 shadow-sm"><i class="fa-brands fa-instagram text-xl"></i></a>
+      </div>
+    </div>
+  `;
+  document.body.insertAdjacentHTML('beforeend', mobileMenuHTML);
+
+  const mobileMenu = document.getElementById('mobile-menu');
+  const closeMenuBtn = document.getElementById('close-menu');
+  const openMenuBtn = document.querySelector('header button.md\\:hidden');
+
+  if (openMenuBtn) {
+    openMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.remove('translate-x-full');
+      document.body.classList.add('overflow-hidden');
+    });
+  }
+
+  if (closeMenuBtn) {
+    closeMenuBtn.addEventListener('click', () => {
+      mobileMenu.classList.add('translate-x-full');
+      document.body.classList.remove('overflow-hidden');
+    });
+  }
+
+  // Mobile language switchers
+  const mobileBtnId = document.getElementById('mobile-lang-id');
+  const mobileBtnEn = document.getElementById('mobile-lang-en');
+
+  if (mobileBtnId) mobileBtnId.addEventListener('click', (e) => { e.preventDefault(); window.setLanguage('id'); });
+  if (mobileBtnEn) mobileBtnEn.addEventListener('click', (e) => { e.preventDefault(); window.setLanguage('en'); });
+
   const btnId = document.getElementById('lang-id');
   const btnEn = document.getElementById('lang-en');
+
+  // Sync active language styles
+  const originalSetLanguage = window.setLanguage;
+  window.setLanguage = function (lang) {
+    originalSetLanguage(lang);
+    if (mobileBtnId && mobileBtnEn) {
+      if (lang === 'id') {
+        mobileBtnId.className = 'text-primary font-bold cursor-pointer transition';
+        mobileBtnEn.className = 'text-gray-500 hover:text-primary cursor-pointer transition';
+      } else {
+        mobileBtnEn.className = 'text-primary font-bold cursor-pointer transition';
+        mobileBtnId.className = 'text-gray-500 hover:text-primary cursor-pointer transition';
+      }
+    }
+  };
 
   if (btnId) btnId.addEventListener('click', (e) => { e.preventDefault(); window.setLanguage('id'); });
   if (btnEn) btnEn.addEventListener('click', (e) => { e.preventDefault(); window.setLanguage('en'); });
 
-  // Set default language on load
-  window.setLanguage('en');
+  // --- Brochure Gated Download Logic ---
+  const downloadBtn = document.getElementById('download-brochure-btn');
+  const brochureModal = document.getElementById('brochure-modal');
+  const brochureModalContent = document.getElementById('brochure-modal-content');
+  const closeModalBtn = document.getElementById('close-modal-btn');
+  const closeSuccessBtn = document.getElementById('close-success-btn');
+  const brochureForm = document.getElementById('brochure-form');
+  const brochureSuccess = document.getElementById('brochure-success');
+  const submitBtnText = document.getElementById('submit-btn-text');
+  const submitLoadingSpinner = document.getElementById('submit-loading-spinner');
+  const submitBrochureBtn = document.getElementById('submit-brochure-btn');
+
+  const openModal = () => {
+    brochureModal.classList.remove('hidden');
+    brochureModal.classList.add('flex');
+    // slight delay for animation
+    setTimeout(() => {
+      brochureModalContent.classList.remove('scale-95', 'opacity-0', 'pointer-events-none');
+      brochureModalContent.classList.add('scale-100', 'opacity-100');
+    }, 10);
+  };
+
+  const closeModal = () => {
+    brochureModalContent.classList.remove('scale-100', 'opacity-100');
+    brochureModalContent.classList.add('scale-95', 'opacity-0', 'pointer-events-none');
+    setTimeout(() => {
+      brochureModal.classList.add('hidden');
+      brochureModal.classList.remove('flex');
+      // Reset form view if closed
+      brochureForm.reset();
+      brochureForm.classList.remove('hidden');
+      brochureSuccess.classList.add('hidden');
+      brochureSuccess.classList.remove('flex');
+    }, 300);
+  };
+
+  if (downloadBtn) {
+    downloadBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      openModal();
+    });
+  }
+
+  if (closeModalBtn) {
+    closeModalBtn.addEventListener('click', closeModal);
+  }
+
+  if (closeSuccessBtn) {
+    closeSuccessBtn.addEventListener('click', closeModal);
+  }
+
+  // Close modal when clicking outside
+  if (brochureModal) {
+    brochureModal.addEventListener('click', (e) => {
+      if (e.target === brochureModal) {
+        closeModal();
+      }
+    });
+  }
+
+  // Handle form submission via EmailJS
+  if (brochureForm) {
+    brochureForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      // Check if EmailJS is defined
+      if (typeof emailjs === 'undefined') {
+        alert("EmailJS is not loaded yet.");
+        return;
+      }
+
+      // UI Loading state
+      submitBtnText.textContent = "Sending...";
+      submitLoadingSpinner.classList.remove('hidden');
+      submitBrochureBtn.disabled = true;
+      submitBrochureBtn.classList.add('opacity-70', 'cursor-not-allowed');
+
+      // Send to EmailJS 
+      // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with actual EmailJS IDs
+      emailjs.sendForm('service_n73js47', 'template_ddjbtfs', this)
+        .then(() => {
+          // Success
+          brochureForm.classList.add('hidden');
+          brochureSuccess.classList.remove('hidden');
+          brochureSuccess.classList.add('flex');
+
+          // Trigger the download automatically
+          const hiddenLink = document.getElementById('hidden-download-link');
+          if (hiddenLink) hiddenLink.click();
+        }, (error) => {
+          // Error
+          alert('Failed to send request. ' + JSON.stringify(error));
+        })
+        .finally(() => {
+          // Reset UI state
+          submitBtnText.textContent = "Submit & Download";
+          submitLoadingSpinner.classList.add('hidden');
+          submitBrochureBtn.disabled = false;
+          submitBrochureBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+        });
+    });
+  }
+
+  // Handle main contact form submission via EmailJS
+  const contactForm = document.getElementById('main-contact-form');
+  const contactSubmitBtn = document.getElementById('contact-submit-btn');
+  const contactSubmitText = document.getElementById('contact-submit-text');
+  const contactSubmitIcon = document.getElementById('contact-submit-icon');
+  const contactLoadingIcon = document.getElementById('contact-loading-icon');
+  const contactSuccess = document.getElementById('contact-success');
+
+  if (contactForm) {
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      if (typeof emailjs === 'undefined') {
+        alert("EmailJS is not loaded yet.");
+        return;
+      }
+
+      // UI Loading state
+      contactSubmitText.textContent = "Sending...";
+      if (contactSubmitIcon) contactSubmitIcon.classList.add('hidden');
+      if (contactLoadingIcon) contactLoadingIcon.classList.remove('hidden');
+      contactSubmitBtn.disabled = true;
+      contactSubmitBtn.classList.add('opacity-70', 'cursor-not-allowed');
+
+      // Send to EmailJS
+      emailjs.sendForm('service_n73js47', 'template_ddjbtfs', this)
+        .then(() => {
+          // Success
+          contactForm.reset();
+          contactForm.classList.add('hidden');
+          if (contactSuccess) contactSuccess.classList.remove('hidden');
+        }, (error) => {
+          // Error
+          alert('Failed to send message. ' + JSON.stringify(error));
+        })
+        .finally(() => {
+          // Reset UI state
+          contactSubmitText.textContent = "Send Message";
+          if (contactSubmitIcon) contactSubmitIcon.classList.remove('hidden');
+          if (contactLoadingIcon) contactLoadingIcon.classList.add('hidden');
+          contactSubmitBtn.disabled = false;
+          contactSubmitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+        });
+    });
+  }
+
 });

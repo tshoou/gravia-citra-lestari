@@ -12,9 +12,10 @@
       theme: {
         extend: {
           colors: {
-            primary: '#1E3A8A', // Dark blue from the design
-            secondary: '#3B82F6', // Lighter blue accent
-            lightbg: '#F4F7FB', // Very light cool background for vision section
+            primary: '#0F172A', // Slate 900
+            secondary: '#3B82F6', // Blue 500 
+            accent: '#0EA5E9', // Sky 500
+            lightbg: '#F8FAFC',
           },
           fontFamily: {
             sans: ['Inter', 'sans-serif'],
@@ -30,7 +31,7 @@
 <body class="bg-white text-gray-800 antialiased overflow-x-hidden font-sans">
 
   <!-- ==================== HEADER ==================== -->
-  <header class="w-full bg-white shadow-sm border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50">
+  <header class="w-full bg-white/80 backdrop-blur-lg shadow-[0_4px_30px_rgba(0,0,0,0.03)] border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50">
     <a href="index.html" class="flex items-center shrink-0 border-none outline-none group">
       <img src="images/logo.png" alt="PT Gravia Citra Lestari Logo" class="h-10 md:h-12 w-auto object-contain group-hover:opacity-90 transition" />
     </a>
@@ -58,7 +59,7 @@
   </header>
 
   <!-- ==================== ABOUT HERO ==================== -->
-  <section class="bg-[#1c378e] pt-20 pb-24 px-6 relative">
+  <section class="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-20 pb-24 px-6 relative">
     <div class="max-w-[1200px] mx-auto text-left relative z-10">
       <h1 class="text-4xl md:text-5xl font-semibold text-white mb-6" data-i18n="about_hero_title">About Us</h1>
       <p class="text-blue-100/90 text-[17px] md:text-lg max-w-xl font-light" data-i18n="about_hero_desc">

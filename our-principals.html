@@ -24,7 +24,9 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600&family=Oswald:wght@600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
@@ -54,6 +56,9 @@
         <span class="text-gray-300">|</span>
         <a id="lang-en" class="text-primary font-bold cursor-pointer transition">EN</a>
       </div>
+      <button class="text-gray-600 hover:text-primary">
+        <i class="fa-solid fa-search"></i>
+      </button>
     </div>
 
     <!-- Mobile Menu Button -->
@@ -63,19 +68,12 @@
   </header>
 
   <!-- ==================== HERO SECTION ==================== -->
-  <section class="bg-[#1f3ba2] pt-20 pb-20 px-6 relative">
-    <div
-      class="max-w-[1200px] mx-auto text-left relative z-10 flex flex-col md:flex-row items-start md:items-center space-x-0 md:space-x-6">
-      <div class="mb-4 md:mb-0">
-        <i class="fa-solid fa-handshake text-white text-4xl opacity-90"></i>
-      </div>
-      <div>
-        <h1 class="text-3xl md:text-[40px] tracking-tight font-semibold text-white mb-3" data-i18n="princ_hero_title">
-          Our Principals</h1>
-        <p class="text-blue-100/90 text-[15px] md:text-lg max-w-xl font-light" data-i18n="princ_hero_desc">
-          Partnering with leading medical equipment manufacturers worldwide
-        </p>
-      </div>
+  <section class="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-20 pb-24 px-6 relative">
+    <div class="max-w-[1200px] mx-auto text-left relative z-10">
+      <h1 class="text-4xl md:text-5xl font-semibold text-white mb-6" data-i18n="princ_hero_title">Our Principals</h1>
+      <p class="text-blue-100/90 text-[17px] md:text-lg max-w-xl font-light" data-i18n="princ_hero_desc">
+        Partnering with leading medical equipment manufacturers worldwide
+      </p>
     </div>
   </section>
 
@@ -97,7 +95,94 @@
 
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
-      <!-- Card 1 -->
+      <!-- PT Panatha Citra Lestari (Highlighted) -->
+      <div
+        class="bg-blue-50 border-2 border-blue-200 hover:border-blue-400 transition duration-300 rounded-[20px] p-7 shadow-sm flex flex-col items-start text-left md:col-span-2 lg:col-span-3 transform hover:-translate-y-1">
+        <div class="flex items-center space-x-6 mb-6">
+          <div class="bg-white p-3 rounded-xl shadow-sm">
+            <img src="images/panatha.png" alt="PT Panatha Citra Lestari logo" class="w-auto h-12 object-contain" />
+          </div>
+          <h3 class="text-xl md:text-2xl font-bold text-gray-900 leading-tight">PT Panatha Citra Lestari</h3>
+        </div>
+        <div class="flex items-center justify-between w-full mb-6">
+          <div class="flex items-center text-gray-600 text-[14px]">
+            <i class="fa-solid fa-location-dot mr-2 text-blue-600"></i>
+            <span data-i18n="loc_indonesia">Indonesia</span>
+          </div>
+          <span
+            class="inline-block border border-blue-200 text-blue-800 bg-white text-[12px] font-semibold px-3 py-1 rounded"
+            data-i18n="reg_indo">Indonesia</span>
+        </div>
+        <div class="w-full mt-auto">
+          <p class="text-[12px] font-semibold tracking-wide text-gray-500 mb-2 uppercase" data-i18n="lbl_products">
+            Products:</p>
+          <div class="flex flex-wrap gap-2">
+            <span
+              class="bg-white border border-blue-100 shadow-sm text-blue-900 text-[13px] font-medium px-4 py-2 rounded-md"
+              data-i18n="tag_local_med">Local Medical Equipment</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- TULIP DIAGNOSTICS -->
+      <div
+        class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
+        <div class="flex items-start space-x-4 mb-6">
+          <div
+            class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
+            <i class="fa-solid fa-building text-xl"></i>
+          </div>
+          <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">TULIP DIAGNOSTICS (P) LTD.</h3>
+        </div>
+        <div class="flex items-center justify-between w-full mb-6">
+          <div class="flex items-center text-gray-500 text-[13px]">
+            <i class="fa-solid fa-location-dot mr-2"></i>
+            <span data-i18n="loc_india">Indonesia</span>
+          </div>
+          <span
+            class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded"
+            data-i18n="reg_asia">Asia</span>
+        </div>
+        <div class="w-full mt-auto">
+          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">
+            Products:</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
+              data-i18n="tag_diagnostics">In-Vitro Diagnostics</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bio Instant -->
+      <div
+        class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
+        <div class="flex items-start space-x-4 mb-6">
+          <div
+            class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
+            <i class="fa-solid fa-building text-xl"></i>
+          </div>
+          <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">Bio Instant</h3>
+        </div>
+        <div class="flex items-center justify-between w-full mb-6">
+          <div class="flex items-center text-gray-500 text-[13px]">
+            <i class="fa-solid fa-location-dot mr-2"></i>
+            <span data-i18n="loc_spain">Spain</span>
+          </div>
+          <span
+            class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded"
+            data-i18n="reg_europe">Europe</span>
+        </div>
+        <div class="w-full mt-auto">
+          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">
+            Products:</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
+              data-i18n="tag_medical">Medical Tests & Devices</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Ugaiya -->
       <div
         class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
         <div class="flex items-start space-x-4 mb-6">
@@ -122,219 +207,6 @@
           <div class="flex flex-wrap gap-2">
             <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
               data-i18n="tag_centrifuge">Centrifuge</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div
-        class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
-        <div class="flex items-start space-x-4 mb-6">
-          <div
-            class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
-            <i class="fa-solid fa-building text-xl"></i>
-          </div>
-          <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">Anhui Wensheng Medical Material Co. Ltd
-          </h3>
-        </div>
-        <div class="flex items-center justify-between w-full mb-6">
-          <div class="flex items-center text-gray-500 text-[13px]">
-            <i class="fa-solid fa-location-dot mr-2"></i>
-            <span data-i18n="loc_china">China</span>
-          </div>
-          <span
-            class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded"
-            data-i18n="reg_asia">Asia</span>
-        </div>
-        <div class="w-full mt-auto">
-          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">
-            Products:</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
-              data-i18n="tag_disposal">Disposal Viral Transport Tube</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div
-        class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
-        <div class="flex items-start space-x-4 mb-6">
-          <div
-            class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
-            <i class="fa-solid fa-building text-xl"></i>
-          </div>
-          <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">Shenyang RMS Medical Tech Co. Ltd</h3>
-        </div>
-        <div class="flex items-center justify-between w-full mb-6">
-          <div class="flex items-center text-gray-500 text-[13px]">
-            <i class="fa-solid fa-location-dot mr-2"></i>
-            <span data-i18n="loc_china">China</span>
-          </div>
-          <span
-            class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded"
-            data-i18n="reg_asia">Asia</span>
-        </div>
-        <div class="w-full mt-auto">
-          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">
-            Products:</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
-              data-i18n="tag_hiflow">HiFlow Nasal Cannula</span>
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
-              data-i18n="tag_humid_bm">Humid BM</span>
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
-              data-i18n="tag_humid_bh">Humid BH</span>
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
-              data-i18n="tag_humid_bhr">Humid BHR</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div
-        class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
-        <div class="flex items-start space-x-4 mb-6">
-          <div
-            class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
-            <i class="fa-solid fa-building text-xl"></i>
-          </div>
-          <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">Zhejiang Heli Refrigeration Equipment
-            Co. Ltd</h3>
-        </div>
-        <div class="flex items-center justify-between w-full mb-6">
-          <div class="flex items-center text-gray-500 text-[13px]">
-            <i class="fa-solid fa-location-dot mr-2"></i>
-            <span data-i18n="loc_china">China</span>
-          </div>
-          <span
-            class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded"
-            data-i18n="reg_asia">Asia</span>
-        </div>
-        <div class="w-full mt-auto">
-          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">
-            Products:</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
-              data-i18n="tag_bb_ref">Blood Bank Refrigerator & Freezer</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div
-        class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
-        <div class="flex items-start space-x-4 mb-6">
-          <div
-            class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
-            <i class="fa-solid fa-building text-xl"></i>
-          </div>
-          <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">Guangdong Iceco Enterprise Co. Ltd</h3>
-        </div>
-        <div class="flex items-center justify-between w-full mb-6">
-          <div class="flex items-center text-gray-500 text-[13px]">
-            <i class="fa-solid fa-location-dot mr-2"></i>
-            <span data-i18n="loc_china">China</span>
-          </div>
-          <span
-            class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded"
-            data-i18n="reg_asia">Asia</span>
-        </div>
-        <div class="w-full mt-auto">
-          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">
-            Products:</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
-              data-i18n="tag_comp_ref">Compressor Refrigerator</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div
-        class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
-        <div class="flex items-start space-x-4 mb-6">
-          <div
-            class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
-            <i class="fa-solid fa-building text-xl"></i>
-          </div>
-          <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">Shanghai BOYU Purifying Technology Co.
-            Ltd</h3>
-        </div>
-        <div class="flex items-center justify-between w-full mb-6">
-          <div class="flex items-center text-gray-500 text-[13px]">
-            <i class="fa-solid fa-location-dot mr-2"></i>
-            <span data-i18n="loc_china">China</span>
-          </div>
-          <span
-            class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded"
-            data-i18n="reg_asia">Asia</span>
-        </div>
-        <div class="w-full mt-auto">
-          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">
-            Products:</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
-              data-i18n="tag_hp_steril">Hydrogen Peroxide Sterilizer</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 7 -->
-      <div
-        class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
-        <div class="flex items-start space-x-4 mb-6">
-          <div
-            class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
-            <i class="fa-solid fa-building text-xl"></i>
-          </div>
-          <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">Jiangsu Kangjian Medical Apparatus Co.
-            Ltd</h3>
-        </div>
-        <div class="flex items-center justify-between w-full mb-6">
-          <div class="flex items-center text-gray-500 text-[13px]">
-            <i class="fa-solid fa-location-dot mr-2"></i>
-            <span data-i18n="loc_china">China</span>
-          </div>
-          <span
-            class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded"
-            data-i18n="reg_asia">Asia</span>
-        </div>
-        <div class="w-full mt-auto">
-          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">
-            Products:</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
-              data-i18n="tag_virus_col">Virus Collection & Preservation System</span>
-          </div>
-        </div>
-      </div>
-
-      <!-- Card 8 -->
-      <div
-        class="bg-white border border-gray-100 hover:border-gray-300 transition duration-300 rounded-[20px] p-7 shadow-[0_4px_25px_rgba(0,0,0,0.02)] flex flex-col items-start text-left hover:-translate-y-1">
-        <div class="flex items-start space-x-4 mb-6">
-          <div
-            class="flex-shrink-0 w-12 h-12 bg-[#ebf0ff] text-[#2b4c9b] rounded-[10px] flex items-center justify-center">
-            <i class="fa-solid fa-building text-xl"></i>
-          </div>
-          <h3 class="text-[17px] font-semibold text-gray-900 leading-tight pr-2">PT Panatha Citra Lestari</h3>
-        </div>
-        <div class="flex items-center justify-between w-full mb-6">
-          <div class="flex items-center text-gray-500 text-[13px]">
-            <i class="fa-solid fa-location-dot mr-2"></i>
-            <span data-i18n="loc_indonesia">Indonesia</span>
-          </div>
-          <span
-            class="inline-block border border-gray-200 text-gray-700 bg-white text-[11px] font-medium px-3 py-1 rounded"
-            data-i18n="reg_indo">Indonesia</span>
-        </div>
-        <div class="w-full mt-auto">
-          <p class="text-[11px] font-medium tracking-wide text-gray-400 mb-2 uppercase" data-i18n="lbl_products">
-            Products:</p>
-          <div class="flex flex-wrap gap-2">
-            <span class="bg-[#f4f5f7] text-gray-700 text-[12px] font-medium px-3 py-1.5 rounded-md"
-              data-i18n="tag_local_med">Local Medical Equipment</span>
           </div>
         </div>
       </div>
@@ -384,10 +256,9 @@
       <div>
         <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm" data-i18n="footer_products">Products</h4>
         <ul class="space-y-4 text-sm">
-          <li><a href="#" class="hover:text-white transition" data-i18n="med_freezers">Medical Freezers</a></li>
-          <li><a href="#" class="hover:text-white transition" data-i18n="centrifuges">Centrifuges</a></li>
-          <li><a href="#" class="hover:text-white transition" data-i18n="autoclaves">Autoclaves</a></li>
-          <li><a href="#" class="hover:text-white transition" data-i18n="surgical_inst">Surgical Instruments</a></li>
+          <li><a href="products.html" class="hover:text-white transition" data-i18n="cat_blood_bank">Blood Bank & Immunohematology Solutions</a></li>
+          <li><a href="products.html" class="hover:text-white transition" data-i18n="cat_ivd">Rapid Diagnostic Tests (IVD)</a></li>
+          <li><a href="products.html" class="hover:text-white transition" data-i18n="cat_centrifuges">Clinical & Research Centrifuges</a></li>
         </ul>
       </div>
 
@@ -397,15 +268,16 @@
         <ul class="space-y-4 text-sm">
           <li class="flex items-start space-x-3">
             <i class="fa-solid fa-map-marker-alt mt-1 shrink-0"></i>
-            <span data-i18n="address">Gedung Gravia, Plaza Business Park Blok B2 No.1, Jakarta, Indonesia</span>
+            <span data-i18n="address">Jl. Wolter Monginsidi No.84AH, RT.1/RW.4, Petogogan, Kebayoran Baru, South Jakarta
+              City, Jakarta 12170</span>
           </li>
           <li class="flex items-center space-x-3">
             <i class="fa-solid fa-phone shrink-0"></i>
-            <span>+62 123 4567 890</span>
+            <span>(62) 811-952-4689</span>
           </li>
           <li class="flex items-center space-x-3">
             <i class="fa-solid fa-envelope shrink-0"></i>
-            <span>info@graviacitra.com</span>
+            <span>graviacitralestari@gmail.com</span>
           </li>
         </ul>
       </div>

@@ -24,7 +24,9 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600&family=Oswald:wght@600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     /* Hide scrollbar for category tabs */
@@ -67,6 +69,9 @@
         <span class="text-gray-300">|</span>
         <a id="lang-en" class="text-primary font-bold cursor-pointer transition">EN</a>
       </div>
+      <button class="text-gray-600 hover:text-primary">
+        <i class="fa-solid fa-search"></i>
+      </button>
     </div>
 
     <!-- Mobile Menu Button -->
@@ -76,11 +81,10 @@
   </header>
 
   <!-- ==================== HERO SECTION ==================== -->
-  <section class="bg-[#213e9a] pt-20 pb-20 px-6 relative">
+  <section class="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-20 pb-24 px-6 relative">
     <div class="max-w-[1200px] mx-auto text-left relative z-10">
-      <h1 class="text-4xl md:text-[44px] tracking-tight font-semibold text-white mb-5" data-i18n="prod_page_title">Our
-        Products</h1>
-      <p class="text-blue-100/90 text-[16px] md:text-lg max-w-xl font-light leading-relaxed" data-i18n="prod_page_desc">
+      <h1 class="text-4xl md:text-5xl font-semibold text-white mb-6" data-i18n="prod_page_title">Our Products</h1>
+      <p class="text-blue-100/90 text-[17px] md:text-lg max-w-xl font-light" data-i18n="prod_page_desc">
         Explore our comprehensive range of blood transfusion instruments and medical equipment
       </p>
     </div>
@@ -89,16 +93,19 @@
   <!-- ==================== CATEGORY TABS ==================== -->
   <section class="bg-white border-b border-gray-100">
     <div class="max-w-[1200px] mx-auto px-6 py-6 md:py-8">
-      <div class="flex overflow-x-auto hide-scrollbar space-x-3 pb-2 md:pb-0">
+      <div class="flex overflow-x-auto hide-scrollbar space-x-3 pb-2 md:pb-0" id="categoryFilter">
         <button
-          class="whitespace-nowrap bg-black text-white px-7 py-2.5 rounded-[14px] text-sm font-semibold transition hover:bg-black/80 flex-shrink-0"
-          data-i18n="cat_all">All Products</button>
+          class="category-btn active whitespace-nowrap bg-[#0E162A] text-white px-7 py-2.5 rounded-[14px] text-sm font-semibold transition hover:bg-opacity-90 flex-shrink-0"
+          data-category="all" data-i18n="cat_all">All Products</button>
         <button
-          class="whitespace-nowrap bg-white border border-gray-200 text-gray-700 px-6 py-2.5 rounded-[14px] text-sm font-medium transition hover:border-gray-400 hover:text-gray-900 flex-shrink-0"
-          data-i18n="cat_blood">Incubator</button>
+          class="category-btn whitespace-nowrap bg-white border border-gray-200 text-gray-700 px-6 py-2.5 rounded-[14px] text-sm font-medium transition hover:border-gray-400 hover:text-gray-900 flex-shrink-0"
+          data-category="blood-bank" data-i18n="cat_blood_bank">Blood Bank & Immunohematology Solutions</button>
         <button
-          class="whitespace-nowrap bg-white border border-gray-200 text-gray-700 px-6 py-2.5 rounded-[14px] text-sm font-medium transition hover:border-gray-400 hover:text-gray-900 flex-shrink-0"
-          data-i18n="cat_lab">Gel Card System</button>
+          class="category-btn whitespace-nowrap bg-white border border-gray-200 text-gray-700 px-6 py-2.5 rounded-[14px] text-sm font-medium transition hover:border-gray-400 hover:text-gray-900 flex-shrink-0"
+          data-category="ivd" data-i18n="cat_ivd">Rapid Diagnostic Tests (IVD)</button>
+        <button
+          class="category-btn whitespace-nowrap bg-white border border-gray-200 text-gray-700 px-6 py-2.5 rounded-[14px] text-sm font-medium transition hover:border-gray-400 hover:text-gray-900 flex-shrink-0"
+          data-category="centrifuges" data-i18n="cat_centrifuges">Clinical & Research Centrifuges</button>
       </div>
     </div>
   </section>
@@ -110,22 +117,22 @@
 
         <!-- PRODUCT CARD 1 -->
         <div
-          class="bg-white rounded-[28px] border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition duration-300">
+          class="product-item bg-white rounded-[28px] border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition duration-300"
+          data-category="blood-bank">
           <div class="flex justify-center items-center py-10 px-8 h-[280px]">
-            <img src="images/centrifuge-product.png" alt="Centrifuge"
+            <img src="images/centrifuge-product.png" alt="General Purpose Benchtop Centrifuges"
               class="h-[180px] md:h-full object-contain mix-blend-multiply drop-shadow-lg" />
           </div>
           <div class="p-8 flex flex-col flex-1 border-t border-gray-50">
-            <span class="text-[#2b4c9b] text-[13px] font-semibold mb-2" data-i18n="lbl_blood_bank">Blood Bank
-              Equipment</span>
-            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="prod_centrifuge">Centrifuge</h3>
-            <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-1 line-clamp-3"
-              data-i18n="prod_centrifuge_desc">
-              We hold all legally required business licenses for dealing in Healthcare and Aesthetic products within the
-              Indonesian market.
+            <span class="text-[#2b4c9b] text-[13px] font-semibold mb-2" data-i18n="cat_blood_bank">Blood Bank &
+              Immunohematology Solutions</span>
+            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="prod_gel_system">Panatha Gel Card System</h3>
+            <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-1 line-clamp-3" data-i18n="prod_gel_desc">
+              A microcolumn gel technology system used for the determination of blood groups and detection of red cell
+              sensitization.
             </p>
             <a href="product-detail.html"
-              class="block w-full text-center bg-slate-900 hover:bg-blue-600 shadow-md hover:shadow-xl transform hover:-translate-y-1 text-white text-[14px] font-semibold py-3.5 rounded-xl transition shadow-md">
+              class="block w-full text-center bg-[#0E162A] hover:bg-opacity-90 shadow-md hover:shadow-lg transform hover:-translate-y-1 text-white text-[14px] font-semibold py-3.5 rounded-xl transition">
               <span data-i18n="view_detail">View Details</span>
               <i class="fa-solid fa-arrow-right ml-2 text-[11px]"></i>
             </a>
@@ -134,22 +141,24 @@
 
         <!-- PRODUCT CARD 2 -->
         <div
-          class="bg-white rounded-[28px] border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition duration-300">
+          class="product-item bg-white rounded-[28px] border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition duration-300"
+          data-category="blood-bank">
           <div class="flex justify-center items-center py-10 px-8 h-[280px]">
-            <img src="images/centrifuge-product.png" alt="Centrifuge"
+            <img src="images/centrifuge-product.png" alt="General Purpose Benchtop Centrifuges"
               class="h-[180px] md:h-full object-contain mix-blend-multiply drop-shadow-lg" />
           </div>
           <div class="p-8 flex flex-col flex-1 border-t border-gray-50">
-            <span class="text-[#2b4c9b] text-[13px] font-semibold mb-2" data-i18n="lbl_blood_bank">Blood Bank
-              Equipment</span>
-            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="prod_centrifuge">Centrifuge</h3>
+            <span class="text-[#2b4c9b] text-[13px] font-semibold mb-2" data-i18n="cat_blood_bank">Blood Bank &
+              Immunohematology Solutions</span>
+            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="prod_incubator">Platelet Incubator & Agitator
+            </h3>
             <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-1 line-clamp-3"
-              data-i18n="prod_centrifuge_desc">
-              We hold all legally required business licenses for dealing in Healthcare and Aesthetic products within the
-              Indonesian market.
+              data-i18n="prod_incubator_desc">
+              A temperature-controlled storage unit (21°C ~ 23°C) with constant horizontal oscillation to maintain
+              platelet viability.
             </p>
             <a href="product-detail.html"
-              class="block w-full text-center bg-slate-900 hover:bg-blue-600 shadow-md hover:shadow-xl transform hover:-translate-y-1 text-white text-[14px] font-semibold py-3.5 rounded-xl transition shadow-md">
+              class="block w-full text-center bg-[#0E162A] hover:bg-opacity-90 shadow-md hover:shadow-lg transform hover:-translate-y-1 text-white text-[14px] font-semibold py-3.5 rounded-xl transition">
               <span data-i18n="view_detail">View Details</span>
               <i class="fa-solid fa-arrow-right ml-2 text-[11px]"></i>
             </a>
@@ -158,22 +167,24 @@
 
         <!-- PRODUCT CARD 3 -->
         <div
-          class="bg-white rounded-[28px] border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition duration-300">
+          class="product-item bg-white rounded-[28px] border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition duration-300"
+          data-category="blood-bank">
           <div class="flex justify-center items-center py-10 px-8 h-[280px]">
-            <img src="images/centrifuge-product.png" alt="Centrifuge"
+            <img src="images/centrifuge-product.png" alt="Blood Bag Refrigerated Centrifuge"
               class="h-[180px] md:h-full object-contain mix-blend-multiply drop-shadow-lg" />
           </div>
           <div class="p-8 flex flex-col flex-1 border-t border-gray-50">
-            <span class="text-[#2b4c9b] text-[13px] font-semibold mb-2" data-i18n="lbl_blood_bank">Blood Bank
-              Equipment</span>
-            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="prod_centrifuge">Centrifuge</h3>
+            <span class="text-[#2b4c9b] text-[13px] font-semibold mb-2" data-i18n="cat_blood_bank">Blood Bank &
+              Immunohematology Solutions</span>
+            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="prod_blood_bag_centrifuge">Blood Bag
+              Refrigerated Centrifuge</h3>
             <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-1 line-clamp-3"
-              data-i18n="prod_centrifuge_desc">
-              We hold all legally required business licenses for dealing in Healthcare and Aesthetic products within the
-              Indonesian market.
+              data-i18n="prod_blood_bag_desc">
+              High-capacity smart centrifuges designed for blood component separation with environmentally friendly
+              cooling systems.
             </p>
             <a href="product-detail.html"
-              class="block w-full text-center bg-slate-900 hover:bg-blue-600 shadow-md hover:shadow-xl transform hover:-translate-y-1 text-white text-[14px] font-semibold py-3.5 rounded-xl transition shadow-md">
+              class="block w-full text-center bg-[#0E162A] hover:bg-opacity-90 shadow-md hover:shadow-lg transform hover:-translate-y-1 text-white text-[14px] font-semibold py-3.5 rounded-xl transition">
               <span data-i18n="view_detail">View Details</span>
               <i class="fa-solid fa-arrow-right ml-2 text-[11px]"></i>
             </a>
@@ -182,22 +193,23 @@
 
         <!-- PRODUCT CARD 4 -->
         <div
-          class="bg-white rounded-[28px] border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition duration-300">
+          class="product-item bg-white rounded-[28px] border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition duration-300"
+          data-category="ivd">
           <div class="flex justify-center items-center py-10 px-8 h-[280px]">
-            <img src="images/centrifuge-product.png" alt="Centrifuge"
+            <img src="images/centrifuge-product.png" alt="General Purpose Benchtop Centrifuges"
               class="h-[180px] md:h-full object-contain mix-blend-multiply drop-shadow-lg" />
           </div>
           <div class="p-8 flex flex-col flex-1 border-t border-gray-50">
-            <span class="text-[#2b4c9b] text-[13px] font-semibold mb-2" data-i18n="lbl_blood_bank">Blood Bank
-              Equipment</span>
-            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="prod_centrifuge">Centrifuge</h3>
-            <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-1 line-clamp-3"
-              data-i18n="prod_centrifuge_desc">
-              We hold all legally required business licenses for dealing in Healthcare and Aesthetic products within the
-              Indonesian market.
+            <span class="text-[#2b4c9b] text-[13px] font-semibold mb-2" data-i18n="cat_ivd">Rapid Diagnostic Tests
+              (IVD)</span>
+            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="prod_virdict_4">Virdict 4 Combo Integrated Test
+            </h3>
+            <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-1 line-clamp-3" data-i18n="prod_virdict_desc">
+              A rapid immunochromatographic test for simultaneous detection of HBsAg and antibodies to HIV, HCV, and
+              Syphilis.
             </p>
             <a href="product-detail.html"
-              class="block w-full text-center bg-slate-900 hover:bg-blue-600 shadow-md hover:shadow-xl transform hover:-translate-y-1 text-white text-[14px] font-semibold py-3.5 rounded-xl transition shadow-md">
+              class="block w-full text-center bg-[#0E162A] hover:bg-opacity-90 shadow-md hover:shadow-lg transform hover:-translate-y-1 text-white text-[14px] font-semibold py-3.5 rounded-xl transition">
               <span data-i18n="view_detail">View Details</span>
               <i class="fa-solid fa-arrow-right ml-2 text-[11px]"></i>
             </a>
@@ -206,22 +218,23 @@
 
         <!-- PRODUCT CARD 5 -->
         <div
-          class="bg-white rounded-[28px] border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition duration-300">
+          class="product-item bg-white rounded-[28px] border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition duration-300"
+          data-category="ivd">
           <div class="flex justify-center items-center py-10 px-8 h-[280px]">
-            <img src="images/centrifuge-product.png" alt="Centrifuge"
+            <img src="images/centrifuge-product.png" alt="General Purpose Benchtop Centrifuges"
               class="h-[180px] md:h-full object-contain mix-blend-multiply drop-shadow-lg" />
           </div>
           <div class="p-8 flex flex-col flex-1 border-t border-gray-50">
-            <span class="text-[#2b4c9b] text-[13px] font-semibold mb-2" data-i18n="lbl_blood_bank">Blood Bank
-              Equipment</span>
-            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="prod_centrifuge">Centrifuge</h3>
-            <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-1 line-clamp-3"
-              data-i18n="prod_centrifuge_desc">
-              We hold all legally required business licenses for dealing in Healthcare and Aesthetic products within the
-              Indonesian market.
+            <span class="text-[#2b4c9b] text-[13px] font-semibold mb-2" data-i18n="cat_ivd">Rapid Diagnostic Tests
+              (IVD)</span>
+            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="prod_bio_instant">Bio-Instant Multi-Drug Rapid
+              Test</h3>
+            <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-1 line-clamp-3" data-i18n="prod_bio_desc">
+              Urine-based screening panels for the simultaneous detection of multiple drug classes and their
+              metabolites.
             </p>
             <a href="product-detail.html"
-              class="block w-full text-center bg-slate-900 hover:bg-blue-600 shadow-md hover:shadow-xl transform hover:-translate-y-1 text-white text-[14px] font-semibold py-3.5 rounded-xl transition shadow-md">
+              class="block w-full text-center bg-[#0E162A] hover:bg-opacity-90 shadow-md hover:shadow-lg transform hover:-translate-y-1 text-white text-[14px] font-semibold py-3.5 rounded-xl transition">
               <span data-i18n="view_detail">View Details</span>
               <i class="fa-solid fa-arrow-right ml-2 text-[11px]"></i>
             </a>
@@ -230,22 +243,24 @@
 
         <!-- PRODUCT CARD 6 -->
         <div
-          class="bg-white rounded-[28px] border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition duration-300">
+          class="product-item bg-white rounded-[28px] border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition duration-300"
+          data-category="centrifuges">
           <div class="flex justify-center items-center py-10 px-8 h-[280px]">
-            <img src="images/centrifuge-product.png" alt="Centrifuge"
+            <img src="images/centrifuge-product.png" alt="Specialty Clinical Centrifuges"
               class="h-[180px] md:h-full object-contain mix-blend-multiply drop-shadow-lg" />
           </div>
           <div class="p-8 flex flex-col flex-1 border-t border-gray-50">
-            <span class="text-[#2b4c9b] text-[13px] font-semibold mb-2" data-i18n="lbl_blood_bank">Blood Bank
-              Equipment</span>
-            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="prod_centrifuge">Centrifuge</h3>
+            <span class="text-[#2b4c9b] text-[13px] font-semibold mb-2" data-i18n="cat_centrifuges">Clinical & Research
+              Centrifuges</span>
+            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="prod_specialty_centrifuge">Specialty Clinical
+              Centrifuges</h3>
             <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-1 line-clamp-3"
-              data-i18n="prod_centrifuge_desc">
-              We hold all legally required business licenses for dealing in Healthcare and Aesthetic products within the
-              Indonesian market.
+              data-i18n="prod_specialty_desc">
+              Dedicated units for specific blood bank and serology protocols, featuring microprocessor control and
+              pre-set programs.
             </p>
             <a href="product-detail.html"
-              class="block w-full text-center bg-slate-900 hover:bg-blue-600 shadow-md hover:shadow-xl transform hover:-translate-y-1 text-white text-[14px] font-semibold py-3.5 rounded-xl transition shadow-md">
+              class="block w-full text-center bg-[#0E162A] hover:bg-opacity-90 shadow-md hover:shadow-lg transform hover:-translate-y-1 text-white text-[14px] font-semibold py-3.5 rounded-xl transition">
               <span data-i18n="view_detail">View Details</span>
               <i class="fa-solid fa-arrow-right ml-2 text-[11px]"></i>
             </a>
@@ -254,22 +269,23 @@
 
         <!-- PRODUCT CARD 7 -->
         <div
-          class="bg-white rounded-[28px] border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition duration-300">
+          class="product-item bg-white rounded-[28px] border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition duration-300"
+          data-category="centrifuges">
           <div class="flex justify-center items-center py-10 px-8 h-[280px]">
-            <img src="images/centrifuge-product.png" alt="Centrifuge"
+            <img src="images/centrifuge-product.png" alt="General Purpose Benchtop Centrifuges"
               class="h-[180px] md:h-full object-contain mix-blend-multiply drop-shadow-lg" />
           </div>
           <div class="p-8 flex flex-col flex-1 border-t border-gray-50">
-            <span class="text-[#2b4c9b] text-[13px] font-semibold mb-2" data-i18n="lbl_blood_bank">Blood Bank
-              Equipment</span>
-            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="prod_centrifuge">Centrifuge</h3>
-            <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-1 line-clamp-3"
-              data-i18n="prod_centrifuge_desc">
-              We hold all legally required business licenses for dealing in Healthcare and Aesthetic products within the
-              Indonesian market.
+            <span class="text-[#2b4c9b] text-[13px] font-semibold mb-2" data-i18n="cat_centrifuges">Clinical & Research
+              Centrifuges</span>
+            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="prod_general_centrifuge">General Purpose
+              Benchtop Centrifuges</h3>
+            <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-1 line-clamp-3" data-i18n="prod_general_desc">
+              Versatile laboratory centrifuges accommodating various tube sizes through interchangeable rotors and
+              adapters.
             </p>
             <a href="product-detail.html"
-              class="block w-full text-center bg-slate-900 hover:bg-blue-600 shadow-md hover:shadow-xl transform hover:-translate-y-1 text-white text-[14px] font-semibold py-3.5 rounded-xl transition shadow-md">
+              class="block w-full text-center bg-[#0E162A] hover:bg-opacity-90 shadow-md hover:shadow-lg transform hover:-translate-y-1 text-white text-[14px] font-semibold py-3.5 rounded-xl transition">
               <span data-i18n="view_detail">View Details</span>
               <i class="fa-solid fa-arrow-right ml-2 text-[11px]"></i>
             </a>
@@ -278,46 +294,22 @@
 
         <!-- PRODUCT CARD 8 -->
         <div
-          class="bg-white rounded-[28px] border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition duration-300">
+          class="product-item bg-white rounded-[28px] border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition duration-300"
+          data-category="centrifuges">
           <div class="flex justify-center items-center py-10 px-8 h-[280px]">
-            <img src="images/centrifuge-product.png" alt="Centrifuge"
+            <img src="images/centrifuge-product.png" alt="High-Speed Micro Centrifuge"
               class="h-[180px] md:h-full object-contain mix-blend-multiply drop-shadow-lg" />
           </div>
           <div class="p-8 flex flex-col flex-1 border-t border-gray-50">
-            <span class="text-[#2b4c9b] text-[13px] font-semibold mb-2" data-i18n="lbl_blood_bank">Blood Bank
-              Equipment</span>
-            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="prod_centrifuge">Centrifuge</h3>
-            <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-1 line-clamp-3"
-              data-i18n="prod_centrifuge_desc">
-              We hold all legally required business licenses for dealing in Healthcare and Aesthetic products within the
-              Indonesian market.
+            <span class="text-[#2b4c9b] text-[13px] font-semibold mb-2" data-i18n="cat_centrifuges">Clinical & Research
+              Centrifuges</span>
+            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="prod_micro_centrifuge">High-Speed Micro
+              Centrifuge</h3>
+            <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-1 line-clamp-3" data-i18n="prod_micro_desc">
+              Compact, high-performance unit designed for micro-volume tubes requiring high RCF.
             </p>
             <a href="product-detail.html"
-              class="block w-full text-center bg-slate-900 hover:bg-blue-600 shadow-md hover:shadow-xl transform hover:-translate-y-1 text-white text-[14px] font-semibold py-3.5 rounded-xl transition shadow-md">
-              <span data-i18n="view_detail">View Details</span>
-              <i class="fa-solid fa-arrow-right ml-2 text-[11px]"></i>
-            </a>
-          </div>
-        </div>
-
-        <!-- PRODUCT CARD 9 -->
-        <div
-          class="bg-white rounded-[28px] border border-gray-100 shadow-[0_4px_30px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col hover:-translate-y-1 hover:shadow-[0_10px_40px_rgba(0,0,0,0.06)] transition duration-300">
-          <div class="flex justify-center items-center py-10 px-8 h-[280px]">
-            <img src="images/centrifuge-product.png" alt="Centrifuge"
-              class="h-[180px] md:h-full object-contain mix-blend-multiply drop-shadow-lg" />
-          </div>
-          <div class="p-8 flex flex-col flex-1 border-t border-gray-50">
-            <span class="text-[#2b4c9b] text-[13px] font-semibold mb-2" data-i18n="lbl_blood_bank">Blood Bank
-              Equipment</span>
-            <h3 class="text-xl font-bold text-gray-900 mb-3" data-i18n="prod_centrifuge">Centrifuge</h3>
-            <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-1 line-clamp-3"
-              data-i18n="prod_centrifuge_desc">
-              We hold all legally required business licenses for dealing in Healthcare and Aesthetic products within the
-              Indonesian market.
-            </p>
-            <a href="product-detail.html"
-              class="block w-full text-center bg-slate-900 hover:bg-blue-600 shadow-md hover:shadow-xl transform hover:-translate-y-1 text-white text-[14px] font-semibold py-3.5 rounded-xl transition shadow-md">
+              class="block w-full text-center bg-[#0E162A] hover:bg-opacity-90 shadow-md hover:shadow-lg transform hover:-translate-y-1 text-white text-[14px] font-semibold py-3.5 rounded-xl transition">
               <span data-i18n="view_detail">View Details</span>
               <i class="fa-solid fa-arrow-right ml-2 text-[11px]"></i>
             </a>
@@ -370,10 +362,9 @@
       <div>
         <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm" data-i18n="footer_products">Products</h4>
         <ul class="space-y-4 text-sm">
-          <li><a href="#" class="hover:text-white transition" data-i18n="med_freezers">Medical Freezers</a></li>
-          <li><a href="#" class="hover:text-white transition" data-i18n="centrifuges">Centrifuges</a></li>
-          <li><a href="#" class="hover:text-white transition" data-i18n="autoclaves">Autoclaves</a></li>
-          <li><a href="#" class="hover:text-white transition" data-i18n="surgical_inst">Surgical Instruments</a></li>
+          <li><a href="products.html" class="hover:text-white transition" data-i18n="cat_blood_bank">Blood Bank & Immunohematology Solutions</a></li>
+          <li><a href="products.html" class="hover:text-white transition" data-i18n="cat_ivd">Rapid Diagnostic Tests (IVD)</a></li>
+          <li><a href="products.html" class="hover:text-white transition" data-i18n="cat_centrifuges">Clinical & Research Centrifuges</a></li>
         </ul>
       </div>
 
@@ -383,15 +374,16 @@
         <ul class="space-y-4 text-sm">
           <li class="flex items-start space-x-3">
             <i class="fa-solid fa-map-marker-alt mt-1 shrink-0"></i>
-            <span data-i18n="address">Gedung Gravia, Plaza Business Park Blok B2 No.1, Jakarta, Indonesia</span>
+            <span data-i18n="address">Jl. Wolter Monginsidi No.84AH, RT.1/RW.4, Petogogan, Kebayoran Baru, South Jakarta
+              City, Jakarta 12170</span>
           </li>
           <li class="flex items-center space-x-3">
             <i class="fa-solid fa-phone shrink-0"></i>
-            <span>+62 123 4567 890</span>
+            <span>(62) 811-952-4689</span>
           </li>
           <li class="flex items-center space-x-3">
             <i class="fa-solid fa-envelope shrink-0"></i>
-            <span>info@graviacitra.com</span>
+            <span>graviacitralestari@gmail.com</span>
           </li>
         </ul>
       </div>
@@ -409,6 +401,34 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const categoryBtns = document.querySelectorAll('.category-btn');
+      const productItems = document.querySelectorAll('.product-item');
+
+      categoryBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Update active button state
+          categoryBtns.forEach(b => {
+            b.classList.remove('bg-[#0E162A]', 'text-white', 'hover:bg-opacity-90');
+            b.classList.add('bg-white', 'text-gray-700', 'border', 'border-gray-200', 'hover:border-gray-400', 'hover:text-gray-900');
+          });
+          btn.classList.remove('bg-white', 'text-gray-700', 'border', 'border-gray-200', 'hover:border-gray-400', 'hover:text-gray-900');
+          btn.classList.add('bg-[#0E162A]', 'text-white', 'hover:bg-opacity-90');
+
+          // Filter products
+          const filterValue = btn.getAttribute('data-category');
+          productItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+              item.style.display = 'flex';
+            } else {
+              item.style.display = 'none';
+            }
+          });
+        });
+      });
+    });
+  </script>
 </body>
 
 </html>

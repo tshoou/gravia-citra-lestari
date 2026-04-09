@@ -24,7 +24,9 @@
       }
     }
   </script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600&family=Oswald:wght@600;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <script type="text/javascript">
@@ -61,6 +63,9 @@
         <span class="text-gray-300">|</span>
         <a id="lang-en" class="text-primary font-bold cursor-pointer transition">EN</a>
       </div>
+      <button class="text-gray-600 hover:text-primary">
+        <i class="fa-solid fa-search"></i>
+      </button>
     </div>
 
     <!-- Mobile Menu Button -->
@@ -70,19 +75,12 @@
   </header>
 
   <!-- ==================== HERO SECTION ==================== -->
-  <section class="bg-[#1f3ba2] pt-20 pb-20 px-6 relative">
-    <div
-      class="max-w-[1200px] mx-auto text-left relative z-10 flex flex-col md:flex-row items-start md:items-center space-x-0 md:space-x-6">
-      <div class="mb-4 md:mb-0">
-        <i class="fa-solid fa-handshake text-white text-4xl opacity-90"></i>
-      </div>
-      <div>
-        <h1 class="text-3xl md:text-[40px] tracking-tight font-semibold text-white mb-3" data-i18n="contact_hero_title">
-          Contact Us</h1>
-        <p class="text-blue-100/90 text-[15px] md:text-lg max-w-xl font-light" data-i18n="contact_hero_desc">
-          Get in touch with our team for inquiries about our products and services
-        </p>
-      </div>
+  <section class="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-20 pb-24 px-6 relative">
+    <div class="max-w-[1200px] mx-auto text-left relative z-10">
+      <h1 class="text-4xl md:text-5xl font-semibold text-white mb-6" data-i18n="contact_hero_title">Contact Us</h1>
+      <p class="text-blue-100/90 text-[17px] md:text-lg max-w-xl font-light" data-i18n="contact_hero_desc">
+        Get in touch with our team for inquiries about our products and services
+      </p>
     </div>
   </section>
 
@@ -97,7 +95,7 @@
         </div>
         <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="lbl_address">Address</h3>
         <p class="text-[14px] text-gray-500 leading-relaxed" data-i18n="address">
-          Gedung Gravia, Plaza Business Park Blok B2 No.1, Jakarta, Indonesia
+          Jl. Wolter Monginsidi No.84AH, RT.1/RW.4, Petogogan, Kebayoran Baru, South Jakarta City, Jakarta 12170
         </p>
       </div>
 
@@ -108,7 +106,7 @@
           <i class="fa-solid fa-phone text-lg"></i>
         </div>
         <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="lbl_phone">Phone</h3>
-        <p class="text-[14px] text-gray-500 leading-relaxed">+62 21 xxxx xxxx</p>
+        <p class="text-[14px] text-gray-500 leading-relaxed">(62) 811-952-4689</p>
       </div>
 
       <!-- Email -->
@@ -119,8 +117,7 @@
         </div>
         <h3 class="text-lg font-semibold text-gray-900 mb-3" data-i18n="lbl_email">Email</h3>
         <p class="text-[14px] text-gray-500 leading-relaxed">
-          info@graviacitralestari.id<br>
-          sales@graviacitralestari.id
+          graviacitralestari@gmail.com
         </p>
       </div>
 
@@ -190,7 +187,7 @@
               data-i18n-placeholder="form_placeholder_message"></textarea>
           </div>
           <button type="submit" id="contact-submit-btn"
-            class="w-full bg-[#090b14] hover:bg-gray-800 text-white font-semibold py-4 rounded-lg flex items-center justify-center transition shadow-md">
+            class="w-full bg-[#0E162A] hover:bg-opacity-90 text-white font-semibold py-4 rounded-lg flex items-center justify-center transition shadow-md">
             <i class="fa-solid fa-paper-plane mr-3 text-[14px]" id="contact-submit-icon"></i>
             <i class="fa-solid fa-circle-notch fa-spin hidden mr-3 text-[14px]" id="contact-loading-icon"></i>
             <span data-i18n="form_btn" id="contact-submit-text">Send Message</span>
@@ -275,10 +272,9 @@
       <div>
         <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm" data-i18n="footer_products">Products</h4>
         <ul class="space-y-4 text-sm">
-          <li><a href="#" class="hover:text-white transition" data-i18n="med_freezers">Medical Freezers</a></li>
-          <li><a href="#" class="hover:text-white transition" data-i18n="centrifuges">Centrifuges</a></li>
-          <li><a href="#" class="hover:text-white transition" data-i18n="autoclaves">Autoclaves</a></li>
-          <li><a href="#" class="hover:text-white transition" data-i18n="surgical_inst">Surgical Instruments</a></li>
+          <li><a href="products.html" class="hover:text-white transition" data-i18n="cat_blood_bank">Blood Bank & Immunohematology Solutions</a></li>
+          <li><a href="products.html" class="hover:text-white transition" data-i18n="cat_ivd">Rapid Diagnostic Tests (IVD)</a></li>
+          <li><a href="products.html" class="hover:text-white transition" data-i18n="cat_centrifuges">Clinical & Research Centrifuges</a></li>
         </ul>
       </div>
 
@@ -288,15 +284,15 @@
         <ul class="space-y-4 text-sm">
           <li class="flex items-start space-x-3">
             <i class="fa-solid fa-map-marker-alt mt-1 shrink-0"></i>
-            <span data-i18n="address">Gedung Gravia, Plaza Business Park Blok B2 No.1, Jakarta, Indonesia</span>
+            <span data-i18n="address">Jl. Wolter Monginsidi No.84AH, RT.1/RW.4, Petogogan, Kebayoran Baru, South Jakarta City, Jakarta 12170</span>
           </li>
           <li class="flex items-center space-x-3">
             <i class="fa-solid fa-phone shrink-0"></i>
-            <span>+62 123 4567 890</span>
+            <span>(62) 811-952-4689</span>
           </li>
           <li class="flex items-center space-x-3">
             <i class="fa-solid fa-envelope shrink-0"></i>
-            <span>info@graviacitra.com</span>
+            <span>graviacitralestari@gmail.com</span>
           </li>
         </ul>
       </div>

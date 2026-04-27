@@ -43,7 +43,7 @@
   <header
     class="w-full bg-white/80 backdrop-blur-lg shadow-[0_4px_30px_rgba(0,0,0,0.03)] border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50">
     <a href="index.html" class="flex items-center shrink-0 border-none outline-none group">
-      <img src="images/logo.png" alt="PT Gravia Citra Lestari Logo"
+      <img src="images/logo-gravia.png" alt="PT Gravia Citra Lestari Logo"
         class="h-10 md:h-12 w-auto object-contain group-hover:opacity-90 transition" />
     </a>
 
@@ -80,7 +80,7 @@
 
       <!-- Left Column: Image -->
       <div class="w-full">
-        <img src="images/centrifuge-product.png" alt="Panatha Gel Card System Detail"
+        <img id="product-image" src="images/products/gel-card.png" alt="Panatha Gel Card System Detail"
           class="w-full h-auto rounded-[20px] object-cover shadow-[0_8px_30px_rgba(0,0,0,0.06)] mix-blend-multiply" />
       </div>
 
@@ -88,13 +88,13 @@
       <div class="flex flex-col">
         <!-- Category Badge -->
         <div class="mb-5">
-          <span
+          <span id="product-category"
             class="inline-block bg-[#090b14] text-white text-[12px] tracking-wide font-medium px-4 py-1.5 rounded-md"
             data-i18n="cat_blood_bank">Blood Bank & Immunohematology Solutions</span>
         </div>
 
         <!-- Main Title -->
-        <h1 class="text-4xl lg:text-[44px] tracking-tight font-semibold text-gray-900 mb-10"
+        <h1 id="product-title" class="text-4xl lg:text-[44px] tracking-tight font-semibold text-gray-900 mb-10"
           data-i18n="prod_gel_system">Panatha Gel Card System</h1>
 
         <!-- Available Types -->
@@ -103,7 +103,7 @@
             <i class="fa-solid fa-cube"></i>
             <span class="text-[14px] font-medium" data-i18n="lbl_avail_types">Available Types</span>
           </div>
-          <div class="flex flex-col gap-3">
+          <div id="product-types" class="flex flex-col gap-3">
             <span
               class="border border-gray-200 text-gray-800 bg-white text-[13px] font-medium px-4 py-3 rounded-lg flex items-center"><i
                 class="fa-solid fa-check text-green-500 mr-3"></i> AHG/Coombs Gel (6 holes)</span>
@@ -125,7 +125,7 @@
         <!-- Description -->
         <div class="mb-12">
           <h3 class="text-lg font-semibold text-gray-900 mb-4" data-i18n="lbl_description">Description</h3>
-          <p class="text-[15px] text-gray-600 leading-[1.8]" data-i18n="prod_gel_desc">
+          <p id="product-description" class="text-[15px] text-gray-600 leading-[1.8]" data-i18n="prod_gel_desc">
             A microcolumn gel technology system used for the determination of blood groups and detection of red cell
             sensitization. Reliable and accurate diagnostic gel cards designed for clinical laboratories.
           </p>
@@ -156,11 +156,11 @@
 
   <!-- ==================== FOOTER ==================== -->
   <footer class="bg-primary text-blue-100 pt-16 pb-8 px-6 md:px-12 mt-10">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
       <div class="col-span-1 md:col-span-1 border-b border-blue-800 pb-8 md:border-0 md:pb-0">
         <a href="index.html"
           class="inline-block mb-6 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow hover:shadow-md transition">
-          <img src="images/logo.png" alt="PT Gravia Citra Lestari Logo" class="h-9 md:h-10 w-auto object-contain" />
+          <img src="images/logo-gravia.png" alt="PT Gravia Citra Lestari Logo" class="h-9 md:h-10 w-auto object-contain" />
         </a>
         <p class="text-sm opacity-80 leading-relaxed mb-6" data-i18n="footer_desc">
           PT Gravia Citra Lestari provides comprehensive medical solutions, delivering proven technology to elevate
@@ -208,8 +208,8 @@
         <ul class="space-y-4 text-sm">
           <li class="flex items-start space-x-3">
             <i class="fa-solid fa-map-marker-alt mt-1 shrink-0"></i>
-            <span data-i18n="address">Jl. Wolter Monginsidi No.84AH, RT.1/RW.4, Petogogan, Kebayoran Baru, South Jakarta
-              City, Jakarta 12170</span>
+            <span data-i18n="address">Jalan Wolter Monginsidi, Komplek Ruko Wolter Monginsidi Blok Q/4 No. 84-HH (Lantai
+              3 dan 4), Petogogan, Kebayoran Baru, Jakarta Selatan, Kode Pos 12170, Indonesia.</span>
           </li>
           <li class="flex items-center space-x-3">
             <i class="fa-solid fa-phone shrink-0"></i>
@@ -224,7 +224,7 @@
     </div>
 
     <div
-      class="max-w-7xl mx-auto mt-12 pt-8 border-t border-blue-800 text-sm text-center md:text-left flex flex-col md:flex-row justify-between items-center text-blue-300">
+      class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-blue-800 text-sm text-center md:text-left flex flex-col md:flex-row justify-between items-center text-blue-300">
       <p data-i18n="rights">&copy; 2024 PT Gravia Citra Lestari. All rights reserved.</p>
       <div class="mt-4 md:mt-0 space-x-4">
         <a href="#" class="hover:text-white" data-i18n="privacy">Privacy Policy</a>
@@ -323,7 +323,7 @@
             Close Window
           </button>
           <!-- Hidden link to trigger download -->
-          <a id="hidden-download-link" href="brochures/centrifuge.pdf" download hidden></a>
+          <a id="hidden-download-link" href="brochures/products/gel-card.pdf" download hidden></a>
         </div>
 
       </div>
@@ -331,6 +331,200 @@
   </div>
 
   <script src="script.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const productMap = {
+        'gel-card': {
+          category: 'Blood Bank & Immunohematology Solutions',
+          title: 'Panatha Gel Card System',
+          description: 'Microcolumn gel card platform for blood grouping and red cell sensitization testing, designed to support consistent, high-confidence immunohematology results.',
+          image: 'images/products/gel-card.png',
+          brochure: 'brochures/products/gel-card.pdf',
+          types: [
+            'AHG/Coombs Gel (6 holes)',
+            'ABO Rho (D) Forward & Reverse Grouping',
+            'ABO Rho (D) Forward Grouping',
+            'Direct Antiglobulin Test (DAT)',
+            'LISS Diluent (for cell suspension)'
+          ]
+        },
+        'platelet-incubator': {
+          category: 'Blood Bank & Immunohematology Solutions',
+          title: 'Platelet Incubator & Agitator',
+          description: 'Temperature-controlled platelet storage and continuous agitation system designed to preserve platelet viability and support compliant blood bank handling.',
+          image: 'images/products/platelet-incubator.png',
+          brochure: 'brochures/products/platelet-incubator.pdf',
+          types: ['Platelet Incubator Unit', 'Platelet Agitator Unit', 'Digital Interface Controller']
+        },
+        'virdict-4': {
+          category: 'Rapid Diagnostic Tests (IVD)',
+          title: 'Virdict 4 Combo Integrated Test',
+          description: 'Rapid immunochromatographic combo test for simultaneous detection of HBsAg and antibodies to HIV, HCV, and Syphilis in routine screening workflows.',
+          image: 'images/products/virdict-4.png',
+          brochure: 'brochures/products/virdict-4.pdf',
+          types: ['Virdict 4 Test Kit', 'Fast Visual Interpretation', 'Multi-Marker Screening Format']
+        },
+        'doa-7': {
+          category: 'Rapid Diagnostic Tests (IVD)',
+          title: 'Bio Instant Multi-Drug Rapid Test 7 Parameter',
+          description: 'Urine-based rapid screening panel for seven drug parameters, supporting efficient and practical screening in clinical and occupational settings.',
+          image: 'images/products/doa-7.png',
+          brochure: 'brochures/products/doa-7.pdf',
+          types: ['7 Parameter Panel', 'Urine Sample Format', 'Rapid Screening Workflow']
+        },
+        'doa-8': {
+          category: 'Rapid Diagnostic Tests (IVD)',
+          title: 'Bio Instant Multi-Drug Rapid Test 8 Parameter',
+          description: 'Extended urine-based rapid screening panel with eight drug parameters, enabling broader coverage for diagnostics and occupational health programs.',
+          image: 'images/products/doa-8.png',
+          brochure: 'brochures/products/doa-8.pdf',
+          types: ['8 Parameter Panel', 'Urine Sample Format', 'Enhanced Screening Coverage']
+        },
+        'cl5r': {
+          category: 'Clinical & Research Centrifuges',
+          title: 'CL5R Refrigerated Centrifuge',
+          description: 'Compact refrigerated centrifuge engineered for stable temperature control and dependable sample separation in clinical laboratory routines.',
+          image: 'images/products/cl5r.png',
+          brochure: 'brochures/products/cl5r.pdf',
+          types: ['Refrigerated Operation', 'Rotor and Adapter Options', 'Clinical Lab Applications']
+        },
+        'cl8r': {
+          category: 'Clinical & Research Centrifuges',
+          title: 'CL8R Refrigerated Centrifuge',
+          description: 'High-capacity refrigerated centrifuge with flexible rotor configurations for blood bank applications and routine laboratory separation protocols.',
+          image: 'images/products/cl8r.png',
+          brochure: 'brochures/products/cl8r.pdf',
+          types: ['High-Capacity Platform', 'Refrigerated Operation', 'Multiple Rotor Configurations']
+        },
+        'lt53': {
+          category: 'Clinical & Research Centrifuges',
+          title: 'LT53 Centrifuge',
+          description: 'Versatile benchtop centrifuge platform with multiple rotor and bucket configurations for efficient, day-to-day laboratory processing.',
+          image: 'images/products/lt53.png',
+          brochure: 'brochures/products/lt53.pdf',
+          types: ['Benchtop Configuration', 'Rotor/Bucket/Adapter Options', 'Routine Lab Processing']
+        },
+        'td-24k': {
+          category: 'Clinical & Research Centrifuges',
+          title: 'TD-24K Gel Card Centrifuge',
+          description: 'Specialized gel card centrifuge optimized for immunohematology workflows, delivering stable and repeatable spin performance.',
+          image: 'images/products/td-24k.png',
+          brochure: 'brochures/products/td-24k.pdf',
+          types: ['Gel Card Workflow Support', 'Laboratory Routine Use', 'Stable Rotor Performance']
+        },
+        'tdz4k': {
+          category: 'Clinical & Research Centrifuges',
+          title: 'TDZ4K Centrifuge',
+          description: 'Compact laboratory centrifuge with compatible rotor options for routine sample preparation and dependable daily processing.',
+          image: 'images/products/tdz4k.png',
+          brochure: 'brochures/products/tdz4k.pdf',
+          types: ['Compact Footprint', 'Rotor Included', 'Routine Sample Processing']
+        },
+        'tg12m': {
+          category: 'Clinical & Research Centrifuges',
+          title: 'TG12M Centrifuge',
+          description: 'General-purpose centrifuge platform for routine laboratory sample separation, designed for reliable day-to-day operation.',
+          image: 'images/products/tg12m.png',
+          brochure: 'brochures/products/tg12m.pdf',
+          types: ['General-Purpose Platform', 'Laboratory Separation', 'Reliable Daily Operation']
+        },
+        'h1650': {
+          category: 'Clinical & Research Centrifuges',
+          title: 'H1650 Centrifuge',
+          description: 'High-performance centrifuge designed to provide dependable throughput for clinical and laboratory sample processing.',
+          image: 'images/products/h1650.png',
+          brochure: 'brochures/products/h1650.pdf',
+          types: ['High Performance', 'Clinical and Lab Use', 'Consistent Processing']
+        },
+        'l420-a': {
+          category: 'Clinical & Research Centrifuges',
+          title: 'L420-A Serology Centrifuge',
+          description: 'Serology-oriented centrifuge configuration tailored for blood bank and immunohematology laboratory workflows.',
+          image: 'images/products/l420-a.png',
+          brochure: 'brochures/products/l420-a.pdf',
+          types: ['Serology Configuration', 'Blood Bank Workflow', 'Rotor Compatibility']
+        },
+        'byihpl': {
+          category: 'Sterilization & Infection Control',
+          title: 'Ionized Hydrogen Peroxide Sterilizer BYIHPL',
+          description: 'Ionized hydrogen peroxide sterilization system engineered to support high-standard infection prevention and environmental decontamination programs.',
+          image: 'images/products/byihpl.png',
+          brochure: 'brochures/products/byihpl.pdf',
+          types: ['Ionized H2O2 Sterilization', 'Healthcare Environment Use', 'Infection Prevention Program']
+        },
+        'byihps': {
+          category: 'Sterilization & Infection Control',
+          title: 'Hydrogen Peroxide Atomizer BYIHPS',
+          description: 'Portable hydrogen peroxide atomization unit for effective room and surface disinfection across healthcare environments.',
+          image: 'images/products/byihps.png',
+          brochure: 'brochures/products/byihps.pdf',
+          types: ['Portable Atomizer', 'Hydrogen Peroxide Delivery', 'Room and Surface Disinfection']
+        },
+        'byihpm': {
+          category: 'Sterilization & Infection Control',
+          title: 'Hydrogen Peroxide Atomizer BYIHPM',
+          description: 'Hydrogen peroxide disinfection atomizer designed for reliable, efficient room and surface treatment in controlled hygiene programs.',
+          image: 'images/products/byihpm.png',
+          brochure: 'brochures/products/byihpm.pdf',
+          types: ['Atomized Disinfection', 'Reliable Treatment Cycle', 'Facility Hygiene Application']
+        },
+        'airblade-tfk070109': {
+          category: 'Hygiene Equipment',
+          title: 'Airblade Wash + Dry Short Hand Dryer Sink TFK070109',
+          description: 'Integrated wash-and-dry sink system designed to streamline hand hygiene flow and improve operational efficiency in public or clinical facilities.',
+          image: 'images/products/airblade-tfk070109.webp',
+          brochure: 'brochures/products/airblade-tfk070109.pdf',
+          types: ['Integrated Wash + Dry', 'Compact Sink Design', 'High-Traffic Hygiene Application']
+        },
+        'h1850': {
+          category: 'Clinical & Research Centrifuges',
+          title: 'H1850 Centrifuge',
+          description: 'High-capacity centrifuge platform designed for intensive laboratory workflows requiring stable, consistent processing performance.',
+          image: 'images/products/h1850.png',
+          brochure: 'brochures/products/h1850.pdf',
+          types: ['High-Capacity Platform', 'Laboratory Workflow Support', 'Stable Daily Performance']
+        },
+        'virdict-50': {
+          category: 'Rapid Diagnostic Tests (IVD)',
+          title: 'Virdict 50 Rapid Test',
+          description: 'Rapid diagnostic test configuration with larger kit capacity, suitable for broader screening demand and high-volume usage scenarios.',
+          image: 'images/products/virdict-50.png',
+          brochure: 'brochures/products/virdict-50.pdf',
+          types: ['Larger Test Pack', 'Rapid Visual Interpretation', 'Broad Screening Use']
+        }
+      };
+
+      const params = new URLSearchParams(window.location.search);
+      const key = params.get('product') || 'gel-card';
+      const product = productMap[key] || productMap['gel-card'];
+
+      const titleEl = document.getElementById('product-title');
+      const descEl = document.getElementById('product-description');
+      const categoryEl = document.getElementById('product-category');
+      const imageEl = document.getElementById('product-image');
+      const typesEl = document.getElementById('product-types');
+      const hiddenLink = document.getElementById('hidden-download-link');
+      const modalName = document.getElementById('modal-product-name');
+      const requestedProduct = document.getElementById('requested-product');
+      const brochureSubject = document.getElementById('brochure-subject');
+
+      titleEl.textContent = product.title;
+      descEl.textContent = product.description;
+      categoryEl.textContent = product.category;
+      imageEl.src = product.image;
+      imageEl.alt = product.title + ' Detail';
+      hiddenLink.href = product.brochure;
+      if (modalName) modalName.textContent = product.title;
+      if (requestedProduct) requestedProduct.value = product.title;
+      if (brochureSubject) brochureSubject.value = 'Brochure Request - ' + product.title;
+
+      typesEl.innerHTML = product.types.map((type) => `
+        <span class="border border-gray-200 text-gray-800 bg-white text-[13px] font-medium px-4 py-3 rounded-lg flex items-center">
+          <i class="fa-solid fa-check text-green-500 mr-3"></i>${type}
+        </span>
+      `).join('');
+    });
+  </script>
 </body>
 
 </html>

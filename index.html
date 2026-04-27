@@ -1,546 +1,929 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - PT Gravia Citra Lestari</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home - PT Gravia Citra Lestari</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#0F172A', // Slate 900
-            secondary: '#3B82F6', // Blue 500 
-            accent: '#0EA5E9', // Sky 500
-            lightbg: '#F8FAFC',
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0F172A", // Slate 900
+              secondary: "#3B82F6", // Blue 500
+              accent: "#0EA5E9", // Sky 500
+              lightbg: "#F8FAFC",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
           },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600&family=Oswald:wght@600;700&display=swap"
-    rel="stylesheet">
-  <!-- Use FontAwesome for simple icons -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600&family=Oswald:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Use FontAwesome for simple icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
 
-<body class="bg-white text-gray-800 antialiased overflow-x-hidden font-sans">
+  <body class="bg-white text-gray-800 antialiased overflow-x-hidden font-sans">
+    <!-- ==================== HEADER ==================== -->
+    <header
+      class="w-full bg-white/80 backdrop-blur-lg shadow-[0_4px_30px_rgba(0,0,0,0.03)] border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50"
+    >
+      <a
+        href="index.html"
+        class="flex items-center shrink-0 border-none outline-none group"
+      >
+        <img
+          src="images/logo-gravia.png"
+          alt="PT Gravia Citra Lestari Logo"
+          class="h-10 md:h-12 w-auto object-contain group-hover:opacity-90 transition"
+        />
+      </a>
 
-  <!-- ==================== HEADER ==================== -->
-  <header
-    class="w-full bg-white/80 backdrop-blur-lg shadow-[0_4px_30px_rgba(0,0,0,0.03)] border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50">
-    <a href="index.html" class="flex items-center shrink-0 border-none outline-none group">
-      <img src="images/logo.png" alt="PT Gravia Citra Lestari Logo"
-        class="h-10 md:h-12 w-auto object-contain group-hover:opacity-90 transition" />
-    </a>
+      <nav class="hidden md:flex space-x-8 items-center font-medium text-sm">
+        <a
+          href="index.html"
+          class="text-primary border-b-2 border-primary pb-1"
+          data-i18n="nav_home"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="text-gray-600 hover:text-primary transition"
+          data-i18n="nav_about"
+          >About Us</a
+        >
+        <a
+          href="products.html"
+          class="text-gray-600 hover:text-primary transition"
+          data-i18n="nav_products"
+          >Our Products</a
+        >
+        <a
+          href="our-principals.html"
+          class="text-gray-600 hover:text-primary transition"
+          data-i18n="nav_principals"
+          >Our Principals</a
+        >
+        <a
+          href="contact.html"
+          class="text-gray-600 hover:text-primary transition"
+          data-i18n="nav_contact"
+          >Contact Us</a
+        >
+      </nav>
 
-    <nav class="hidden md:flex space-x-8 items-center font-medium text-sm">
-      <a href="index.html" class="text-primary border-b-2 border-primary pb-1" data-i18n="nav_home">Home</a>
-      <a href="about.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_about">About Us</a>
-      <a href="products.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_products">Our
-        Products</a>
-      <a href="our-principals.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_principals">Our
-        Principals</a>
-      <a href="contact.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_contact">Contact Us</a>
-    </nav>
-
-    <div class="hidden md:flex items-center space-x-6 text-sm">
-      <div class="flex space-x-2 font-medium">
-        <a id="lang-id" class="text-gray-500 hover:text-primary cursor-pointer transition">ID</a>
-        <span class="text-gray-300">|</span>
-        <a id="lang-en" class="text-primary font-bold cursor-pointer transition">EN</a>
+      <div class="hidden md:flex items-center space-x-6 text-sm">
+        <div class="flex space-x-2 font-medium">
+          <a
+            id="lang-id"
+            class="text-gray-500 hover:text-primary cursor-pointer transition"
+            >ID</a
+          >
+          <span class="text-gray-300">|</span>
+          <a
+            id="lang-en"
+            class="text-primary font-bold cursor-pointer transition"
+            >EN</a
+          >
+        </div>
+        <button class="text-gray-600 hover:text-primary">
+          <i class="fa-solid fa-search"></i>
+        </button>
       </div>
-      <button class="text-gray-600 hover:text-primary">
-        <i class="fa-solid fa-search"></i>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-gray-600">
+        <i class="fa-solid fa-bars text-2xl"></i>
       </button>
-    </div>
+    </header>
 
-    <!-- Mobile Menu Button -->
-    <button class="md:hidden text-gray-600">
-      <i class="fa-solid fa-bars text-2xl"></i>
-    </button>
-  </header>
-
-  <!-- ==================== HERO SECTION ==================== -->
-  <section class="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-24 pb-28 relative overflow-hidden">
-    <!-- Decorative background blur -->
-    <div class="absolute -right-4 -top-4 w-96 h-96 bg-[#1c85a2]/20 rounded-full blur-[100px] pointer-events-none"></div>
-    <div class="max-w-[1200px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
-      <div class="space-y-6">
-        <div class="text-lg font-semibold tracking-wider text-blue-300 uppercase" data-i18n="hero_tag">Gravia Citra
-          Lestari</div>
-        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white tracking-tight"
-          data-i18n="hero_title">
-          Trusted Distributor of High Quality Medical Devices and IVD in Indonesia
-        </h1>
-        <p class="text-blue-100/90 text-lg max-w-lg font-light" data-i18n="hero_desc">
-          We committed to improving healthcare accessibility by delivering innovative, high-quality medical
-          solutions backed by ISO and CDAKB certifications to hospitals, clinics, and laboratories across Indonesia.
-        </p>
-        <div class="pt-4 flex flex-col sm:flex-row gap-6 items-start sm:items-center">
-          <a href="products.html"
-            class="bg-white hover:bg-gray-100 text-[#0E162A] font-semibold px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 inline-flex items-center space-x-2"
-            data-i18n="hero_btn">
-            <span>View more</span>
-            <i class="fa-solid fa-arrow-right text-[12px]"></i>
-          </a>
-
-        </div>
-      </div>
-      <div class="relative">
-        <img src="images/hero-cleanroom.png" alt="Medical Factory/Cleanroom"
-          class="rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] object-cover h-[450px] md:h-[500px] w-full border border-white/10" />
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== BANNER SECTION ==================== -->
-  <div class="bg-white py-12 px-6 text-center text-black">
-    <div class="max-w-4xl mx-auto">
-      <p class="text-xl md:text-2xl font-light leading-relaxed" data-i18n="banner_text">
-        We understand the critical importance of reliable and advanced medical technology in today's healthcare
-        environment. That's why we continuously innovate.
-      </p>
-    </div>
-  </div>
-
-  <!-- ==================== ISO & CERTIFICATIONS ==================== -->
-  <section class="bg-white py-24 px-6 md:px-12">
-    <div class="max-w-[1200px] mx-auto">
-      <div class="flex items-center mb-12">
-        <h2
-          class="text-[50px] md:text-[80px] font-['Oswald'] font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-500 uppercase tracking-tight leading-none drop-shadow-sm"
-          data-i18n="cert_title">Certifications</h2>
-
-        <div class="h-[2px] bg-gradient-to-r from-gray-200 to-transparent flex-grow ml-8 hidden md:block"></div>
-        <div
-          class="bg-white/10 backdrop-blur border border-white/20 p-3 rounded-xl inline-block mt-4 sm:mt-0 shadow-sm">
-          <img src="images/bangga.png" alt="Bangga Buatan Indonesia" class="h-44 w-auto object-contain" />
-        </div>
-      </div>
-
-
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
-        <!-- Card 1: CDAKB -->
-        <div
-          class="flex flex-col p-8 md:p-10 bg-white border border-gray-100 rounded-[28px] shadow-[0_4px_30px_rgba(0,0,0,0.03)] hover:-translate-y-1 transition duration-300 relative overflow-hidden group">
-          <div
-            class="absolute inset-0 bg-gradient-to-br from-[#1c85a2]/[0.02] to-[#2b4c9b]/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          </div>
-          <div class="relative z-10 break-words w-full overflow-hidden flex flex-col items-center text-center">
-            <div
-              class="w-32 md:w-40 h-20 md:h-24 mb-6 flex justify-center items-center p-2 group-hover:scale-105 transition-transform duration-500">
-              <img src="images/cdakb.png" alt="CDAKB Certified" class="w-full h-full object-contain drop-shadow-sm" />
-            </div>
-            <h3
-              class="text-xl md:text-[22px] font-bold text-gray-900 mb-3 group-hover:text-[#1c85a2] transition-colors duration-300"
-              data-i18n="cdakb_title">CDAKB Certified</h3>
-            <p class="text-[14px] text-gray-500 leading-relaxed font-normal" data-i18n="cdakb_desc">
-              Officially certified in Good Distribution Practice for Medical
-              Devices by the Ministry of Health of the Republic of Indonesia.
-            </p>
-          </div>
-        </div>
-
-        <!-- Card 2: ISO 9001 -->
-        <div
-          class="flex flex-col p-8 md:p-10 bg-white border border-gray-100 rounded-[28px] shadow-[0_4px_30px_rgba(0,0,0,0.03)] hover:-translate-y-1 transition duration-300 relative overflow-hidden group">
-          <div
-            class="absolute inset-0 bg-gradient-to-br from-[#1c85a2]/[0.02] to-[#2b4c9b]/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          </div>
-          <div class="relative z-10 break-words w-full overflow-hidden flex flex-col items-center text-center">
-            <div
-              class="w-32 md:w-40 h-20 md:h-24 mb-6 flex justify-center items-center p-2 group-hover:scale-105 transition-transform duration-500">
-              <img src="images/iso.png" alt="ISO 9001:2015" class="w-full h-full object-contain drop-shadow-sm" />
-            </div>
-            <h3
-              class="text-xl md:text-[22px] font-bold text-gray-900 mb-3 group-hover:text-[#1c85a2] transition-colors duration-300"
-              data-i18n="iso_title">ISO 9001:2015</h3>
-            <p class="text-[14px] text-gray-500 leading-relaxed font-normal" data-i18n="iso_desc">
-              Certified Quality Management System ensuring consistent excellence in our business processes and
-              distribution services.
-            </p>
-          </div>
-        </div>
-
-        <!-- Card 3: Kemenkes -->
-        <div
-          class="flex flex-col p-8 md:p-10 bg-white border border-gray-100 rounded-[28px] shadow-[0_4px_30px_rgba(0,0,0,0.03)] hover:-translate-y-1 transition duration-300 relative overflow-hidden group">
-          <div
-            class="absolute inset-0 bg-gradient-to-br from-[#1c85a2]/[0.02] to-[#2b4c9b]/[0.02] opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-          </div>
-          <div class="relative z-10 break-words w-full overflow-hidden flex flex-col items-center text-center">
-            <div
-              class="w-32 md:w-40 h-20 md:h-24 mb-6 flex justify-center items-center p-2 group-hover:scale-105 transition-transform duration-500">
-              <img src="images/kemenkes.png" alt="Kemenkes Authorization"
-                class="w-full h-full object-contain drop-shadow-sm" />
-            </div>
-            <h3
-              class="text-xl md:text-[22px] font-bold text-gray-900 mb-3 group-hover:text-[#1c85a2] transition-colors duration-300"
-              data-i18n="kemenkes_title">Ministry of Health</h3>
-            <p class="text-[14px] text-gray-500 leading-relaxed font-normal" data-i18n="kemenkes_desc">
-              We hold all legally required business licenses for dealing in Healthcare and Aesthetic products within the
-              Indonesian market.
-            </p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== OUR PRODUCTS ==================== -->
-  <section class="bg-primary py-24 px-6 relative overflow-hidden">
-    <div class="max-w-[1300px] mx-auto text-center">
-      <h2 class="text-4xl md:text-5xl font-bold text-white mb-16" data-i18n="our_products_title">Our Products</h2>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_auto] gap-6">
-        <!-- Product 1 -->
-        <div class="bg-white rounded-[32px] p-6 lg:p-8 text-left flex flex-col group hover:-translate-y-2 transition duration-300 shadow-xl">
-          <div class="h-48 mb-6 flex justify-center items-center">
-            <img src="images/product-gel-1.jpg" alt="Panatha Gel Card System" class="h-full object-contain mix-blend-multiply group-hover:scale-105 transition duration-500" />
-          </div>
-          <div class="flex-grow flex flex-col">
-            <span class="text-[13px] font-semibold text-secondary mb-1" data-i18n="cat_blood_bank">Blood Bank & Immunohematology Solutions</span>
-            <h3 class="text-[22px] font-bold text-gray-900 mb-3" data-i18n="prod_gel_system">Panatha Gel Card System</h3>
-            <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-grow" data-i18n="prod_gel_desc">A microcolumn gel technology system used for the determination of blood groups and detection of red cell sensitization.</p>
-            <div class="mt-auto">
-              <a href="product-detail.html" class="w-full bg-[#0E162A] hover:bg-opacity-90 shadow-md hover:shadow-lg transform hover:-translate-y-1 text-white text-[14px] font-medium py-3.5 px-6 rounded-xl flex items-center justify-center transition group-hover:shadow-md">
-                <span data-i18n="view_detail">View Details</span>
-                <i class="fa-solid fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 2 -->
-        <div class="bg-white rounded-[32px] p-6 lg:p-8 text-left flex flex-col group hover:-translate-y-2 transition duration-300 shadow-xl">
-          <div class="h-48 mb-6 flex justify-center items-center">
-            <img src="https://images.unsplash.com/photo-1579154204601-01588f351e67?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Virdict 4 Combo Integrated Test" class="h-full object-cover mix-blend-multiply group-hover:scale-105 transition duration-500 rounded-xl" />
-          </div>
-          <div class="flex-grow flex flex-col">
-            <span class="text-[13px] font-semibold text-secondary mb-1" data-i18n="cat_ivd">Rapid Diagnostic Tests (IVD)</span>
-            <h3 class="text-[22px] font-bold text-gray-900 mb-3" data-i18n="prod_virdict_4">Virdict 4 Combo Integrated Test</h3>
-            <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-grow" data-i18n="prod_virdict_desc">A rapid immunochromatographic test for simultaneous detection of HBsAg and antibodies to HIV, HCV, and Syphilis.</p>
-            <div class="mt-auto">
-              <a href="product-detail.html" class="w-full bg-[#0E162A] hover:bg-opacity-90 shadow-md hover:shadow-lg transform hover:-translate-y-1 text-white text-[14px] font-medium py-3.5 px-6 rounded-xl flex items-center justify-center transition group-hover:shadow-md">
-                <span data-i18n="view_detail">View Details</span>
-                <i class="fa-solid fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Product 3 -->
-        <div class="bg-white rounded-[32px] p-6 lg:p-8 text-left flex flex-col group hover:-translate-y-2 transition duration-300 shadow-xl">
-          <div class="h-48 mb-6 flex justify-center items-center">
-            <img src="images/centrifuge-product.png" alt="Specialty Clinical Centrifuges" class="h-full object-contain mix-blend-multiply group-hover:scale-105 transition duration-500" />
-          </div>
-          <div class="flex-grow flex flex-col">
-            <span class="text-[13px] font-semibold text-secondary mb-1" data-i18n="cat_centrifuges">Clinical & Research Centrifuges</span>
-            <h3 class="text-[22px] font-bold text-gray-900 mb-3" data-i18n="prod_specialty_centrifuge">Specialty Clinical Centrifuges</h3>
-            <p class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-grow" data-i18n="prod_specialty_desc">Dedicated units for specific blood bank and serology protocols, featuring microprocessor control and pre-set programs.</p>
-            <div class="mt-auto">
-              <a href="product-detail.html" class="w-full bg-[#0E162A] hover:bg-opacity-90 shadow-md hover:shadow-lg transform hover:-translate-y-1 text-white text-[14px] font-medium py-3.5 px-6 rounded-xl flex items-center justify-center transition group-hover:shadow-md">
-                <span data-i18n="view_detail">View Details</span>
-                <i class="fa-solid fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition"></i>
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- View More Vertical Pill -->
-        <a href="products.html"
-          class="hidden lg:flex flex-col items-center justify-center bg-white rounded-full px-5 py-8 cursor-pointer hover:bg-gray-50 transition duration-300 hover:-translate-y-2 shadow-xl group">
-          <div style="writing-mode: vertical-rl; transform: rotate(180deg);"
-            class="text-[22px] font-bold text-gray-900 tracking-wide group-hover:text-primary transition"
-            data-i18n="view_all">
-            View More
-          </div>
-        </a>
-      </div>
-
-      <!-- Mobile View More Link -->
-      <div class="mt-10 lg:hidden">
-        <a href="products.html"
-          class="inline-block bg-white text-primary font-bold hover:bg-gray-100 transition duration-300 px-10 py-4 w-full sm:w-auto rounded-2xl shadow-lg"
-          data-i18n="view_all">
-          View More
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== KEY FACTORS ==================== -->
-  <section class="py-24 bg-lightbg px-6 border-b border-gray-100">
-    <div class="max-w-7xl mx-auto">
-      <div class="mb-16">
-        <div class="flex items-center mb-6">
-          <h2
-            class="text-[50px] md:text-[70px] lg:text-[80px] font-['Oswald'] font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-500 uppercase tracking-tight leading-none drop-shadow-sm"
-            data-i18n="key_factors_title">Key Factors</h2>
-          <div class="h-[2px] bg-gradient-to-r from-gray-200 to-transparent flex-grow ml-8 hidden md:block"></div>
-        </div>
-        <p class="text-[17px] md:text-[19px] text-gray-700 leading-relaxed max-w-4xl font-medium"
-          data-i18n="key_factors_desc">
-          Committed to quality, compliance, and innovation. These core principles ensure that every aspect of our
-          business operates efficiently and effectively to serve you better.
-        </p>
-      </div>
-
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-10 lg:gap-x-12">
-        <!-- Factor 1 -->
-        <div class="flex items-start group pb-2">
-          <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15">
-            </div>
-            <div
-              class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500">
-              <span
-                class="font-['Oswald'] text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]">01</span>
-            </div>
-          </div>
-          <div class="ml-6 mt-1 flex-1">
-            <h3
-              class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
-              data-i18n="kf1_title">Quality Standards</h3>
-            <p class="text-[15px] md:text-[16px] text-gray-600 leading-relaxed" data-i18n="kf1_desc">We adhere strictly
-              to ISO 9001:2015, ensuring consistency and efficiency across all processes.</p>
-          </div>
-        </div>
-
-        <!-- Factor 2 -->
-        <div class="flex items-start group pb-2">
-          <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15">
-            </div>
-            <div
-              class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500">
-              <span
-                class="font-['Oswald'] text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]">02</span>
-            </div>
-          </div>
-          <div class="ml-6 mt-1 flex-1">
-            <h3
-              class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
-              data-i18n="kf2_title">Regulatory Compliance</h3>
-            <p class="text-[15px] md:text-[16px] text-gray-600 leading-relaxed" data-i18n="kf2_desc">Our products meet
-              CDAKB certification, aligning with all industry regulations for safety and reliability.</p>
-          </div>
-        </div>
-
-        <!-- Factor 3 -->
-        <div class="flex items-start group pb-2">
-          <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15">
-            </div>
-            <div
-              class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500">
-              <span
-                class="font-['Oswald'] text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]">03</span>
-            </div>
-          </div>
-          <div class="ml-6 mt-1 flex-1">
-            <h3
-              class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
-              data-i18n="kf3_title">Innovation</h3>
-            <p class="text-[15px] md:text-[16px] text-gray-600 leading-relaxed" data-i18n="kf3_desc">We focus on
-              distributing the latest medical and aesthetic technologies, keeping us at the forefront of the market.</p>
-          </div>
-        </div>
-
-        <!-- Factor 4 -->
-        <div class="flex items-start group pb-2">
-          <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15">
-            </div>
-            <div
-              class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500">
-              <span
-                class="font-['Oswald'] text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]">04</span>
-            </div>
-          </div>
-          <div class="ml-6 mt-1 flex-1">
-            <h3
-              class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
-              data-i18n="kf4_title">Vision Alignment</h3>
-            <p class="text-[15px] md:text-[16px] text-gray-600 leading-relaxed" data-i18n="kf4_desc">Our operations are
-              guided by the goal of becoming a leading national supplier, driving every decision we make.</p>
-          </div>
-        </div>
-
-        <!-- Factor 5 -->
-        <div class="flex items-start group pb-2">
-          <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15">
-            </div>
-            <div
-              class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500">
-              <span
-                class="font-['Oswald'] text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]">05</span>
-            </div>
-          </div>
-          <div class="ml-6 mt-1 flex-1">
-            <h3
-              class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
-              data-i18n="kf5_title">Product Management</h3>
-            <p class="text-[15px] md:text-[16px] text-gray-600 leading-relaxed" data-i18n="kf5_desc">Efficient handling
-              and distribution systems ensure timely and accurate delivery of specialized medical devices.</p>
-          </div>
-        </div>
-
-        <!-- Factor 6 -->
-        <div class="flex items-start group pb-2">
-          <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
-            <div
-              class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15">
-            </div>
-            <div
-              class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500">
-              <span
-                class="font-['Oswald'] text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]">06</span>
-            </div>
-          </div>
-          <div class="ml-6 mt-1 flex-1">
-            <h3
-              class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
-              data-i18n="kf6_title">Customer Focus</h3>
-            <p class="text-[15px] md:text-[16px] text-gray-600 leading-relaxed" data-i18n="kf6_desc">We emphasize clear
-              communication and responsive service to build lasting client relationships.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== CONNECT CTA ==================== -->
-  <section class="max-w-[1200px] mx-auto px-6 py-16 md:py-24">
-    <div class="flex items-center mb-10">
-      <h2
-        class="text-[50px] md:text-[80px] font-['Oswald'] font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-500 uppercase tracking-tight leading-none drop-shadow-sm"
-        data-i18n="connect_title">Connect</h2>
-      <div class="h-[2px] bg-gradient-to-r from-gray-200 to-transparent flex-grow ml-8 hidden md:block"></div>
-    </div>
-
-    <div
-      class="bg-gradient-to-br from-slate-900 to-blue-900 rounded-[32px] overflow-hidden flex flex-col md:flex-row items-stretch shadow-xl relative">
-      <div class="absolute inset-0 bg-primary opacity-10 mix-blend-overlay object-cover"></div>
-      <div class="p-10 md:p-16 flex-1 flex flex-col justify-center text-center md:text-left z-10 w-full relative">
-        <h3 class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight">Partner With Our Team</h3>
-        <p class="text-blue-100 mb-8 max-w-sm mx-auto md:mx-0 text-[16px] leading-relaxed font-light"
-          data-i18n="connect_desc">
-          Have an inquiry about bringing robust medical solutions to your facility? Let's discuss your needs.
-        </p>
-        <div>
-          <a href="contact.html"
-            class="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-[#0E162A] font-semibold px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 space-x-2"
-            data-i18n="contact_btn">
-            <span>Contact Us</span>
-            <i class="fa-solid fa-paper-plane text-[13px]"></i>
-          </a>
-        </div>
-      </div>
+    <!-- ==================== HERO SECTION ==================== -->
+    <section
+      class="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-24 pb-28 relative overflow-hidden"
+    >
+      <!-- Decorative background blur -->
       <div
-        class="w-full md:w-5/12 relative flex items-end justify-center pt-8 md:pt-12 pr-0 md:pr-12 md:pb-0 z-10 text-center">
-        <img src="images/connect-worker.png" alt="Laboratory Professional"
-          class="w-full h-auto max-h-[450px] object-contain object-bottom drop-shadow-2xl mx-auto" />
+        class="absolute -right-4 -top-4 w-96 h-96 bg-[#1c85a2]/20 rounded-full blur-[100px] pointer-events-none"
+      ></div>
+      <div
+        class="max-w-[1200px] mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10"
+      >
+        <div class="space-y-6">
+          <div
+            class="text-lg font-semibold tracking-wider text-blue-300 uppercase"
+            data-i18n="hero_tag"
+          >
+            Gravia Citra Lestari
+          </div>
+          <h1
+            class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white tracking-tight"
+            data-i18n="hero_title"
+          >
+            Trusted Distributor of High Quality Medical Devices and IVD in
+            Indonesia
+          </h1>
+          <p
+            class="text-blue-100/90 text-lg max-w-lg font-light"
+            data-i18n="hero_desc"
+          >
+            We committed to improving healthcare accessibility by delivering
+            innovative, high-quality medical solutions backed by ISO and CDAKB
+            certifications to hospitals, clinics, and laboratories across
+            Indonesia.
+          </p>
+          <div
+            class="pt-4 flex flex-col sm:flex-row gap-6 items-start sm:items-center"
+          >
+            <a
+              href="products.html"
+              class="bg-white hover:bg-gray-100 text-[#0E162A] font-semibold px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 inline-flex items-center space-x-2"
+              data-i18n="hero_btn"
+            >
+              <span>View more</span>
+              <i class="fa-solid fa-arrow-right text-[12px]"></i>
+            </a>
+          </div>
+        </div>
+        <div class="relative">
+          <img
+            src="images/hero-cleanroom.png"
+            alt="Medical Factory/Cleanroom"
+            class="rounded-3xl shadow-[0_20px_50px_rgba(0,0,0,0.3)] object-cover h-[450px] md:h-[500px] w-full border border-white/10"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== BANNER SECTION ==================== -->
+    <div class="bg-white py-12 px-6 text-center text-black">
+      <div class="max-w-4xl mx-auto">
+        <p
+          class="text-xl md:text-2xl font-light leading-relaxed"
+          data-i18n="banner_text"
+        >
+          We understand the critical importance of reliable and advanced medical
+          technology in today's healthcare environment. That's why we
+          continuously innovate.
+        </p>
       </div>
     </div>
-  </section>
 
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="bg-primary text-blue-100 pt-16 pb-8 px-6 md:px-12 mt-10">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
-      <div class="col-span-1 md:col-span-1 border-b border-blue-800 pb-8 md:border-0 md:pb-0">
-        <a href="index.html"
-          class="inline-block mb-6 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow hover:shadow-md transition">
-          <img src="images/logo.png" alt="PT Gravia Citra Lestari Logo" class="h-9 md:h-10 w-auto object-contain" />
-        </a>
-        <p class="text-sm opacity-80 leading-relaxed mb-6" data-i18n="footer_desc">
-          PT Gravia Citra Lestari provides comprehensive medical solutions, delivering proven technology to elevate
-          healthcare outcomes.
-        </p>
-        <div class="flex space-x-4">
-          <a href="#"
-            class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
-            <i class="fa-brands fa-linkedin-in"></i>
+    <!-- ==================== CERTIFICATIONS & COMPLIANCE ==================== -->
+    <section class="bg-lightbg py-24 px-6 md:px-12 border-y border-gray-100">
+      <div class="max-w-[1200px] mx-auto">
+        <div class="text-center mb-14">
+          <h2
+            class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4"
+            data-i18n="compliance_title"
+          >
+            Certifications & Compliance
+          </h2>
+          <p
+            class="text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            data-i18n="compliance_desc"
+          >
+            We maintain strict regulatory and quality standards to ensure safe,
+            reliable, and compliant medical supply solutions for B2B healthcare
+            institutions.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-4 gap-8 mb-10">
+          <article
+            class="bg-white border border-gray-100 rounded-2xl p-8 shadow-[0_8px_25px_rgba(15,23,42,0.04)] group"
+          >
+            <div
+              class="h-20 flex items-center justify-center mb-5 grayscale group-hover:grayscale-0 transition"
+            >
+              <img
+                src="images/iso.png"
+                alt="ISO 9001:2015 Badge"
+                class="h-full w-auto object-contain"
+              />
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+              ISO 9001:2015
+            </h3>
+            <p
+              class="text-sm text-gray-600 leading-relaxed"
+              data-i18n="compliance_iso_desc"
+            >
+              Demonstrates our commitment to a certified quality management
+              system, ensuring consistent operational control and service
+              quality.
+            </p>
+          </article>
+
+          <article
+            class="bg-white border border-gray-100 rounded-2xl p-8 shadow-[0_8px_25px_rgba(15,23,42,0.04)] group"
+          >
+            <div
+              class="h-20 flex items-center justify-center mb-5 grayscale group-hover:grayscale-0 transition"
+            >
+              <img
+                src="images/cdakb.png"
+                alt="CDAKB Badge"
+                class="h-full w-auto object-contain"
+              />
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">CDAKB</h3>
+            <p
+              class="text-sm text-gray-600 leading-relaxed"
+              data-i18n="compliance_cdakb_desc"
+            >
+              Confirms adherence to Good Distribution Practice for Medical
+              Devices for safe handling, storage, and nationwide distribution.
+            </p>
+          </article>
+
+          <article
+            class="bg-white border border-gray-100 rounded-2xl p-8 shadow-[0_8px_25px_rgba(15,23,42,0.04)] group"
+          >
+            <div
+              class="h-20 flex items-center justify-center mb-5 grayscale group-hover:grayscale-0 transition"
+            >
+              <img
+                src="images/bangga-buatan-indonesia.png"
+                alt="Bangga Buatan Indonesia badge"
+                class="h-full w-auto object-contain"
+              />
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+              Bangga Buatan Indonesia
+            </h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+              Reflects our support for domestic industry growth and local-value
+              contributions in Indonesia's healthcare supply chain.
+            </p>
+          </article>
+
+          <article
+            class="bg-white border border-gray-100 rounded-2xl p-8 shadow-[0_8px_25px_rgba(15,23,42,0.04)] group"
+          >
+            <div class="h-20 flex items-center justify-center mb-5">
+              <div
+                class="bg-white border border-gray-100 rounded-xl px-4 py-2 shadow-sm"
+              >
+                <img
+                  src="images/logo-inaproc.jpeg"
+                  alt="RI INAPROC e-Katalog logo"
+                  class="h-12 md:h-14 w-auto object-contain grayscale group-hover:grayscale-0 transition duration-300"
+                />
+              </div>
+            </div>
+            <h3
+              class="text-lg font-semibold text-gray-900 mb-2"
+              data-i18n="compliance_inaproc_title"
+            >
+              National e-Katalog Listing
+            </h3>
+            <p
+              class="text-sm text-gray-600 leading-relaxed mb-6"
+              data-i18n="compliance_inaproc_desc"
+            >
+              PT. Gravia Citra Lestari is officially listed in the national
+              e-Katalog via RI INAPROC procurement system.
+            </p>
+            <a
+              href="https://katalog.inaproc.id/gravia-citra-lestari"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center justify-center bg-[#0E162A] hover:bg-opacity-90 text-white text-[13px] font-semibold px-5 py-2.5 rounded-lg transition"
+              data-i18n="compliance_inaproc_btn"
+            >
+              View our e-Katalog Profile
+              <i
+                class="fa-solid fa-arrow-up-right-from-square ml-2 text-[11px]"
+              ></i>
+            </a>
+          </article>
+        </div>
+
+        <div
+          class="bg-white border border-gray-100 rounded-2xl p-8 md:p-10 shadow-[0_8px_25px_rgba(15,23,42,0.04)]"
+        >
+          <h3
+            class="text-xl font-semibold text-gray-900 mb-2"
+            data-i18n="compliance_progress_title"
+          >
+            On Progress: Future Readiness
+          </h3>
+          <p
+            class="text-sm text-gray-600 leading-relaxed max-w-3xl mb-5"
+            data-i18n="compliance_progress_desc"
+          >
+            We are currently progressing toward additional strategic
+            certifications to strengthen transparency, local-value contribution,
+            and long-term procurement readiness.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== OUR PRODUCTS ==================== -->
+    <section class="bg-primary py-24 px-6 relative overflow-hidden">
+      <div class="max-w-[1300px] mx-auto text-center">
+        <h2
+          class="text-4xl md:text-5xl font-bold text-white mb-16"
+          data-i18n="our_products_title"
+        >
+          Our Products
+        </h2>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-[1fr_1fr_1fr_auto] gap-6"
+        >
+          <!-- Product 1 -->
+          <div
+            class="bg-white rounded-[32px] p-6 lg:p-8 text-left flex flex-col group hover:-translate-y-2 transition duration-300 shadow-xl"
+          >
+            <div class="h-48 mb-6 flex justify-center items-center">
+              <img
+                src="images/products/gel-card.png"
+                alt="Panatha Gel Card System"
+                class="h-full object-contain mix-blend-multiply group-hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="flex-grow flex flex-col">
+              <span
+                class="text-[13px] font-semibold text-secondary mb-1"
+                data-i18n="cat_blood_bank"
+                >Blood Bank & Immunohematology Solutions</span
+              >
+              <h3
+                class="text-[22px] font-bold text-gray-900 mb-3"
+                data-i18n="prod_gel_system"
+              >
+                Panatha Gel Card System
+              </h3>
+              <p
+                class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-grow"
+                data-i18n="prod_gel_desc"
+              >
+                A microcolumn gel technology system used for the determination
+                of blood groups and detection of red cell sensitization.
+              </p>
+              <div class="mt-auto">
+                <a
+                  href="product-detail.html?product=gel-card"
+                  class="w-full bg-[#0E162A] hover:bg-opacity-90 shadow-md hover:shadow-lg transform hover:-translate-y-1 text-white text-[14px] font-medium py-3.5 px-6 rounded-xl flex items-center justify-center transition group-hover:shadow-md"
+                >
+                  <span data-i18n="view_detail">View Details</span>
+                  <i
+                    class="fa-solid fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 2 -->
+          <div
+            class="bg-white rounded-[32px] p-6 lg:p-8 text-left flex flex-col group hover:-translate-y-2 transition duration-300 shadow-xl"
+          >
+            <div class="h-48 mb-6 flex justify-center items-center">
+              <img
+                src="images/products/virdict-4.png"
+                alt="Virdict 4 Combo Integrated Test"
+                class="h-full object-contain mix-blend-multiply group-hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="flex-grow flex flex-col">
+              <span
+                class="text-[13px] font-semibold text-secondary mb-1"
+                data-i18n="cat_ivd"
+                >Rapid Diagnostic Tests (IVD)</span
+              >
+              <h3
+                class="text-[22px] font-bold text-gray-900 mb-3"
+                data-i18n="prod_virdict_4"
+              >
+                Virdict 4 Combo Integrated Test
+              </h3>
+              <p
+                class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-grow"
+                data-i18n="prod_virdict_desc"
+              >
+                A rapid immunochromatographic test for simultaneous detection of
+                HBsAg and antibodies to HIV, HCV, and Syphilis.
+              </p>
+              <div class="mt-auto">
+                <a
+                  href="product-detail.html?product=virdict-4"
+                  class="w-full bg-[#0E162A] hover:bg-opacity-90 shadow-md hover:shadow-lg transform hover:-translate-y-1 text-white text-[14px] font-medium py-3.5 px-6 rounded-xl flex items-center justify-center transition group-hover:shadow-md"
+                >
+                  <span data-i18n="view_detail">View Details</span>
+                  <i
+                    class="fa-solid fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Product 3 -->
+          <div
+            class="bg-white rounded-[32px] p-6 lg:p-8 text-left flex flex-col group hover:-translate-y-2 transition duration-300 shadow-xl"
+          >
+            <div class="h-48 mb-6 flex justify-center items-center">
+              <img
+                src="images/products/cl5r.png"
+                alt="CL5R Refrigerated Centrifuge"
+                class="h-full object-contain mix-blend-multiply group-hover:scale-105 transition duration-500"
+              />
+            </div>
+            <div class="flex-grow flex flex-col">
+              <span
+                class="text-[13px] font-semibold text-secondary mb-1"
+                data-i18n="cat_centrifuges"
+                >Clinical & Research Centrifuges</span
+              >
+              <h3 class="text-[22px] font-bold text-gray-900 mb-3">
+                CL5R Refrigerated Centrifuge
+              </h3>
+              <p
+                class="text-[14px] text-gray-500 leading-relaxed mb-8 flex-grow"
+              >
+                Compact refrigerated centrifuge engineered for stable
+                temperature control and dependable sample processing in clinical
+                laboratory routines.
+              </p>
+              <div class="mt-auto">
+                <a
+                  href="product-detail.html?product=cl5r"
+                  class="w-full bg-[#0E162A] hover:bg-opacity-90 shadow-md hover:shadow-lg transform hover:-translate-y-1 text-white text-[14px] font-medium py-3.5 px-6 rounded-xl flex items-center justify-center transition group-hover:shadow-md"
+                >
+                  <span data-i18n="view_detail">View Details</span>
+                  <i
+                    class="fa-solid fa-arrow-right ml-2 text-xs transform group-hover:translate-x-1 transition"
+                  ></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- View More Vertical Pill -->
+          <a
+            href="products.html"
+            class="hidden lg:flex flex-col items-center justify-center bg-white rounded-full px-5 py-8 cursor-pointer hover:bg-gray-50 transition duration-300 hover:-translate-y-2 shadow-xl group"
+          >
+            <div
+              style="writing-mode: vertical-rl; transform: rotate(180deg)"
+              class="text-[22px] font-bold text-gray-900 tracking-wide group-hover:text-primary transition"
+              data-i18n="view_all"
+            >
+              View More
+            </div>
           </a>
-          <a href="#"
-            class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="#"
-            class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
-            <i class="fa-brands fa-instagram"></i>
+        </div>
+
+        <!-- Mobile View More Link -->
+        <div class="mt-10 lg:hidden">
+          <a
+            href="products.html"
+            class="inline-block bg-white text-primary font-bold hover:bg-gray-100 transition duration-300 px-10 py-4 w-full sm:w-auto rounded-2xl shadow-lg"
+            data-i18n="view_all"
+          >
+            View More
           </a>
         </div>
       </div>
+    </section>
 
-      <div>
-        <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm" data-i18n="quick_links">Quick Links</h4>
-        <ul class="space-y-4 text-sm">
-          <li><a href="about.html" class="hover:text-white transition" data-i18n="nav_about">About Us</a></li>
-          <li><a href="products.html" class="hover:text-white transition" data-i18n="nav_products">Our Products</a></li>
-          <li><a href="our-principals.html" class="hover:text-white transition" data-i18n="footer_principals">Principals
-              & Partners</a></li>
-          <li><a href="contact.html" class="hover:text-white transition" data-i18n="nav_contact">Contact Us</a></li>
-        </ul>
+    <!-- ==================== KEY FACTORS ==================== -->
+    <section class="py-24 bg-lightbg px-6 border-b border-gray-100">
+      <div class="max-w-7xl mx-auto">
+        <div class="text-center mb-14">
+          <h2
+            class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4"
+            data-i18n="key_factors_title"
+          >
+            Key Factors
+          </h2>
+          <p
+            class="text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            data-i18n="key_factors_desc"
+          >
+            Committed to quality, compliance, and innovation. These core
+            principles ensure that every aspect of our business operates
+            efficiently and effectively to serve you better.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-10 lg:gap-x-12"
+        >
+          <!-- Factor 1 -->
+          <div class="flex items-start group pb-2">
+            <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15"
+              ></div>
+              <div
+                class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500"
+              >
+                <span
+                  class="font-['Oswald'] text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]"
+                  >01</span
+                >
+              </div>
+            </div>
+            <div class="ml-6 mt-1 flex-1">
+              <h3
+                class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
+                data-i18n="kf1_title"
+              >
+                Quality Standards
+              </h3>
+              <p
+                class="text-[15px] md:text-[16px] text-gray-600 leading-relaxed"
+                data-i18n="kf1_desc"
+              >
+                We adhere strictly to ISO 9001:2015, ensuring consistency and
+                efficiency across all processes.
+              </p>
+            </div>
+          </div>
+
+          <!-- Factor 2 -->
+          <div class="flex items-start group pb-2">
+            <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15"
+              ></div>
+              <div
+                class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500"
+              >
+                <span
+                  class="font-['Oswald'] text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]"
+                  >02</span
+                >
+              </div>
+            </div>
+            <div class="ml-6 mt-1 flex-1">
+              <h3
+                class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
+                data-i18n="kf2_title"
+              >
+                Regulatory Compliance
+              </h3>
+              <p
+                class="text-[15px] md:text-[16px] text-gray-600 leading-relaxed"
+                data-i18n="kf2_desc"
+              >
+                Our products meet CDAKB certification, aligning with all
+                industry regulations for safety and reliability.
+              </p>
+            </div>
+          </div>
+
+          <!-- Factor 3 -->
+          <div class="flex items-start group pb-2">
+            <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15"
+              ></div>
+              <div
+                class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500"
+              >
+                <span
+                  class="font-['Oswald'] text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]"
+                  >03</span
+                >
+              </div>
+            </div>
+            <div class="ml-6 mt-1 flex-1">
+              <h3
+                class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
+                data-i18n="kf3_title"
+              >
+                Innovation
+              </h3>
+              <p
+                class="text-[15px] md:text-[16px] text-gray-600 leading-relaxed"
+                data-i18n="kf3_desc"
+              >
+                We focus on distributing the latest medical and aesthetic
+                technologies, keeping us at the forefront of the market.
+              </p>
+            </div>
+          </div>
+
+          <!-- Factor 4 -->
+          <div class="flex items-start group pb-2">
+            <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15"
+              ></div>
+              <div
+                class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500"
+              >
+                <span
+                  class="font-['Oswald'] text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]"
+                  >04</span
+                >
+              </div>
+            </div>
+            <div class="ml-6 mt-1 flex-1">
+              <h3
+                class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
+                data-i18n="kf4_title"
+              >
+                Vision Alignment
+              </h3>
+              <p
+                class="text-[15px] md:text-[16px] text-gray-600 leading-relaxed"
+                data-i18n="kf4_desc"
+              >
+                Our operations are guided by the goal of becoming a leading
+                national supplier, driving every decision we make.
+              </p>
+            </div>
+          </div>
+
+          <!-- Factor 5 -->
+          <div class="flex items-start group pb-2">
+            <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15"
+              ></div>
+              <div
+                class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500"
+              >
+                <span
+                  class="font-['Oswald'] text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]"
+                  >05</span
+                >
+              </div>
+            </div>
+            <div class="ml-6 mt-1 flex-1">
+              <h3
+                class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
+                data-i18n="kf5_title"
+              >
+                Product Management
+              </h3>
+              <p
+                class="text-[15px] md:text-[16px] text-gray-600 leading-relaxed"
+                data-i18n="kf5_desc"
+              >
+                Efficient handling and distribution systems ensure timely and
+                accurate delivery of specialized medical devices.
+              </p>
+            </div>
+          </div>
+
+          <!-- Factor 6 -->
+          <div class="flex items-start group pb-2">
+            <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15"
+              ></div>
+              <div
+                class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500"
+              >
+                <span
+                  class="font-['Oswald'] text-2xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]"
+                  >06</span
+                >
+              </div>
+            </div>
+            <div class="ml-6 mt-1 flex-1">
+              <h3
+                class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
+                data-i18n="kf6_title"
+              >
+                Customer Focus
+              </h3>
+              <p
+                class="text-[15px] md:text-[16px] text-gray-600 leading-relaxed"
+                data-i18n="kf6_desc"
+              >
+                We emphasize clear communication and responsive service to build
+                lasting client relationships.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CONNECT CTA ==================== -->
+    <section class="max-w-[1200px] mx-auto px-6 py-16 md:py-24">
+      <div class="text-center mb-14">
+        <h2
+          class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4"
+          data-i18n="connect_title"
+        >
+          Connect
+        </h2>
       </div>
 
-      <div>
-        <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm" data-i18n="footer_products">Products</h4>
-        <ul class="space-y-4 text-sm">
-          <li><a href="products.html" class="hover:text-white transition" data-i18n="cat_blood_bank">Blood Bank & Immunohematology Solutions</a></li>
-          <li><a href="products.html" class="hover:text-white transition" data-i18n="cat_ivd">Rapid Diagnostic Tests (IVD)</a></li>
-          <li><a href="products.html" class="hover:text-white transition" data-i18n="cat_centrifuges">Clinical & Research Centrifuges</a></li>
-        </ul>
+      <div
+        class="bg-gradient-to-br from-slate-900 to-blue-900 rounded-[32px] overflow-hidden flex flex-col md:flex-row items-stretch shadow-xl relative"
+      >
+        <div
+          class="absolute inset-0 bg-primary opacity-10 mix-blend-overlay object-cover"
+        ></div>
+        <div
+          class="p-10 md:p-16 flex-1 flex flex-col justify-center text-center md:text-left z-10 w-full relative"
+        >
+          <h3
+            class="text-3xl md:text-4xl font-bold text-white mb-6 leading-tight"
+          >
+            Partner With Our Team
+          </h3>
+          <p
+            class="text-blue-100 mb-8 max-w-sm mx-auto md:mx-0 text-[16px] leading-relaxed font-light"
+            data-i18n="connect_desc"
+          >
+            Have an inquiry about bringing robust medical solutions to your
+            facility? Let's discuss your needs.
+          </p>
+          <div>
+            <a
+              href="contact.html"
+              class="inline-flex items-center justify-center bg-white hover:bg-gray-100 text-[#0E162A] font-semibold px-8 py-3.5 rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 transition duration-300 space-x-2"
+              data-i18n="contact_btn"
+            >
+              <span>Contact Us</span>
+              <i class="fa-solid fa-paper-plane text-[13px]"></i>
+            </a>
+          </div>
+        </div>
+        <div
+          class="w-full md:w-5/12 relative flex items-end justify-center pt-8 md:pt-12 pr-0 md:pr-12 md:pb-0 z-10 text-center"
+        >
+          <img
+            src="images/connect-worker.png"
+            alt="Laboratory Professional"
+            class="w-full h-auto max-h-[450px] object-contain object-bottom drop-shadow-2xl mx-auto"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-primary text-blue-100 pt-16 pb-8 px-6 md:px-12 mt-10">
+      <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div
+          class="col-span-1 md:col-span-1 border-b border-blue-800 pb-8 md:border-0 md:pb-0"
+        >
+          <a
+            href="index.html"
+            class="inline-block mb-6 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow hover:shadow-md transition"
+          >
+            <img
+              src="images/logo-gravia.png"
+              alt="PT Gravia Citra Lestari Logo"
+              class="h-9 md:h-10 w-auto object-contain"
+            />
+          </a>
+          <p
+            class="text-sm opacity-80 leading-relaxed"
+            data-i18n="footer_desc"
+          >
+            PT Gravia Citra Lestari provides comprehensive medical solutions,
+            delivering proven technology to elevate healthcare outcomes.
+          </p>
+
+        </div>
+
+        <div>
+          <h4
+            class="text-white font-bold mb-6 tracking-wide uppercase text-sm"
+            data-i18n="quick_links"
+          >
+            Quick Links
+          </h4>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a
+                href="about.html"
+                class="hover:text-white transition"
+                data-i18n="nav_about"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="products.html"
+                class="hover:text-white transition"
+                data-i18n="nav_products"
+                >Our Products</a
+              >
+            </li>
+            <li>
+              <a
+                href="our-principals.html"
+                class="hover:text-white transition"
+                data-i18n="footer_principals"
+                >Principals & Partners</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="hover:text-white transition"
+                data-i18n="nav_contact"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4
+            class="text-white font-bold mb-6 tracking-wide uppercase text-sm"
+            data-i18n="footer_products"
+          >
+            Products
+          </h4>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a
+                href="products.html"
+                class="hover:text-white transition"
+                data-i18n="cat_blood_bank"
+                >Blood Bank & Immunohematology Solutions</a
+              >
+            </li>
+            <li>
+              <a
+                href="products.html"
+                class="hover:text-white transition"
+                data-i18n="cat_ivd"
+                >Rapid Diagnostic Tests (IVD)</a
+              >
+            </li>
+            <li>
+              <a
+                href="products.html"
+                class="hover:text-white transition"
+                data-i18n="cat_centrifuges"
+                >Clinical & Research Centrifuges</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4
+            class="text-white font-bold mb-6 tracking-wide uppercase text-sm"
+            data-i18n="contact_details"
+          >
+            Contact Details
+          </h4>
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-start space-x-3">
+              <i class="fa-solid fa-map-marker-alt mt-1 shrink-0"></i>
+              <span data-i18n="address"
+                >Jalan Wolter Monginsidi, Komplek Ruko Wolter Monginsidi Blok
+                Q/4 No. 84-HH (Lantai 3 dan 4), Petogogan, Kebayoran Baru,
+                Jakarta Selatan, Kode Pos 12170, Indonesia.</span
+              >
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fa-solid fa-phone shrink-0"></i>
+              <span>(62) 811-952-4689</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fa-solid fa-envelope shrink-0"></i>
+              <span>graviacitralestari@gmail.com</span>
+            </li>
+          </ul>
+        </div>
       </div>
 
-      <div>
-        <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm" data-i18n="contact_details">Contact
-          Details</h4>
-        <ul class="space-y-4 text-sm">
-          <li class="flex items-start space-x-3">
-            <i class="fa-solid fa-map-marker-alt mt-1 shrink-0"></i>
-            <span data-i18n="address">Jl. Wolter Monginsidi No.84AH, RT.1/RW.4, Petogogan, Kebayoran Baru, South Jakarta City, Jakarta 12170</span>
-          </li>
-          <li class="flex items-center space-x-3">
-            <i class="fa-solid fa-phone shrink-0"></i>
-            <span>(62) 811-952-4689</span>
-          </li>
-          <li class="flex items-center space-x-3">
-            <i class="fa-solid fa-envelope shrink-0"></i>
-            <span>graviacitralestari@gmail.com</span>
-          </li>
-        </ul>
+      <div
+        class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-blue-800 text-sm text-center md:text-left flex flex-col md:flex-row justify-between items-center text-blue-300"
+      >
+        <p data-i18n="rights">
+          &copy; 2024 PT Gravia Citra Lestari. All rights reserved.
+        </p>
+        <div class="mt-4 md:mt-0 space-x-4">
+          <a href="#" class="hover:text-white" data-i18n="privacy"
+            >Privacy Policy</a
+          >
+          <span>|</span>
+          <a href="#" class="hover:text-white" data-i18n="terms"
+            >Terms of Service</a
+          >
+        </div>
       </div>
-    </div>
+    </footer>
 
-    <div
-      class="max-w-7xl mx-auto mt-12 pt-8 border-t border-blue-800 text-sm text-center md:text-left flex flex-col md:flex-row justify-between items-center text-blue-300">
-      <p data-i18n="rights">&copy; 2024 PT Gravia Citra Lestari. All rights reserved.</p>
-      <div class="mt-4 md:mt-0 space-x-4">
-        <a href="#" class="hover:text-white" data-i18n="privacy">Privacy Policy</a>
-        <span>|</span>
-        <a href="#" class="hover:text-white" data-i18n="terms">Terms of Service</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

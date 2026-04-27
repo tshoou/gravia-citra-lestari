@@ -1,404 +1,976 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Us - PT Gravia Citra Lestari</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About Us - PT Gravia Citra Lestari</title>
-
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            primary: '#0F172A', // Slate 900
-            secondary: '#3B82F6', // Blue 500 
-            accent: '#0EA5E9', // Sky 500
-            lightbg: '#F8FAFC',
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0F172A", // Slate 900
+              secondary: "#3B82F6", // Blue 500
+              accent: "#0EA5E9", // Sky 500
+              lightbg: "#F8FAFC",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
           },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-          }
-        }
-      }
-    }
-  </script>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600&family=Oswald:wght@600;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-</head>
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Caveat:wght@500;600&family=Oswald:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
 
-<body class="bg-white text-gray-800 antialiased overflow-x-hidden font-sans">
+  <body class="bg-white text-gray-800 antialiased overflow-x-hidden font-sans">
+    <!-- ==================== HEADER ==================== -->
+    <header
+      class="w-full bg-white/80 backdrop-blur-lg shadow-[0_4px_30px_rgba(0,0,0,0.03)] border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50"
+    >
+      <a
+        href="index.html"
+        class="flex items-center shrink-0 border-none outline-none group"
+      >
+        <img
+          src="images/logo-gravia.png"
+          alt="PT Gravia Citra Lestari Logo"
+          class="h-10 md:h-12 w-auto object-contain group-hover:opacity-90 transition"
+        />
+      </a>
 
-  <!-- ==================== HEADER ==================== -->
-  <header
-    class="w-full bg-white/80 backdrop-blur-lg shadow-[0_4px_30px_rgba(0,0,0,0.03)] border-b border-gray-100 py-4 px-6 md:px-12 flex items-center justify-between sticky top-0 z-50">
-    <a href="index.html" class="flex items-center shrink-0 border-none outline-none group">
-      <img src="images/logo.png" alt="PT Gravia Citra Lestari Logo"
-        class="h-10 md:h-12 w-auto object-contain group-hover:opacity-90 transition" />
-    </a>
+      <nav class="hidden md:flex space-x-8 items-center font-medium text-sm">
+        <a
+          href="index.html"
+          class="text-gray-600 hover:text-primary transition"
+          data-i18n="nav_home"
+          >Home</a
+        >
+        <a
+          href="about.html"
+          class="text-primary border-b-2 border-primary pb-1"
+          data-i18n="nav_about"
+          >About Us</a
+        >
+        <a
+          href="products.html"
+          class="text-gray-600 hover:text-primary transition"
+          data-i18n="nav_products"
+          >Our Products</a
+        >
+        <a
+          href="our-principals.html"
+          class="text-gray-600 hover:text-primary transition"
+          data-i18n="nav_principals"
+          >Our Principals</a
+        >
+        <a
+          href="contact.html"
+          class="text-gray-600 hover:text-primary transition"
+          data-i18n="nav_contact"
+          >Contact Us</a
+        >
+      </nav>
 
-    <nav class="hidden md:flex space-x-8 items-center font-medium text-sm">
-      <a href="index.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_home">Home</a>
-      <a href="about.html" class="text-primary border-b-2 border-primary pb-1" data-i18n="nav_about">About Us</a>
-      <a href="products.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_products">Our
-        Products</a>
-      <a href="our-principals.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_principals">Our
-        Principals</a>
-      <a href="contact.html" class="text-gray-600 hover:text-primary transition" data-i18n="nav_contact">Contact Us</a>
-    </nav>
-
-    <div class="hidden md:flex items-center space-x-6 text-sm">
-      <div class="flex space-x-2 font-medium">
-        <a id="lang-id" class="text-gray-500 hover:text-primary cursor-pointer transition">ID</a>
-        <span class="text-gray-300">|</span>
-        <a id="lang-en" class="text-primary font-bold cursor-pointer transition">EN</a>
+      <div class="hidden md:flex items-center space-x-6 text-sm">
+        <div class="flex space-x-2 font-medium">
+          <a
+            id="lang-id"
+            class="text-gray-500 hover:text-primary cursor-pointer transition"
+            >ID</a
+          >
+          <span class="text-gray-300">|</span>
+          <a
+            id="lang-en"
+            class="text-primary font-bold cursor-pointer transition"
+            >EN</a
+          >
+        </div>
+        <button class="text-gray-600 hover:text-primary">
+          <i class="fa-solid fa-search"></i>
+        </button>
       </div>
-      <button class="text-gray-600 hover:text-primary">
-        <i class="fa-solid fa-search"></i>
+
+      <!-- Mobile Menu Button -->
+      <button class="md:hidden text-gray-600">
+        <i class="fa-solid fa-bars text-2xl"></i>
       </button>
-    </div>
+    </header>
 
-    <!-- Mobile Menu Button -->
-    <button class="md:hidden text-gray-600">
-      <i class="fa-solid fa-bars text-2xl"></i>
-    </button>
-  </header>
-
-  <!-- ==================== ABOUT HERO ==================== -->
-  <section class="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-20 pb-24 px-6 relative">
-    <div class="max-w-[1200px] mx-auto text-left relative z-10">
-      <h1 class="text-4xl md:text-5xl font-semibold text-white mb-6" data-i18n="about_hero_title">About Us</h1>
-      <p class="text-blue-100/90 text-[17px] md:text-lg max-w-xl font-light" data-i18n="about_hero_desc">
-        Learn about our journey, experience, and commitment to excellence in medical equipment supply.
-      </p>
-    </div>
-  </section>
-
-  <!-- ==================== INTRO CONTENT ==================== -->
-  <section class="py-20 md:py-28 px-6 max-w-[1200px] mx-auto">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center">
-
-      <!-- Left side: Text -->
-      <div class="lg:col-span-6 space-y-6">
-        <h2 class="text-3xl font-semibold text-gray-900 mb-8" data-i18n="about_intro_title">PT Gravia Citra Lestari</h2>
-        <div class="space-y-5 text-[15px] text-gray-600 leading-[1.8]">
-          <p data-i18n="about_intro_p1">
-            PT Gravia Citra Lestari was established on November 11, 2017, as a holding company specializing in trading
-            and supplying medical equipment with a primary focus on Blood Transfusion Instruments & Products.
-          </p>
-          <p data-i18n="about_intro_p2">
-            With over 20 years of industry experience dating back to 2000, we have established ourselves as a trusted
-            partner for hospitals, clinics, blood donation units, and medical institutions across Indonesia.
-          </p>
-          <p data-i18n="about_intro_p3">
-            As an authorized distributor from domestic manufacturers and PT Panatha Citra Lestari, we offer a
-            comprehensive range of both imported and locally manufactured medical products, ensuring quality and
-            reliability in every solution we provide.
-          </p>
-          <p data-i18n="about_intro_p4">
-            Led by experienced professionals in the medical equipment industry, we are committed to distributing medical
-            innovation and leading the way in healthcare excellence.
-          </p>
-        </div>
-      </div>
-
-      <!-- Right side: Stats Grid -->
-      <div class="lg:col-span-6">
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <!-- Card 1 -->
-          <div
-            class="bg-white p-8 rounded-[20px] shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col items-center text-center">
-            <div class="text-[#2b4c9b] mb-4">
-              <i class="fa-regular fa-calendar text-[32px]"></i>
-            </div>
-            <h3 class="text-[17px] font-bold text-gray-900 mb-2" data-i18n="about_stat1_title">Since 2017</h3>
-            <p class="text-[12px] text-gray-500 max-w-[140px]" data-i18n="about_stat1_desc">Established as a holding
-              company</p>
-          </div>
-
-          <!-- Card 2 -->
-          <div
-            class="bg-white p-8 rounded-[20px] shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col items-center text-center">
-            <div class="text-[#2b4c9b] mb-4">
-              <i class="fa-regular fa-calendar-check text-[32px]"></i>
-            </div>
-            <h3 class="text-[17px] font-bold text-gray-900 mb-2" data-i18n="about_stat2_title">20+ Years</h3>
-            <p class="text-[12px] text-gray-500 max-w-[140px]" data-i18n="about_stat2_desc">Industry experience since
-              2000</p>
-          </div>
-
-          <!-- Card 3 -->
-          <div
-            class="bg-white p-8 rounded-[20px] shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col items-center text-center">
-            <div class="text-[#2b4c9b] mb-4">
-              <i class="fa-solid fa-award text-[32px]"></i>
-            </div>
-            <h3 class="text-[17px] font-bold text-gray-900 mb-2" data-i18n="about_stat3_title">Authorized</h3>
-            <p class="text-[12px] text-gray-500 max-w-[140px]" data-i18n="about_stat3_desc">Distributor from PT Panatha
-              Citra Lestari</p>
-          </div>
-
-          <!-- Card 4 -->
-          <div
-            class="bg-white p-8 rounded-[20px] shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col items-center text-center">
-            <div class="text-[#2b4c9b] mb-4">
-              <i class="fa-solid fa-bullseye text-[32px]"></i>
-            </div>
-            <h3 class="text-[17px] font-bold text-gray-900 mb-2" data-i18n="about_stat4_title">B2B Focus</h3>
-            <p class="text-[12px] text-gray-500 max-w-[140px]" data-i18n="about_stat4_desc">Hospitals, clinics &
-              institutions</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== VISION & MISSION ==================== -->
-  <section class="bg-lightbg py-24 px-6 md:px-12">
-    <div class="max-w-[1200px] mx-auto">
-
-      <!-- Vision Section -->
-      <div class="mb-14">
-        <div class="flex items-center mb-8">
-          <h2
-            class="text-[70px] md:text-[110px] font-['Oswald'] font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-500 uppercase tracking-tight leading-none drop-shadow-sm"
-            data-i18n="vision_main">Vision</h2>
-          <div class="h-[2px] bg-gradient-to-r from-gray-200 to-transparent flex-grow ml-8 hidden md:block"></div>
-        </div>
-        <div class="text-[18px] md:text-[20px] text-gray-800 leading-[1.7] font-medium max-w-4xl"
-          data-i18n="vision_desc">
-          To be the leading of national distributor with innovative, high-quality medical device and in-vitro
-          diagnostics (IVD) and enhancing healthcare accessibility and patient health outcomes in Indonesia.
-        </div>
-      </div>
-
-      <!-- Mission Section -->
-      <div>
-        <div class="flex items-center mb-12">
-          <h2
-            class="text-[70px] md:text-[110px] font-['Oswald'] font-bold text-transparent bg-clip-text bg-gradient-to-r from-gray-900 via-gray-700 to-gray-500 uppercase tracking-tight leading-none drop-shadow-sm"
-            data-i18n="mission_main">Mission</h2>
-          <div class="h-[2px] bg-gradient-to-r from-gray-200 to-transparent flex-grow ml-8 hidden md:block"></div>
-        </div>
-
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-12 lg:gap-x-24 mt-8">
-
-          <!-- Mission 1 -->
-          <div class="flex items-start group">
-            <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
-              <div
-                class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15">
-              </div>
-              <div
-                class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500">
-                <span
-                  class="font-['Oswald'] text-3xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]">01</span>
-              </div>
-            </div>
-            <div class="ml-6 mt-1">
-              <h3
-                class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
-                data-i18n="miss1_title">Deliver Excellence</h3>
-              <p class="text-[16px] text-gray-600 leading-relaxed" data-i18n="miss1_desc">Provide certified,
-                high-quality medical devices and diagnostics that meet international standards.</p>
-            </div>
-          </div>
-
-          <!-- Mission 2 -->
-          <div class="flex items-start group">
-            <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
-              <div
-                class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15">
-              </div>
-              <div
-                class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500">
-                <span
-                  class="font-['Oswald'] text-3xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]">02</span>
-              </div>
-            </div>
-            <div class="ml-6 mt-1">
-              <h3
-                class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
-                data-i18n="miss2_title">Enhance Accessibility</h3>
-              <p class="text-[16px] text-gray-600 leading-relaxed" data-i18n="miss2_desc">Expand the reach of advanced
-                healthcare solutions to hospitals, clinics, and laboratories nationwide.</p>
-            </div>
-          </div>
-
-          <!-- Mission 3 -->
-          <div class="flex items-start group">
-            <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
-              <div
-                class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15">
-              </div>
-              <div
-                class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500">
-                <span
-                  class="font-['Oswald'] text-3xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]">03</span>
-              </div>
-            </div>
-            <div class="ml-6 mt-1">
-              <h3
-                class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
-                data-i18n="miss3_title">Drive Innovation</h3>
-              <p class="text-[16px] text-gray-600 leading-relaxed" data-i18n="miss3_desc">Continuously adopt and
-                introduce cutting-edge medical technology to improve healthcare services.</p>
-            </div>
-          </div>
-
-          <!-- Mission 4 -->
-          <div class="flex items-start group">
-            <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
-              <div
-                class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15">
-              </div>
-              <div
-                class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500">
-                <span
-                  class="font-['Oswald'] text-3xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]">04</span>
-              </div>
-            </div>
-            <div class="ml-6 mt-1">
-              <h3
-                class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
-                data-i18n="miss4_title">Build Strong Partnerships</h3>
-              <p class="text-[16px] text-gray-600 leading-relaxed" data-i18n="miss4_desc">Foster long-term
-                collaborations with healthcare providers, institutions, and stakeholders to advance medical care.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ==================== WORKSHOP EXPERIENCES ==================== -->
-  <section class="py-24 px-6 max-w-[1200px] mx-auto relative break-words">
-    <h2 class="text-3xl font-semibold text-center text-gray-900 mb-16" data-i18n="workshop_title">Workshop Experiences
-    </h2>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Card 1 -->
-      <div
-        class="bg-white p-6 rounded-2xl border border-gray-100 shadow-[0_2px_15px_rgba(0,0,0,0.03)] hover:-translate-y-1 transition duration-300">
-        <img src="images/detail-image.jpg" alt="Workshop 1" class="w-full h-40 object-cover rounded-xl mb-5" />
-        <h4 class="text-[15px] font-bold text-gray-900 mb-3 leading-snug" data-i18n="ws1_title">Wet Workshop with BB
-          Hospital</h4>
-        <p class="text-[13px] text-gray-500 leading-relaxed" data-i18n="ws1_desc">East and Central Java - Semarang IIC
-          Crossmatching Wet Workshop, Gel Method</p>
-      </div>
-
-      <!-- Card 2 -->
-      <div
-        class="bg-white p-6 rounded-2xl border border-gray-100 shadow-[0_2px_15px_rgba(0,0,0,0.03)] hover:-translate-y-1 transition duration-300">
-        <img src="images/detail-image.jpg" alt="Workshop 2" class="w-full h-40 object-cover rounded-xl mb-5" />
-        <h4 class="text-[15px] font-bold text-gray-900 mb-3 leading-snug" data-i18n="ws2_title">Bandung Health
-          Polytechnic</h4>
-        <p class="text-[13px] text-gray-500 leading-relaxed" data-i18n="ws2_desc">Specialized training program for
-          healthcare professionals in blood transfusion techniques</p>
-      </div>
-
-      <!-- Card 3 -->
-      <div
-        class="bg-white p-6 rounded-2xl border border-gray-100 shadow-[0_2px_15px_rgba(0,0,0,0.03)] hover:-translate-y-1 transition duration-300">
-        <img src="images/detail-image.jpg" alt="Workshop 3" class="w-full h-40 object-cover rounded-xl mb-5" />
-        <h4 class="text-[15px] font-bold text-gray-900 mb-3 leading-snug" data-i18n="ws3_title">Antibody Screening
-          Workshop</h4>
-        <p class="text-[13px] text-gray-500 leading-relaxed" data-i18n="ws3_desc">Antibody Screening and Identification
-          Wet Workshop with Pathology Clinic Doctors - Bandung</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="bg-primary text-blue-100 pt-16 pb-8 px-6 md:px-12 mt-10">
-    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
-      <div class="col-span-1 md:col-span-1 border-b border-blue-800 pb-8 md:border-0 md:pb-0">
-        <a href="index.html"
-          class="inline-block mb-6 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow hover:shadow-md transition">
-          <img src="images/logo.png" alt="PT Gravia Citra Lestari Logo" class="h-9 md:h-10 w-auto object-contain" />
-        </a>
-        <p class="text-sm opacity-80 leading-relaxed mb-6" data-i18n="footer_desc">
-          PT Gravia Citra Lestari provides comprehensive medical solutions, delivering proven technology to elevate
-          healthcare outcomes.
+    <!-- ==================== ABOUT HERO ==================== -->
+    <section
+      class="bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900 pt-20 pb-24 px-6 relative"
+    >
+      <div class="max-w-[1200px] mx-auto text-left relative z-10">
+        <h1
+          class="text-4xl md:text-5xl font-semibold text-white mb-6"
+          data-i18n="about_hero_title"
+        >
+          About Us
+        </h1>
+        <p
+          class="text-blue-100/90 text-[17px] md:text-lg max-w-xl font-light"
+          data-i18n="about_hero_desc"
+        >
+          Learn about our journey, experience, and commitment to excellence in
+          medical equipment supply.
         </p>
-        <div class="flex space-x-4">
-          <a href="#"
-            class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
-            <i class="fa-brands fa-linkedin-in"></i>
+      </div>
+    </section>
+
+    <!-- ==================== INTRO CONTENT ==================== -->
+    <section class="py-20 md:py-28 px-6 max-w-[1200px] mx-auto">
+      <div
+        class="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-24 items-center"
+      >
+        <!-- Left side: Text -->
+        <div class="lg:col-span-6 space-y-6">
+          <h2
+            class="text-3xl font-semibold text-gray-900 mb-8"
+            data-i18n="about_intro_title"
+          >
+            PT Gravia Citra Lestari
+          </h2>
+          <div class="space-y-5 text-[15px] text-gray-600 leading-[1.8]">
+            <p data-i18n="about_intro_p1">
+              PT Gravia Citra Lestari was established on November 11, 2017, as a
+              holding company specializing in trading and supplying medical
+              equipment with a primary focus on Blood Transfusion Instruments &
+              Products.
+            </p>
+            <p data-i18n="about_intro_p2">
+              With over 20 years of industry experience dating back to 2000, we
+              have established ourselves as a trusted partner for hospitals,
+              clinics, blood donation units, and medical institutions across
+              Indonesia.
+            </p>
+            <p data-i18n="about_intro_p3">
+              As an authorized distributor from domestic manufacturers and PT
+              Panatha Citra Lestari, we offer a comprehensive range of both
+              imported and locally manufactured medical products, ensuring
+              quality and reliability in every solution we provide.
+            </p>
+            <p data-i18n="about_intro_p4">
+              Led by experienced professionals in the medical equipment
+              industry, we are committed to distributing medical innovation and
+              leading the way in healthcare excellence.
+            </p>
+          </div>
+        </div>
+
+        <!-- Right side: Stats Grid -->
+        <div class="lg:col-span-6">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Card 1 -->
+            <div
+              class="bg-white p-8 rounded-[20px] shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col items-center text-center"
+            >
+              <div class="text-[#2b4c9b] mb-4">
+                <i class="fa-regular fa-calendar text-[32px]"></i>
+              </div>
+              <h3
+                class="text-[17px] font-bold text-gray-900 mb-2"
+                data-i18n="about_stat1_title"
+              >
+                Since 2017
+              </h3>
+              <p
+                class="text-[12px] text-gray-500 max-w-[140px]"
+                data-i18n="about_stat1_desc"
+              >
+                Established as a holding company
+              </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="bg-white p-8 rounded-[20px] shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col items-center text-center"
+            >
+              <div class="text-[#2b4c9b] mb-4">
+                <i class="fa-regular fa-calendar-check text-[32px]"></i>
+              </div>
+              <h3
+                class="text-[17px] font-bold text-gray-900 mb-2"
+                data-i18n="about_stat2_title"
+              >
+                20+ Years
+              </h3>
+              <p
+                class="text-[12px] text-gray-500 max-w-[140px]"
+                data-i18n="about_stat2_desc"
+              >
+                Industry experience since 2000
+              </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="bg-white p-8 rounded-[20px] shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col items-center text-center"
+            >
+              <div class="text-[#2b4c9b] mb-4">
+                <i class="fa-solid fa-award text-[32px]"></i>
+              </div>
+              <h3
+                class="text-[17px] font-bold text-gray-900 mb-2"
+                data-i18n="about_stat3_title"
+              >
+                Authorized
+              </h3>
+              <p
+                class="text-[12px] text-gray-500 max-w-[140px]"
+                data-i18n="about_stat3_desc"
+              >
+                Distributor from PT Panatha Citra Lestari
+              </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="bg-white p-8 rounded-[20px] shadow-[0_4px_30px_rgba(0,0,0,0.03)] border border-gray-100 flex flex-col items-center text-center"
+            >
+              <div class="text-[#2b4c9b] mb-4">
+                <i class="fa-solid fa-bullseye text-[32px]"></i>
+              </div>
+              <h3
+                class="text-[17px] font-bold text-gray-900 mb-2"
+                data-i18n="about_stat4_title"
+              >
+                B2B Focus
+              </h3>
+              <p
+                class="text-[12px] text-gray-500 max-w-[140px]"
+                data-i18n="about_stat4_desc"
+              >
+                Hospitals, clinics & institutions
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VISION & MISSION ==================== -->
+    <section class="bg-lightbg py-24 px-6 md:px-12">
+      <div class="max-w-[1200px] mx-auto">
+        <!-- Vision Section -->
+        <div class="text-center mb-14">
+          <h2
+            class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4"
+            data-i18n="vision_main"
+          >
+            Vision
+          </h2>
+          <p
+            class="text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            data-i18n="vision_desc"
+          >
+            To be the leading of national distributor with innovative,
+            high-quality medical device and in-vitro diagnostics (IVD) and
+            enhancing healthcare accessibility and patient health outcomes in
+            Indonesia.
+          </p>
+        </div>
+
+        <!-- Mission Section -->
+        <div>
+          <div class="text-center mb-14">
+            <h2
+              class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4"
+              data-i18n="mission_main"
+            >
+              Mission
+            </h2>
+          </div>
+
+          <div
+            class="grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-12 lg:gap-x-24 mt-8"
+          >
+            <!-- Mission 1 -->
+            <div class="flex items-start group">
+              <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15"
+                ></div>
+                <div
+                  class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500"
+                >
+                  <span
+                    class="font-['Oswald'] text-3xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]"
+                    >01</span
+                  >
+                </div>
+              </div>
+              <div class="ml-6 mt-1">
+                <h3
+                  class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
+                  data-i18n="miss1_title"
+                >
+                  Deliver Excellence
+                </h3>
+                <p
+                  class="text-[16px] text-gray-600 leading-relaxed"
+                  data-i18n="miss1_desc"
+                >
+                  Provide certified, high-quality medical devices and
+                  diagnostics that meet international standards.
+                </p>
+              </div>
+            </div>
+
+            <!-- Mission 2 -->
+            <div class="flex items-start group">
+              <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15"
+                ></div>
+                <div
+                  class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500"
+                >
+                  <span
+                    class="font-['Oswald'] text-3xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]"
+                    >02</span
+                  >
+                </div>
+              </div>
+              <div class="ml-6 mt-1">
+                <h3
+                  class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
+                  data-i18n="miss2_title"
+                >
+                  Enhance Accessibility
+                </h3>
+                <p
+                  class="text-[16px] text-gray-600 leading-relaxed"
+                  data-i18n="miss2_desc"
+                >
+                  Expand the reach of advanced healthcare solutions to
+                  hospitals, clinics, and laboratories nationwide.
+                </p>
+              </div>
+            </div>
+
+            <!-- Mission 3 -->
+            <div class="flex items-start group">
+              <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15"
+                ></div>
+                <div
+                  class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500"
+                >
+                  <span
+                    class="font-['Oswald'] text-3xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]"
+                    >03</span
+                  >
+                </div>
+              </div>
+              <div class="ml-6 mt-1">
+                <h3
+                  class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
+                  data-i18n="miss3_title"
+                >
+                  Drive Innovation
+                </h3>
+                <p
+                  class="text-[16px] text-gray-600 leading-relaxed"
+                  data-i18n="miss3_desc"
+                >
+                  Continuously adopt and introduce cutting-edge medical
+                  technology to improve healthcare services.
+                </p>
+              </div>
+            </div>
+
+            <!-- Mission 4 -->
+            <div class="flex items-start group">
+              <div class="relative w-16 h-16 md:w-[72px] md:h-[72px] shrink-0">
+                <div
+                  class="absolute inset-0 bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b] rounded-[20px] transform group-hover:scale-105 transition-all duration-500 opacity-15"
+                ></div>
+                <div
+                  class="absolute inset-0 bg-white border border-[#1c85a2]/20 rounded-[20px] flex items-center justify-center shadow-sm group-hover:shadow-[0_8px_30px_rgba(28,133,162,0.15)] transition-all duration-500"
+                >
+                  <span
+                    class="font-['Oswald'] text-3xl md:text-3xl font-bold bg-clip-text text-transparent bg-gradient-to-br from-[#1c85a2] to-[#2b4c9b]"
+                    >04</span
+                  >
+                </div>
+              </div>
+              <div class="ml-6 mt-1">
+                <h3
+                  class="text-xl md:text-[22px] font-bold text-gray-900 mb-2 group-hover:text-[#1c85a2] transition-colors duration-300"
+                  data-i18n="miss4_title"
+                >
+                  Build Strong Partnerships
+                </h3>
+                <p
+                  class="text-[16px] text-gray-600 leading-relaxed"
+                  data-i18n="miss4_desc"
+                >
+                  Foster long-term collaborations with healthcare providers,
+                  institutions, and stakeholders to advance medical care.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== OUR JOURNEY ==================== -->
+    <section class="py-24 px-6 md:px-12 bg-white">
+      <div class="max-w-[1200px] mx-auto">
+        <div class="text-center mb-14">
+          <h2
+            class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4"
+            data-i18n="journey_title"
+          >
+            Our Journey
+          </h2>
+          <p
+            class="text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            data-i18n="journey_desc"
+          >
+            Milestones that reflect our long-term commitment to quality, trusted
+            partnerships, and sustainable growth in Indonesia's medical supply
+            industry.
+          </p>
+        </div>
+
+        <div class="relative max-w-5xl mx-auto">
+          <div
+            class="absolute left-5 md:left-1/2 md:-translate-x-1/2 top-0 bottom-0 w-[2px] bg-blue-100"
+          ></div>
+
+          <div class="space-y-10">
+            <article
+              class="relative reveal-on-scroll opacity-0 translate-y-5 transition-all duration-700"
+            >
+              <div
+                class="w-10 h-10 rounded-full border-[3px] border-secondary bg-white absolute left-0 md:left-1/2 md:-translate-x-1/2 top-2 z-10"
+              ></div>
+              <div
+                class="pl-16 md:pl-0 md:grid md:grid-cols-2 md:gap-10 items-start"
+              >
+                <div class="md:text-right md:pr-10">
+                  <p class="text-2xl md:text-3xl font-bold text-[#2b4c9b]">
+                    2026
+                  </p>
+                </div>
+                <div
+                  class="md:pl-10 mt-2 md:mt-0 bg-lightbg border border-blue-50 rounded-2xl p-6 shadow-[0_8px_24px_rgba(15,23,42,0.04)]"
+                >
+                  <h3
+                    class="text-lg font-semibold text-gray-900 mb-2"
+                    data-i18n="journey_2026_title"
+                  >
+                    Local Product Distribution License Secured
+                  </h3>
+                  <p
+                    class="text-sm text-gray-600 leading-relaxed"
+                    data-i18n="journey_2026_desc"
+                  >
+                    Received Ministry of Health distribution license for Panatha
+                    Gel Card System (ABO/RHO Forward & Reverse Grouping) and
+                    AHG/Coombs Gel.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="relative reveal-on-scroll opacity-0 translate-y-5 transition-all duration-700"
+            >
+              <div
+                class="w-10 h-10 rounded-full border-[3px] border-secondary bg-white absolute left-0 md:left-1/2 md:-translate-x-1/2 top-2 z-10"
+              ></div>
+              <div
+                class="pl-16 md:pl-0 md:grid md:grid-cols-2 md:gap-10 items-start"
+              >
+                <div class="md:text-right md:pr-10">
+                  <p class="text-2xl md:text-3xl font-bold text-[#2b4c9b]">
+                    2025
+                  </p>
+                </div>
+                <div
+                  class="md:pl-10 mt-2 md:mt-0 bg-lightbg border border-blue-50 rounded-2xl p-6 shadow-[0_8px_24px_rgba(15,23,42,0.04)]"
+                >
+                  <h3
+                    class="text-lg font-semibold text-gray-900 mb-2"
+                    data-i18n="journey_2025_title"
+                  >
+                    Expanded Strategic Distribution Network
+                  </h3>
+                  <p
+                    class="text-sm text-gray-600 leading-relaxed"
+                    data-i18n="journey_2025_desc"
+                  >
+                    Appointed as distributor for PT Panatha Citra Lestari and
+                    Ugaia Bio-Sciences Japan for gel systems, platelet
+                    incubators, and refrigerated centrifuges.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="relative reveal-on-scroll opacity-0 translate-y-5 transition-all duration-700"
+            >
+              <div
+                class="w-10 h-10 rounded-full border-[3px] border-secondary bg-white absolute left-0 md:left-1/2 md:-translate-x-1/2 top-2 z-10"
+              ></div>
+              <div
+                class="pl-16 md:pl-0 md:grid md:grid-cols-2 md:gap-10 items-start"
+              >
+                <div class="md:text-right md:pr-10">
+                  <p class="text-2xl md:text-3xl font-bold text-[#2b4c9b]">
+                    2024
+                  </p>
+                </div>
+                <div
+                  class="md:pl-10 mt-2 md:mt-0 bg-lightbg border border-blue-50 rounded-2xl p-6 shadow-[0_8px_24px_rgba(15,23,42,0.04)]"
+                >
+                  <h3
+                    class="text-lg font-semibold text-gray-900 mb-2"
+                    data-i18n="journey_2024_title"
+                  >
+                    Rapid Diagnostics Portfolio Strengthened
+                  </h3>
+                  <p
+                    class="text-sm text-gray-600 leading-relaxed"
+                    data-i18n="journey_2024_desc"
+                  >
+                    Became exclusive distributor for Hangzhou Eilt Biotech rapid
+                    urine test panels across multi-drug screening categories.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="relative reveal-on-scroll opacity-0 translate-y-5 transition-all duration-700"
+            >
+              <div
+                class="w-10 h-10 rounded-full border-[3px] border-secondary bg-white absolute left-0 md:left-1/2 md:-translate-x-1/2 top-2 z-10"
+              ></div>
+              <div
+                class="pl-16 md:pl-0 md:grid md:grid-cols-2 md:gap-10 items-start"
+              >
+                <div class="md:text-right md:pr-10">
+                  <p class="text-2xl md:text-3xl font-bold text-[#2b4c9b]">
+                    2022
+                  </p>
+                </div>
+                <div
+                  class="md:pl-10 mt-2 md:mt-0 bg-lightbg border border-blue-50 rounded-2xl p-6 shadow-[0_8px_24px_rgba(15,23,42,0.04)]"
+                >
+                  <h3
+                    class="text-lg font-semibold text-gray-900 mb-2"
+                    data-i18n="journey_2022_title"
+                  >
+                    Broader Access to Clinical Essentials
+                  </h3>
+                  <p
+                    class="text-sm text-gray-600 leading-relaxed"
+                    data-i18n="journey_2022_desc"
+                  >
+                    Added key principals including Anhui Wensheng Materials and
+                    Tulip Diagnostics for transport, immunohematology,
+                    microbiology, and coagulation product lines.
+                  </p>
+                </div>
+              </div>
+            </article>
+
+            <article
+              class="relative reveal-on-scroll opacity-0 translate-y-5 transition-all duration-700"
+            >
+              <div
+                class="w-10 h-10 rounded-full border-[3px] border-secondary bg-white absolute left-0 md:left-1/2 md:-translate-x-1/2 top-2 z-10"
+              ></div>
+              <div
+                class="pl-16 md:pl-0 md:grid md:grid-cols-2 md:gap-10 items-start"
+              >
+                <div class="md:text-right md:pr-10">
+                  <p class="text-2xl md:text-3xl font-bold text-[#2b4c9b]">
+                    2020
+                  </p>
+                </div>
+                <div
+                  class="md:pl-10 mt-2 md:mt-0 bg-lightbg border border-blue-50 rounded-2xl p-6 shadow-[0_8px_24px_rgba(15,23,42,0.04)]"
+                >
+                  <h3
+                    class="text-lg font-semibold text-gray-900 mb-2"
+                    data-i18n="journey_2020_title"
+                  >
+                    Cold Chain and Sterilization Expansion
+                  </h3>
+                  <p
+                    class="text-sm text-gray-600 leading-relaxed"
+                    data-i18n="journey_2020_desc"
+                  >
+                    Expanded national distribution for medical refrigeration,
+                    centrifugation, sterilization, and viral transport product
+                    categories.
+                  </p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== OUR NETWORK ==================== -->
+    <section class="py-24 px-6 md:px-12 bg-lightbg">
+      <div class="max-w-[1200px] mx-auto">
+        <div class="text-center mb-14">
+          <h2
+            class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4"
+            data-i18n="network_title"
+          >
+            Our Network
+          </h2>
+          <p
+            class="text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            data-i18n="network_desc"
+          >
+            PT Gravia Citra Lestari operates within an integrated healthcare
+            group that combines distribution, manufacturing, and clinical
+            services.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <article
+            class="bg-white rounded-2xl border border-gray-100 p-7 shadow-[0_8px_25px_rgba(15,23,42,0.04)]"
+          >
+            <div class="h-16 flex items-center mb-5">
+              <img
+                src="images/logo-gravia.png"
+                alt="PT Gravia Citra Lestari logo"
+                class="h-12 w-auto object-contain grayscale hover:grayscale-0 transition duration-300"
+              />
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+              PT Gravia Citra Lestari
+            </h3>
+            <p
+              class="text-sm text-gray-600 leading-relaxed"
+              data-i18n="network_gcl_desc"
+            >
+              Holding and distribution hub focused on trusted IVD and medical
+              device solutions for hospitals, clinics, and laboratories.
+            </p>
+          </article>
+
+          <article
+            class="bg-white rounded-2xl border border-gray-100 p-7 shadow-[0_8px_25px_rgba(15,23,42,0.04)]"
+          >
+            <div
+              class="h-16 w-16 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 font-bold text-xl mb-5 grayscale hover:grayscale-0 hover:text-[#C7A95B] transition duration-300"
+            >
+              GCA
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+              GC Aesthetics Clinic
+            </h3>
+            <p
+              class="text-sm text-gray-600 leading-relaxed"
+              data-i18n="network_gca_desc"
+            >
+              Clinical arm specializing in holistic treatment services and
+              modern aesthetic-oriented healthcare equipment utilization.
+            </p>
+          </article>
+
+          <article
+            class="bg-white rounded-2xl border border-gray-100 p-7 shadow-[0_8px_25px_rgba(15,23,42,0.04)]"
+          >
+            <div
+              class="h-16 w-16 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 font-bold text-xl mb-5 grayscale hover:grayscale-0 hover:text-[#2b4c9b] transition duration-300"
+            >
+              GDA
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+              Distributor Alkes Division
+            </h3>
+            <p
+              class="text-sm text-gray-600 leading-relaxed"
+              data-i18n="network_gda_desc"
+            >
+              Dedicated business unit delivering compliant procurement and
+              distribution support for nationwide medical institutions.
+            </p>
+          </article>
+
+          <article
+            class="bg-white rounded-2xl border border-gray-100 p-7 shadow-[0_8px_25px_rgba(15,23,42,0.04)]"
+          >
+            <div
+              class="h-16 w-16 rounded-full border border-slate-200 flex items-center justify-center text-slate-600 font-bold text-xl mb-5 grayscale hover:grayscale-0 hover:text-[#22A868] transition duration-300"
+            >
+              PCL
+            </div>
+            <h3 class="text-lg font-semibold text-gray-900 mb-2">
+              PT Panatha Citra Lestari
+            </h3>
+            <p
+              class="text-sm text-gray-600 leading-relaxed"
+              data-i18n="network_pcl_desc"
+            >
+              Domestic manufacturing partner producing quality medical equipment
+              tailored to Indonesian healthcare market requirements.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== WORKSHOP EXPERIENCES ==================== -->
+    <section class="py-24 px-6 max-w-[1200px] mx-auto relative break-words">
+      <h2
+        class="text-3xl font-semibold text-center text-gray-900 mb-16"
+        data-i18n="workshop_title"
+      >
+        Workshop Experiences
+      </h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Card 1 -->
+        <div
+          class="bg-white p-6 rounded-2xl border border-gray-100 shadow-[0_2px_15px_rgba(0,0,0,0.03)] hover:-translate-y-1 transition duration-300"
+        >
+          <img
+            src="images/detail-image.jpg"
+            alt="Workshop 1"
+            class="w-full h-40 object-cover rounded-xl mb-5"
+          />
+          <h4
+            class="text-[15px] font-bold text-gray-900 mb-3 leading-snug"
+            data-i18n="ws1_title"
+          >
+            Wet Workshop with BB Hospital
+          </h4>
+          <p
+            class="text-[13px] text-gray-500 leading-relaxed"
+            data-i18n="ws1_desc"
+          >
+            East and Central Java - Semarang IIC Crossmatching Wet Workshop, Gel
+            Method
+          </p>
+        </div>
+
+        <!-- Card 2 -->
+        <div
+          class="bg-white p-6 rounded-2xl border border-gray-100 shadow-[0_2px_15px_rgba(0,0,0,0.03)] hover:-translate-y-1 transition duration-300"
+        >
+          <img
+            src="images/detail-image.jpg"
+            alt="Workshop 2"
+            class="w-full h-40 object-cover rounded-xl mb-5"
+          />
+          <h4
+            class="text-[15px] font-bold text-gray-900 mb-3 leading-snug"
+            data-i18n="ws2_title"
+          >
+            Bandung Health Polytechnic
+          </h4>
+          <p
+            class="text-[13px] text-gray-500 leading-relaxed"
+            data-i18n="ws2_desc"
+          >
+            Specialized training program for healthcare professionals in blood
+            transfusion techniques
+          </p>
+        </div>
+
+        <!-- Card 3 -->
+        <div
+          class="bg-white p-6 rounded-2xl border border-gray-100 shadow-[0_2px_15px_rgba(0,0,0,0.03)] hover:-translate-y-1 transition duration-300"
+        >
+          <img
+            src="images/detail-image.jpg"
+            alt="Workshop 3"
+            class="w-full h-40 object-cover rounded-xl mb-5"
+          />
+          <h4
+            class="text-[15px] font-bold text-gray-900 mb-3 leading-snug"
+            data-i18n="ws3_title"
+          >
+            Antibody Screening Workshop
+          </h4>
+          <p
+            class="text-[13px] text-gray-500 leading-relaxed"
+            data-i18n="ws3_desc"
+          >
+            Antibody Screening and Identification Wet Workshop with Pathology
+            Clinic Doctors - Bandung
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-primary text-blue-100 pt-16 pb-8 px-6 md:px-12 mt-10">
+      <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-10">
+        <div
+          class="col-span-1 md:col-span-1 border-b border-blue-800 pb-8 md:border-0 md:pb-0"
+        >
+          <a
+            href="index.html"
+            class="inline-block mb-6 bg-white/95 backdrop-blur-sm rounded-2xl p-3 shadow hover:shadow-md transition"
+          >
+            <img
+              src="images/logo-gravia.png"
+              alt="PT Gravia Citra Lestari Logo"
+              class="h-9 md:h-10 w-auto object-contain"
+            />
           </a>
-          <a href="#"
-            class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
-            <i class="fa-brands fa-facebook-f"></i>
-          </a>
-          <a href="#"
-            class="w-10 h-10 rounded-full bg-blue-800 flex items-center justify-center hover:bg-white hover:text-primary transition duration-300">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
+          <p
+            class="text-sm opacity-80 leading-relaxed"
+            data-i18n="footer_desc"
+          >
+            PT Gravia Citra Lestari provides comprehensive medical solutions,
+            delivering proven technology to elevate healthcare outcomes.
+          </p>
+
+        </div>
+
+        <div>
+          <h4
+            class="text-white font-bold mb-6 tracking-wide uppercase text-sm"
+            data-i18n="quick_links"
+          >
+            Quick Links
+          </h4>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a
+                href="about.html"
+                class="hover:text-white transition"
+                data-i18n="nav_about"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a
+                href="products.html"
+                class="hover:text-white transition"
+                data-i18n="nav_products"
+                >Our Products</a
+              >
+            </li>
+            <li>
+              <a
+                href="our-principals.html"
+                class="hover:text-white transition"
+                data-i18n="footer_principals"
+                >Principals & Partners</a
+              >
+            </li>
+            <li>
+              <a
+                href="contact.html"
+                class="hover:text-white transition"
+                data-i18n="nav_contact"
+                >Contact Us</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4
+            class="text-white font-bold mb-6 tracking-wide uppercase text-sm"
+            data-i18n="footer_products"
+          >
+            Products
+          </h4>
+          <ul class="space-y-4 text-sm">
+            <li>
+              <a
+                href="products.html"
+                class="hover:text-white transition"
+                data-i18n="cat_blood_bank"
+                >Blood Bank & Immunohematology Solutions</a
+              >
+            </li>
+            <li>
+              <a
+                href="products.html"
+                class="hover:text-white transition"
+                data-i18n="cat_ivd"
+                >Rapid Diagnostic Tests (IVD)</a
+              >
+            </li>
+            <li>
+              <a
+                href="products.html"
+                class="hover:text-white transition"
+                data-i18n="cat_centrifuges"
+                >Clinical & Research Centrifuges</a
+              >
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h4
+            class="text-white font-bold mb-6 tracking-wide uppercase text-sm"
+            data-i18n="contact_details"
+          >
+            Contact Details
+          </h4>
+          <ul class="space-y-4 text-sm">
+            <li class="flex items-start space-x-3">
+              <i class="fa-solid fa-map-marker-alt mt-1 shrink-0"></i>
+              <span data-i18n="address"
+                >Jalan Wolter Monginsidi, Komplek Ruko Wolter Monginsidi Blok
+                Q/4 No. 84-HH (Lantai 3 dan 4), Petogogan, Kebayoran Baru,
+                Jakarta Selatan, Kode Pos 12170, Indonesia.</span
+              >
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fa-solid fa-phone shrink-0"></i>
+              <span>(62) 811-952-4689</span>
+            </li>
+            <li class="flex items-center space-x-3">
+              <i class="fa-solid fa-envelope shrink-0"></i>
+              <span>graviacitralestari@gmail.com</span>
+            </li>
+          </ul>
         </div>
       </div>
 
-      <div>
-        <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm" data-i18n="quick_links">Quick Links</h4>
-        <ul class="space-y-4 text-sm">
-          <li><a href="about.html" class="hover:text-white transition" data-i18n="nav_about">About Us</a></li>
-          <li><a href="products.html" class="hover:text-white transition" data-i18n="nav_products">Our Products</a></li>
-          <li><a href="our-principals.html" class="hover:text-white transition" data-i18n="footer_principals">Principals
-              & Partners</a></li>
-          <li><a href="contact.html" class="hover:text-white transition" data-i18n="nav_contact">Contact Us</a></li>
-        </ul>
+      <div
+        class="max-w-[1200px] mx-auto mt-12 pt-8 border-t border-blue-800 text-sm text-center md:text-left flex flex-col md:flex-row justify-between items-center text-blue-300"
+      >
+        <p data-i18n="rights">
+          &copy; 2024 PT Gravia Citra Lestari. All rights reserved.
+        </p>
+        <div class="mt-4 md:mt-0 space-x-4">
+          <a href="#" class="hover:text-white" data-i18n="privacy"
+            >Privacy Policy</a
+          >
+          <span>|</span>
+          <a href="#" class="hover:text-white" data-i18n="terms"
+            >Terms of Service</a
+          >
+        </div>
       </div>
+    </footer>
 
-      <div>
-        <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm" data-i18n="footer_products">Products</h4>
-        <ul class="space-y-4 text-sm">
-          <li><a href="products.html" class="hover:text-white transition" data-i18n="cat_blood_bank">Blood Bank &
-              Immunohematology Solutions</a></li>
-          <li><a href="products.html" class="hover:text-white transition" data-i18n="cat_ivd">Rapid Diagnostic Tests
-              (IVD)</a></li>
-          <li><a href="products.html" class="hover:text-white transition" data-i18n="cat_centrifuges">Clinical &
-              Research Centrifuges</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <h4 class="text-white font-bold mb-6 tracking-wide uppercase text-sm" data-i18n="contact_details">Contact
-          Details</h4>
-        <ul class="space-y-4 text-sm">
-          <li class="flex items-start space-x-3">
-            <i class="fa-solid fa-map-marker-alt mt-1 shrink-0"></i>
-            <span data-i18n="address">Jl. Wolter Monginsidi No.84AH, RT.1/RW.4, Petogogan, Kebayoran Baru, South Jakarta
-              City, Jakarta 12170</span>
-          </li>
-          <li class="flex items-center space-x-3">
-            <i class="fa-solid fa-phone shrink-0"></i>
-            <span>(62) 811-952-4689</span>
-          </li>
-          <li class="flex items-center space-x-3">
-            <i class="fa-solid fa-envelope shrink-0"></i>
-            <span>graviacitralestari@gmail.com</span>
-          </li>
-        </ul>
-      </div>
-    </div>
-
-    <div
-      class="max-w-7xl mx-auto mt-12 pt-8 border-t border-blue-800 text-sm text-center md:text-left flex flex-col md:flex-row justify-between items-center text-blue-300">
-      <p data-i18n="rights">&copy; 2024 PT Gravia Citra Lestari. All rights reserved.</p>
-      <div class="mt-4 md:mt-0 space-x-4">
-        <a href="#" class="hover:text-white" data-i18n="privacy">Privacy Policy</a>
-        <span>|</span>
-        <a href="#" class="hover:text-white" data-i18n="terms">Terms of Service</a>
-      </div>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-
+    <script src="script.js"></script>
+  </body>
 </html>

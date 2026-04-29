@@ -9,7 +9,7 @@ const translations = {
     hero_title:
       "Trusted Distributor of High Quality Medical Devices and (IVD) in Indonesia",
     hero_desc:
-      "Committed to improving healthcare accessibility by delivering innovative, high-quality medical solutions—backed by ISO and CDAKB certifications—to hospitals, clinics, and laboratories across Indonesia.",
+      "Committed to improving healthcare accessibility by delivering innovative, high-quality medical solutions backed by ISO and CDAKB certifications to hospitals, clinics, and laboratories across Indonesia.",
     hero_btn: "View more",
     banner_text:
       "We understand the critical importance of reliable and advanced medical technology in today's healthcare environment. That's why we continuously innovate.",

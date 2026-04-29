@@ -78,6 +78,14 @@ const translations = {
     cat_blood_bank: "Blood Bank & Immunohematology Solutions",
     cat_ivd: "Rapid Diagnostic Tests (IVD)",
     cat_centrifuges: "Clinical & Research Centrifuges",
+    cat_sterilization: "Sterilization & Infection Control",
+    cat_hygiene: "Hygiene Equipment",
+    net_gravia_desc: "The Holding Company of Medical Equipment Distributor and Aesthetics Clinic",
+    net_gc_bullet1: "Holistic Treatment Clinic",
+    net_gc_bullet2: "Modern and Advance Clinic Equipment",
+    net_dis_bullet1: "Trusted Distributor of IVD & Medical Devices",
+    net_dis_bullet2: "Distributor of Panatha Citra Lestari (PDN / AKD)",
+    net_pan_bullet1: "A Professional, Quality, Reliable and Trusted Medical Equipment Company in Indonesia",
     prod_gel_system: "Panatha Gel Card System",
     prod_gel_desc:
       "Microcolumn gel card platform for blood grouping and red cell sensitization testing, designed to support consistent immunohematology results.",
@@ -188,7 +196,7 @@ const translations = {
     journey_2020_title: "Cold Chain and Sterilization Expansion",
     journey_2020_desc:
       "Expanded national distribution for medical refrigeration, centrifugation, sterilization, and viral transport product categories.",
-    network_title: "Our Network",
+    network_title: "Company Group",
     network_desc:
       "PT Gravia Citra Lestari operates within an integrated healthcare group that combines distribution, manufacturing, and clinical services.",
     network_gcl_desc:
@@ -355,6 +363,14 @@ const translations = {
     cat_blood_bank: "Solusi Bank Darah & Imunohematologi",
     cat_ivd: "Tes Diagnostik Cepat (IVD)",
     cat_centrifuges: "Sentrifus Klinis & Riset",
+    cat_sterilization: "Sterilisasi & Kontrol Infeksi",
+    cat_hygiene: "Peralatan Kebersihan",
+    net_gravia_desc: "Perusahaan Induk Distributor Alat Kesehatan dan Klinik Estetika",
+    net_gc_bullet1: "Klinik Perawatan Holistik",
+    net_gc_bullet2: "Peralatan Klinik Modern dan Canggih",
+    net_dis_bullet1: "Distributor Terpercaya IVD & Alat Kesehatan",
+    net_dis_bullet2: "Distributor Panatha Citra Lestari (PDN / AKD)",
+    net_pan_bullet1: "Perusahaan Alat Kesehatan yang Profesional, Berkualitas, Andal, dan Terpercaya di Indonesia",
     prod_gel_system: "Sistem Gel Kartu Panatha",
     prod_gel_desc:
       "Platform kartu gel mikrokolom untuk uji golongan darah dan sensitisasi sel darah merah, dirancang untuk mendukung hasil imunohematologi yang konsisten.",
@@ -465,7 +481,7 @@ const translations = {
     journey_2020_title: "Ekspansi Rantai Dingin dan Sterilisasi",
     journey_2020_desc:
       "Memperluas distribusi nasional untuk produk refrigerasi medis, sentrifugasi, sterilisasi, dan viral transport.",
-    network_title: "Jaringan Kami",
+    network_title: "Grup Perusahaan",
     network_desc:
       "PT Gravia Citra Lestari berada dalam ekosistem grup layanan kesehatan terintegrasi yang menggabungkan distribusi, manufaktur, dan layanan klinis.",
     network_gcl_desc:
@@ -556,6 +572,7 @@ const translations = {
 };
 
 window.setLanguage = function (lang) {
+  localStorage.setItem("language", lang);
   document.querySelectorAll("[data-i18n]").forEach((el) => {
     const key = el.getAttribute("data-i18n");
     if (translations[lang] && translations[lang][key]) {
@@ -587,6 +604,9 @@ window.setLanguage = function (lang) {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
+  const savedLang = localStorage.getItem("language") || "en";
+  window.setLanguage(savedLang);
+
   // Mobile Menu Generation
   const mobileMenuHTML = `
     <div id="mobile-menu" class="fixed inset-0 bg-white/95 backdrop-blur-md z-50 transform translate-x-full transition-transform duration-300 md:hidden flex flex-col pt-20 px-8 shadow-2xl">
@@ -792,10 +812,27 @@ document.addEventListener("DOMContentLoaded", () => {
       submitBrochureBtn.disabled = true;
       submitBrochureBtn.classList.add("opacity-70", "cursor-not-allowed");
 
+      // Construct custom message
+      const formattedMessage = `Hi, ${this.from_name.value} from ${this.company.value} request for a brochure ${this.requested_product.value} this is the message from website
+Full Name * ${this.from_name.value}
+Email Address * ${this.reply_to.value}
+Company/Institution * ${this.company.value}
+Phone Number ${this.phone.value}
+Subject * ${this.subject.value}
+Message * ${this.message.value}`;
+
+      const templateParams = {
+        message: formattedMessage,
+        reply_to: this.reply_to.value,
+        from_name: this.from_name.value,
+        subject: this.subject.value,
+        to_email: 'info@graviacitralestari.id',
+        to_name: 'PT Gravia Citra Lestari'
+      };
+
       // Send to EmailJS
-      // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with actual EmailJS IDs
       emailjs
-        .sendForm("service_n73js47", "template_ddjbtfs", this)
+        .send("service_vlqkk0l", "template_xjuvzx9", templateParams)
         .then(
           () => {
             // Success
@@ -849,9 +886,27 @@ document.addEventListener("DOMContentLoaded", () => {
       contactSubmitBtn.disabled = true;
       contactSubmitBtn.classList.add("opacity-70", "cursor-not-allowed");
 
+      // Construct custom message for main contact form
+      const formattedMessage = `Hi, ${this.from_name.value} from ${this.company.value} requested for a brochure.
+Full Name : ${this.from_name.value}
+Email Address : ${this.reply_to.value}
+Company/Institution : ${this.company.value}
+Phone Number : ${this.phone.value}
+Subject : ${this.subject.value}
+Message : ${this.message.value}`;
+
+      const templateParams = {
+        message: formattedMessage,
+        reply_to: this.reply_to.value,
+        from_name: this.from_name.value,
+        subject: this.subject.value,
+        to_email: 'info@graviacitralestari.id',
+        to_name: 'PT Gravia Citra Lestari'
+      };
+
       // Send to EmailJS
       emailjs
-        .sendForm("service_n73js47", "template_ddjbtfs", this)
+        .send("service_vlqkk0l", "template_xjuvzx9", templateParams)
         .then(
           () => {
             // Success
@@ -872,6 +927,110 @@ document.addEventListener("DOMContentLoaded", () => {
           contactSubmitBtn.disabled = false;
           contactSubmitBtn.classList.remove("opacity-70", "cursor-not-allowed");
         });
+    });
+  }
+
+  // Search Logic
+  const searchModalHTML = `
+    <div id="search-modal" class="fixed inset-0 bg-primary/80 backdrop-blur-sm z-[100] hidden flex items-start justify-center pt-24 px-4">
+      <div class="bg-white w-full max-w-2xl rounded-2xl shadow-2xl overflow-hidden transform scale-95 opacity-0 transition-all duration-300" id="search-container">
+        <div class="p-6 border-b border-gray-100 flex items-center relative">
+          <i class="fa-solid fa-search text-gray-400 absolute left-10"></i>
+          <input type="text" id="search-input" class="w-full pl-12 pr-10 py-3 text-lg outline-none text-gray-800 placeholder-gray-400" placeholder="Search products, services, or information..." autocomplete="off" />
+          <button id="close-search" class="absolute right-6 text-gray-400 hover:text-red-500 transition">
+            <i class="fa-solid fa-xmark text-xl"></i>
+          </button>
+        </div>
+        <div id="search-results" class="max-h-[60vh] overflow-y-auto bg-gray-50 p-2 hidden"></div>
+      </div>
+    </div>
+  `;
+  document.body.insertAdjacentHTML("beforeend", searchModalHTML);
+
+  const searchIndex = [
+    { title: "Panatha Gel Card System", url: "product-detail.html?product=gel-card", type: "Product", keywords: "blood bank, immunohematology, panatha gel card system, ahg, coombs" },
+    { title: "Platelet Incubator & Agitator", url: "product-detail.html?product=platelet-incubator", type: "Product", keywords: "platelet, incubator, agitator, blood bank" },
+    { title: "Virdict 4 Combo Integrated Test", url: "product-detail.html?product=virdict-4", type: "Product", keywords: "ivd, rapid diagnostic tests, virdict 4 combo, hiv, hcv" },
+    { title: "CL5R Refrigerated Centrifuge", url: "product-detail.html?product=cl5r", type: "Product", keywords: "centrifuge, clinical, refrigerated" },
+    { title: "About Us", url: "about.html", type: "Page", keywords: "about us, company group, vision, mission, journey, history, gravia citra lestari" },
+    { title: "Our Products", url: "products.html", type: "Page", keywords: "products, equipment, instruments, centrifuge, medical freezers, blood bank" },
+    { title: "Our Principals", url: "our-principals.html", type: "Page", keywords: "principals, partners, panatha, japan, china, indonesia" },
+    { title: "Contact Us", url: "contact.html", type: "Page", keywords: "contact, address, email, phone, location" }
+  ];
+
+  const searchModal = document.getElementById("search-modal");
+  const searchContainer = document.getElementById("search-container");
+  const searchInput = document.getElementById("search-input");
+  const searchResults = document.getElementById("search-results");
+  const closeSearchBtn = document.getElementById("close-search");
+
+  const searchBtns = document.querySelectorAll("header button:has(.fa-search), header .fa-search");
+
+  const openSearch = (e) => {
+    if (e) e.preventDefault();
+    searchModal.classList.remove("hidden");
+    setTimeout(() => {
+      searchContainer.classList.remove("scale-95", "opacity-0");
+      searchContainer.classList.add("scale-100", "opacity-100");
+      searchInput.focus();
+    }, 10);
+  };
+
+  const closeSearch = () => {
+    searchContainer.classList.remove("scale-100", "opacity-100");
+    searchContainer.classList.add("scale-95", "opacity-0");
+    setTimeout(() => {
+      searchModal.classList.add("hidden");
+      searchInput.value = '';
+      searchResults.innerHTML = '';
+      searchResults.classList.add("hidden");
+    }, 300);
+  };
+
+  searchBtns.forEach(btn => {
+    const actualBtn = btn.tagName === 'I' ? btn.parentElement : btn;
+    actualBtn.addEventListener("click", openSearch);
+  });
+  if (closeSearchBtn) closeSearchBtn.addEventListener("click", closeSearch);
+  if (searchModal) searchModal.addEventListener("click", (e) => {
+    if (e.target === searchModal) closeSearch();
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener("input", (e) => {
+      const query = e.target.value.toLowerCase().trim();
+      if (query.length < 2) {
+        searchResults.innerHTML = '';
+        searchResults.classList.add("hidden");
+        return;
+      }
+
+      const results = searchIndex.filter(item =>
+        item.title.toLowerCase().includes(query) || item.keywords.includes(query)
+      );
+
+      if (results.length > 0) {
+        searchResults.innerHTML = results.map(item => `
+          <a href="${item.url}" class="block p-4 hover:bg-white rounded-xl mb-1 border border-transparent hover:border-blue-100 hover:shadow-sm transition">
+            <div class="flex justify-between items-center">
+              <div>
+                <h4 class="text-gray-900 font-semibold mb-1">${item.title}</h4>
+                <span class="text-xs font-medium text-secondary bg-blue-50 px-2 py-1 rounded">${item.type}</span>
+              </div>
+              <i class="fa-solid fa-chevron-right text-gray-300"></i>
+            </div>
+          </a>
+        `).join('');
+        searchResults.classList.remove("hidden");
+      } else {
+        searchResults.innerHTML = `
+          <div class="p-8 text-center text-gray-500">
+            <i class="fa-solid fa-search text-3xl mb-3 text-gray-300"></i>
+            <p>No results found for "${query}"</p>
+          </div>
+        `;
+        searchResults.classList.remove("hidden");
+      }
     });
   }
 });
